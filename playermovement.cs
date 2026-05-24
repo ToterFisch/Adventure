@@ -16,24 +16,24 @@ public class playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        /*if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(Vector3.up*speed*Time.deltaTime,Space.World);
             walking = 1;
         }
-        else if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(Vector3.left*speed*Time.deltaTime,Space.World);
             direction = 1;
             walking = 1;
         }
-        else if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector3.right*speed*Time.deltaTime,Space.World);
             direction = 2;
             walking = 1;
         }
-        else if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(Vector3.down*speed*Time.deltaTime,Space.World);
             walking = 1;
@@ -41,7 +41,38 @@ public class playermovement : MonoBehaviour
         else 
         {
             walking = 0;
+        } */
+         Vector2 movement = Vector2.zero;
+
+        if (Input.GetKey(KeyCode.W))
+            movement.y += 1;
+
+        if (Input.GetKey(KeyCode.S))
+            movement.y -= 1;
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            movement.x -= 1;
+            direction = 1;
         }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            movement.x += 1;
+            direction = 2;
+        }
+
+        if (movement != Vector2.zero)
+        {
+            movement = movement.normalized;
+            transform.Translate(movement * speed * Time.deltaTime, Space.World);
+            walking = 1;
+        }
+        else
+        {
+            walking = 0;
+        }
+
         anna.SetInteger("laufend", walking);
         anna.SetInteger("richtung", direction);
     }
