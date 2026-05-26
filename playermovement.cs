@@ -44,12 +44,12 @@ public class playermovement : MonoBehaviour
         } */
          Vector2 movement = Vector2.zero;
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W)){
             movement.y += 1;
-
-        if (Input.GetKey(KeyCode.S))
+        }
+        if (Input.GetKey(KeyCode.S)){
             movement.y -= 1;
-
+        }
         if (Input.GetKey(KeyCode.A))
         {
             movement.x -= 1;
