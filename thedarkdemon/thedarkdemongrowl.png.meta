@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: e27c13c68b68ad5d8bc669135d706add
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6163379731695899644
+    second: thedarkdemongrowl_0
+  - first:
+      213: 5687849266988816889
+    second: thedarkdemongrowl_1
+  - first:
+      213: -7293584938340408591
+    second: thedarkdemongrowl_2
+  - first:
+      213: 4575793148408931366
+    second: thedarkdemongrowl_3
+  - first:
+      213: 9176755582670055673
+    second: thedarkdemongrowl_4
+  - first:
+      213: -5986329425069029282
+    second: thedarkdemongrowl_5
+  - first:
+      213: -4597994664459968295
+    second: thedarkdemongrowl_6
+  - first:
+      213: 4603067318324280738
+    second: thedarkdemongrowl_7
+  - first:
+      213: 7231348162798421103
+    second: thedarkdemongrowl_8
+  - first:
+      213: -5505291757661391773
+    second: thedarkdemongrowl_9
+  - first:
+      213: -531298012842332775
+    second: thedarkdemongrowl_10
+  - first:
+      213: 4128951364404123481
+    second: thedarkdemongrowl_11
+  - first:
+      213: 2583087255387267049
+    second: thedarkdemongrowl_12
+  - first:
+      213: 689999272595567975
+    second: thedarkdemongrowl_13
+  - first:
+      213: -844921493108511355
+    second: thedarkdemongrowl_14
+  - first:
+      213: -7391325596476790989
+    second: thedarkdemongrowl_15
+  - first:
+      213: 1854428550995849619
+    second: thedarkdemongrowl_16
+  - first:
+      213: 9156542895018015432
+    second: thedarkdemongrowl_17
+  - first:
+      213: 2211617695486108662
+    second: thedarkdemongrowl_18
+  - first:
+      213: -1360481131667612572
+    second: thedarkdemongrowl_19
+  - first:
+      213: 8003979054183019165
+    second: thedarkdemongrowl_20
+  - first:
+      213: 6114616043459404694
+    second: thedarkdemongrowl_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: thedarkdemongrowl_0
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1109
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf393930639b88550800000000000000
+      internalID: 6163379731695899644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_1
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 1109
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f995d6d5cc4fee40800000000000000
+      internalID: 5687849266988816889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_2
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 1109
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f2a413442bf7ca90800000000000000
+      internalID: -7293584938340408591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_3
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 1109
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624a498ff9b708f30800000000000000
+      internalID: 4575793148408931366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_4
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 893
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f8a1a7f4926a5f70800000000000000
+      internalID: 9176755582670055673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_5
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 893
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58ca46da194ceca0800000000000000
+      internalID: -5986329425069029282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_6
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 893
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0e8b1c634a030c0800000000000000
+      internalID: -4597994664459968295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_7
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 893
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2adbde1865161ef30800000000000000
+      internalID: 4603067318324280738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_8
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 677
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6406ca37d8ea5460800000000000000
+      internalID: 7231348162798421103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_9
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 677
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364f4bf80564993b0800000000000000
+      internalID: -5505291757661391773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_10
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 677
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d69a2b54370a8f0800000000000000
+      internalID: -531298012842332775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_11
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 677
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9571c2ac36bfc4930800000000000000
+      internalID: 4128951364404123481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_12
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 461
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ef52394c28f8d320800000000000000
+      internalID: 2583087255387267049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_13
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 461
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7653652ceae539900800000000000000
+      internalID: 689999272595567975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_14
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 461
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58dac2ce06c3644f0800000000000000
+      internalID: -844921493108511355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_15
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 461
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337afbae78cbc6990800000000000000
+      internalID: -7391325596476790989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_16
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 245
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 391337321f04cb910800000000000000
+      internalID: 1854428550995849619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_17
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 245
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cafc24ef33921f70800000000000000
+      internalID: 9156542895018015432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_18
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 245
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f3ea6e839e31be10800000000000000
+      internalID: 2211617695486108662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_19
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 245
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46c945f6e999e1de0800000000000000
+      internalID: -1360481131667612572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_20
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 29
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d92fe3afa88d31f60800000000000000
+      internalID: 8003979054183019165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemongrowl_21
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 29
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6936d4815ea7bd450800000000000000
+      internalID: 6114616043459404694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      thedarkdemongrowl_0: 6163379731695899644
+      thedarkdemongrowl_1: 5687849266988816889
+      thedarkdemongrowl_10: -531298012842332775
+      thedarkdemongrowl_11: 4128951364404123481
+      thedarkdemongrowl_12: 2583087255387267049
+      thedarkdemongrowl_13: 689999272595567975
+      thedarkdemongrowl_14: -844921493108511355
+      thedarkdemongrowl_15: -7391325596476790989
+      thedarkdemongrowl_16: 1854428550995849619
+      thedarkdemongrowl_17: 9156542895018015432
+      thedarkdemongrowl_18: 2211617695486108662
+      thedarkdemongrowl_19: -1360481131667612572
+      thedarkdemongrowl_2: -7293584938340408591
+      thedarkdemongrowl_20: 8003979054183019165
+      thedarkdemongrowl_21: 6114616043459404694
+      thedarkdemongrowl_3: 4575793148408931366
+      thedarkdemongrowl_4: 9176755582670055673
+      thedarkdemongrowl_5: -5986329425069029282
+      thedarkdemongrowl_6: -4597994664459968295
+      thedarkdemongrowl_7: 4603067318324280738
+      thedarkdemongrowl_8: 7231348162798421103
+      thedarkdemongrowl_9: -5505291757661391773
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

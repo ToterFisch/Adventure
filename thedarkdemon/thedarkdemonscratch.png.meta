@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 02d4dab0fc4fe4526a5b21314c0a8716
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5615057679101234796
+    second: thedarkdemonscratch_0
+  - first:
+      213: 7020954134341558117
+    second: thedarkdemonscratch_1
+  - first:
+      213: 1692661862357273991
+    second: thedarkdemonscratch_2
+  - first:
+      213: -187813385171828014
+    second: thedarkdemonscratch_3
+  - first:
+      213: -3590189943452122286
+    second: thedarkdemonscratch_4
+  - first:
+      213: -1800729884690416956
+    second: thedarkdemonscratch_5
+  - first:
+      213: -233502334059174675
+    second: thedarkdemonscratch_6
+  - first:
+      213: -5947794904026624093
+    second: thedarkdemonscratch_7
+  - first:
+      213: -7356445671279924635
+    second: thedarkdemonscratch_8
+  - first:
+      213: 3246235415827225354
+    second: thedarkdemonscratch_9
+  - first:
+      213: -8116880633194018182
+    second: thedarkdemonscratch_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: thedarkdemonscratch_0
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 677
+        width: 183
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49177db6ace4312b0800000000000000
+      internalID: -5615057679101234796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonscratch_1
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 677
+        width: 229
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56f1db926907f6160800000000000000
+      internalID: 7020954134341558117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonscratch_2
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 461
+        width: 261
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d08a6eefa8d7710800000000000000
+      internalID: 1692661862357273991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonscratch_3
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 461
+        width: 288
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d205c4a8b0c46df0800000000000000
+      internalID: -187813385171828014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonscratch_4
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 245
+        width: 261
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2534b50a4451d2ec0800000000000000
+      internalID: -3590189943452122286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonscratch_5
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 245
+        width: 260
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4caf896e5b58207e0800000000000000
+      internalID: -1800729884690416956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonscratch_6
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 29
+        width: 259
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4ad244dde62ccf0800000000000000
+      internalID: -233502334059174675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonscratch_7
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 110
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af4d9c2c00357da0800000000000000
+      internalID: -5947794904026624093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonscratch_8
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 94
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a66e953a7a8e990800000000000000
+      internalID: -7356445671279924635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonscratch_9
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 85
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b9ca159e1fc0d20800000000000000
+      internalID: 3246235415827225354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonscratch_10
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 29
+        width: 121
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7a0936b11c0b5f80800000000000000
+      internalID: -8116880633194018182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      thedarkdemonscratch_0: -5615057679101234796
+      thedarkdemonscratch_1: 7020954134341558117
+      thedarkdemonscratch_10: -8116880633194018182
+      thedarkdemonscratch_2: 1692661862357273991
+      thedarkdemonscratch_3: -187813385171828014
+      thedarkdemonscratch_4: -3590189943452122286
+      thedarkdemonscratch_5: -1800729884690416956
+      thedarkdemonscratch_6: -233502334059174675
+      thedarkdemonscratch_7: -5947794904026624093
+      thedarkdemonscratch_8: -7356445671279924635
+      thedarkdemonscratch_9: 3246235415827225354
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

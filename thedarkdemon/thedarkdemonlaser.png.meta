@@ -1,0 +1,2054 @@
+fileFormatVersion: 2
+guid: 8f3ac4f3fed02ae3fa751dcbf8774a15
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1877433126933219708
+    second: thedarkdemonlaser_0
+  - first:
+      213: 5754005655279903863
+    second: thedarkdemonlaser_1
+  - first:
+      213: 4599370937432230685
+    second: thedarkdemonlaser_2
+  - first:
+      213: 6637012786984499546
+    second: thedarkdemonlaser_3
+  - first:
+      213: -1291111105955435375
+    second: thedarkdemonlaser_4
+  - first:
+      213: -7518382985947588395
+    second: thedarkdemonlaser_5
+  - first:
+      213: -4129798503547191685
+    second: thedarkdemonlaser_6
+  - first:
+      213: -7280390278777345000
+    second: thedarkdemonlaser_7
+  - first:
+      213: 5354427642773564692
+    second: thedarkdemonlaser_8
+  - first:
+      213: -8445456607526932399
+    second: thedarkdemonlaser_9
+  - first:
+      213: -8551578535240634177
+    second: thedarkdemonlaser_10
+  - first:
+      213: 637545614942754088
+    second: thedarkdemonlaser_11
+  - first:
+      213: 4223010319910232257
+    second: thedarkdemonlaser_12
+  - first:
+      213: 1881271552780568932
+    second: thedarkdemonlaser_13
+  - first:
+      213: 438829947329992862
+    second: thedarkdemonlaser_14
+  - first:
+      213: -3892642766116320040
+    second: thedarkdemonlaser_15
+  - first:
+      213: 4162830618946670417
+    second: thedarkdemonlaser_16
+  - first:
+      213: -5180558201850560701
+    second: thedarkdemonlaser_17
+  - first:
+      213: 5975017321713725174
+    second: thedarkdemonlaser_18
+  - first:
+      213: 3204235624166368052
+    second: thedarkdemonlaser_19
+  - first:
+      213: 1639610990730105634
+    second: thedarkdemonlaser_20
+  - first:
+      213: 8806615044457332535
+    second: thedarkdemonlaser_21
+  - first:
+      213: -5881253728575523718
+    second: thedarkdemonlaser_22
+  - first:
+      213: -2199946805788330617
+    second: thedarkdemonlaser_23
+  - first:
+      213: 1058059656903904435
+    second: thedarkdemonlaser_24
+  - first:
+      213: -8884713623208332607
+    second: thedarkdemonlaser_25
+  - first:
+      213: 6087796573676083843
+    second: thedarkdemonlaser_26
+  - first:
+      213: 8134479061908137243
+    second: thedarkdemonlaser_27
+  - first:
+      213: 6034636658526883694
+    second: thedarkdemonlaser_28
+  - first:
+      213: -2656387495122922076
+    second: thedarkdemonlaser_29
+  - first:
+      213: -4102049111816532185
+    second: thedarkdemonlaser_30
+  - first:
+      213: 3139443280646267849
+    second: thedarkdemonlaser_31
+  - first:
+      213: -2364030935948189402
+    second: thedarkdemonlaser_32
+  - first:
+      213: -4368075271844257006
+    second: thedarkdemonlaser_33
+  - first:
+      213: -1356878289258883843
+    second: thedarkdemonlaser_34
+  - first:
+      213: -8967187329767732596
+    second: thedarkdemonlaser_35
+  - first:
+      213: -5890242396747031608
+    second: thedarkdemonlaser_36
+  - first:
+      213: -4343199836333714530
+    second: thedarkdemonlaser_37
+  - first:
+      213: 72788915359399221
+    second: thedarkdemonlaser_38
+  - first:
+      213: -6604668031505032270
+    second: thedarkdemonlaser_39
+  - first:
+      213: -5189212208124516884
+    second: thedarkdemonlaser_40
+  - first:
+      213: -8548008603657691361
+    second: thedarkdemonlaser_41
+  - first:
+      213: 1051864180513611252
+    second: thedarkdemonlaser_42
+  - first:
+      213: -4970533740274146463
+    second: thedarkdemonlaser_43
+  - first:
+      213: 6415275011840027138
+    second: thedarkdemonlaser_44
+  - first:
+      213: 1191808662676142547
+    second: thedarkdemonlaser_45
+  - first:
+      213: -3524950439887522349
+    second: thedarkdemonlaser_46
+  - first:
+      213: -4234297804477381124
+    second: thedarkdemonlaser_47
+  - first:
+      213: 2821597978455064894
+    second: thedarkdemonlaser_48
+  - first:
+      213: 820045718724279116
+    second: thedarkdemonlaser_49
+  - first:
+      213: -794417151535171919
+    second: thedarkdemonlaser_50
+  - first:
+      213: 7089077521083305899
+    second: thedarkdemonlaser_51
+  - first:
+      213: 4449952004145453657
+    second: thedarkdemonlaser_52
+  - first:
+      213: -2125968088832987091
+    second: thedarkdemonlaser_53
+  - first:
+      213: -4144815823761292063
+    second: thedarkdemonlaser_54
+  - first:
+      213: -1341596822624590473
+    second: thedarkdemonlaser_55
+  - first:
+      213: -731593609064971876
+    second: thedarkdemonlaser_56
+  - first:
+      213: 2957588940881931752
+    second: thedarkdemonlaser_57
+  - first:
+      213: 5353896925048623250
+    second: thedarkdemonlaser_58
+  - first:
+      213: 1049774913705361547
+    second: thedarkdemonlaser_59
+  - first:
+      213: 8060181823394524508
+    second: thedarkdemonlaser_60
+  - first:
+      213: -5652025118731125453
+    second: thedarkdemonlaser_61
+  - first:
+      213: 7941019265997370379
+    second: thedarkdemonlaser_62
+  - first:
+      213: 9198204202309546967
+    second: thedarkdemonlaser_63
+  - first:
+      213: 5211055082561839578
+    second: thedarkdemonlaser_64
+  - first:
+      213: 3990156438783179591
+    second: thedarkdemonlaser_65
+  - first:
+      213: 1932604052701974839
+    second: thedarkdemonlaser_66
+  - first:
+      213: -6455150114989894213
+    second: thedarkdemonlaser_67
+  - first:
+      213: 7771826577654326400
+    second: thedarkdemonlaser_68
+  - first:
+      213: -2206716810753149696
+    second: thedarkdemonlaser_69
+  - first:
+      213: 308237365573707926
+    second: thedarkdemonlaser_70
+  - first:
+      213: -5412194336191830620
+    second: thedarkdemonlaser_71
+  - first:
+      213: 4281394622192447998
+    second: thedarkdemonlaser_72
+  - first:
+      213: 3831166917738685521
+    second: thedarkdemonlaser_73
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: thedarkdemonlaser_0
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1541
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c79c76c5b7bfd0a10800000000000000
+      internalID: 1877433126933219708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_1
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1541
+        width: 86
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7742c8e48a55adf40800000000000000
+      internalID: 5754005655279903863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_2
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 1541
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1b47e3cf7f34df30800000000000000
+      internalID: 4599370937432230685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_3
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1541
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a59bfe127f76b1c50800000000000000
+      internalID: 6637012786984499546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_4
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1541
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19ce6fb2a4d051ee0800000000000000
+      internalID: -1291111105955435375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_5
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1325
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d8d045228659a790800000000000000
+      internalID: -7518382985947588395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_6
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1325
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e3122442200b6c0800000000000000
+      internalID: -4129798503547191685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_7
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 1325
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ce4475d9bd6fa90800000000000000
+      internalID: -7280390278777345000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_8
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 1491
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41dec07729fbe4a40800000000000000
+      internalID: 5354427642773564692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_9
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1325
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 150b16e16f5bbca80800000000000000
+      internalID: -8445456607526932399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_10
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1325
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0702261a0b25980800000000000000
+      internalID: -8551578535240634177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_11
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 1491
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82555c2eb5409d800800000000000000
+      internalID: 637545614942754088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_12
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1109
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0ee01f2852b9a30800000000000000
+      internalID: 4223010319910232257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_13
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1109
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4698885828e9b1a10800000000000000
+      internalID: 1881271552780568932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_14
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 1275
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9858671389071600800000000000000
+      internalID: 438829947329992862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_15
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 1109
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dc8420470e8af9c0800000000000000
+      internalID: -3892642766116320040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_16
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1109
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f8f6e646855c930800000000000000
+      internalID: 4162830618946670417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_17
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 1275
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ff57063c5fa18b0800000000000000
+      internalID: -5180558201850560701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_18
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1109
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe6d8bd8968be250800000000000000
+      internalID: 5975017321713725174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_19
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 1275
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433a61bc25bb77c20800000000000000
+      internalID: 3204235624166368052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_20
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 893
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2235b40528111c610800000000000000
+      internalID: 1639610990730105634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_21
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 1044
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f7d7639b1673a70800000000000000
+      internalID: 8806615044457332535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_22
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 893
+        width: 86
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a747052e4e6916ea0800000000000000
+      internalID: -5881253728575523718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_23
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 893
+        width: 86
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7853b3439083871e0800000000000000
+      internalID: -2199946805788330617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_24
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 893
+        width: 86
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bccde0f6abfeae00800000000000000
+      internalID: 1058059656903904435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_25
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 893
+        width: 86
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c2f79d680823b480800000000000000
+      internalID: -8884713623208332607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_26
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 677
+        width: 86
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38a9dceaab23c7450800000000000000
+      internalID: 6087796573676083843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_27
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 677
+        width: 86
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1523e5cb9973e070800000000000000
+      internalID: 8134479061908137243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_28
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 677
+        width: 154
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f8b0c61165fb350800000000000000
+      internalID: 6034636658526883694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_29
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 647
+        width: 235
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a59867b5ad922bd0800000000000000
+      internalID: -2656387495122922076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_30
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 647
+        width: 235
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f08fef0189217c0800000000000000
+      internalID: -4102049111816532185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_31
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 431
+        width: 235
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c3686fb70b819b20800000000000000
+      internalID: 3139443280646267849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_32
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 431
+        width: 235
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62126c09366413fd0800000000000000
+      internalID: -2364030935948189402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_33
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 431
+        width: 235
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2132e8deeaa7163c0800000000000000
+      internalID: -4368075271844257006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_34
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 431
+        width: 235
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df4d84d82666b2de0800000000000000
+      internalID: -1356878289258883843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_35
+      rect:
+        serializedVersion: 2
+        x: 1727
+        y: 542
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8a8fce32a62e8380800000000000000
+      internalID: -8967187329767732596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_36
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 563
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cb92fc7fb7a14ea0800000000000000
+      internalID: -5890242396747031608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_37
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 568
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e935bc692cad9b3c0800000000000000
+      internalID: -4343199836333714530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_38
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 558
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53d35930229920100800000000000000
+      internalID: 72788915359399221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_39
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 569
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb93ca1b618754a0800000000000000
+      internalID: -6604668031505032270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_40
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 461
+        width: 88
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce52e968df63cf7b0800000000000000
+      internalID: -5189212208124516884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_41
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 493
+        width: 25
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f100ad67f5f5980800000000000000
+      internalID: -8548008603657691361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_42
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 539
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd987f26e8f89e00800000000000000
+      internalID: 1051864180513611252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_43
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 546
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 163add2f5ed150bb0800000000000000
+      internalID: -4970533740274146463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_44
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 548
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20a2a2932a2a70950800000000000000
+      internalID: 6415275011840027138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_45
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 539
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d97b0b0aa72a8010800000000000000
+      internalID: 1191808662676142547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_46
+      rect:
+        serializedVersion: 2
+        x: 1717
+        y: 527
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d5b5ab304cd41fc0800000000000000
+      internalID: -3524950439887522349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_47
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 489
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf5c8e2c490cc35c0800000000000000
+      internalID: -4234297804477381124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_48
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 485
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3146c47964582720800000000000000
+      internalID: 2821597978455064894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_49
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 475
+        width: 14
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4bf3248c33616b00800000000000000
+      internalID: 820045718724279116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_50
+      rect:
+        serializedVersion: 2
+        x: 1678
+        y: 491
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b6b4474fc9a9f4f0800000000000000
+      internalID: -794417151535171919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_51
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 472
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baf80652276716260800000000000000
+      internalID: 7089077521083305899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_52
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 484
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a90aa55c761cd30800000000000000
+      internalID: 4449952004145453657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_53
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 507
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d203b4d794b0f72e0800000000000000
+      internalID: -2125968088832987091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_54
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 441
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e44a4de7f7aa76c0800000000000000
+      internalID: -4144815823761292063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_55
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 448
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7752ba34cc0b16de0800000000000000
+      internalID: -1341596822624590473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_56
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 465
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c918cbb1d7bd8d5f0800000000000000
+      internalID: -731593609064971876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_57
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 454
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed24e4c8777b0920800000000000000
+      internalID: 2957588940881931752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_58
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 444
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290549d13ecdc4a40800000000000000
+      internalID: 5353896925048623250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_59
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 465
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b804689d8bc819e00800000000000000
+      internalID: 1049774913705361547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_60
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 457
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5dad78e9a48bdf60800000000000000
+      internalID: 8060181823394524508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_61
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 450
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d3278a919ff81b0800000000000000
+      internalID: -5652025118731125453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_62
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 434
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b047e48f2fa243e60800000000000000
+      internalID: 7941019265997370379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_63
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 431
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d37a22ecf596af70800000000000000
+      internalID: 9198204202309546967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_64
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 443
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad1a71dfcf2615840800000000000000
+      internalID: 5211055082561839578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_65
+      rect:
+        serializedVersion: 2
+        x: 1634
+        y: 431
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74bb8ebe322ef5730800000000000000
+      internalID: 3990156438783179591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_66
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 439
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73118c4852df1da10800000000000000
+      internalID: 1932604052701974839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_67
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 215
+        width: 235
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb59438db23ba66a0800000000000000
+      internalID: -6455150114989894213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_68
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 409
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084a60178131bdb60800000000000000
+      internalID: 7771826577654326400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_69
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 245
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 005fc2790ca2061e0800000000000000
+      internalID: -2206716810753149696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_70
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 245
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 698e5893044174400800000000000000
+      internalID: 308237365573707926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_71
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 245
+        width: 86
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a5a7ef1de504e4b0800000000000000
+      internalID: -5412194336191830620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_72
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 245
+        width: 86
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef17c0f99b19a6b30800000000000000
+      internalID: 4281394622192447998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemonlaser_73
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 29
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 154ea07630a0b2530800000000000000
+      internalID: 3831166917738685521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      thedarkdemonlaser_0: 1877433126933219708
+      thedarkdemonlaser_1: 5754005655279903863
+      thedarkdemonlaser_10: -8551578535240634177
+      thedarkdemonlaser_11: 637545614942754088
+      thedarkdemonlaser_12: 4223010319910232257
+      thedarkdemonlaser_13: 1881271552780568932
+      thedarkdemonlaser_14: 438829947329992862
+      thedarkdemonlaser_15: -3892642766116320040
+      thedarkdemonlaser_16: 4162830618946670417
+      thedarkdemonlaser_17: -5180558201850560701
+      thedarkdemonlaser_18: 5975017321713725174
+      thedarkdemonlaser_19: 3204235624166368052
+      thedarkdemonlaser_2: 4599370937432230685
+      thedarkdemonlaser_20: 1639610990730105634
+      thedarkdemonlaser_21: 8806615044457332535
+      thedarkdemonlaser_22: -5881253728575523718
+      thedarkdemonlaser_23: -2199946805788330617
+      thedarkdemonlaser_24: 1058059656903904435
+      thedarkdemonlaser_25: -8884713623208332607
+      thedarkdemonlaser_26: 6087796573676083843
+      thedarkdemonlaser_27: 8134479061908137243
+      thedarkdemonlaser_28: 6034636658526883694
+      thedarkdemonlaser_29: -2656387495122922076
+      thedarkdemonlaser_3: 6637012786984499546
+      thedarkdemonlaser_30: -4102049111816532185
+      thedarkdemonlaser_31: 3139443280646267849
+      thedarkdemonlaser_32: -2364030935948189402
+      thedarkdemonlaser_33: -4368075271844257006
+      thedarkdemonlaser_34: -1356878289258883843
+      thedarkdemonlaser_35: -8967187329767732596
+      thedarkdemonlaser_36: -5890242396747031608
+      thedarkdemonlaser_37: -4343199836333714530
+      thedarkdemonlaser_38: 72788915359399221
+      thedarkdemonlaser_39: -6604668031505032270
+      thedarkdemonlaser_4: -1291111105955435375
+      thedarkdemonlaser_40: -5189212208124516884
+      thedarkdemonlaser_41: -8548008603657691361
+      thedarkdemonlaser_42: 1051864180513611252
+      thedarkdemonlaser_43: -4970533740274146463
+      thedarkdemonlaser_44: 6415275011840027138
+      thedarkdemonlaser_45: 1191808662676142547
+      thedarkdemonlaser_46: -3524950439887522349
+      thedarkdemonlaser_47: -4234297804477381124
+      thedarkdemonlaser_48: 2821597978455064894
+      thedarkdemonlaser_49: 820045718724279116
+      thedarkdemonlaser_5: -7518382985947588395
+      thedarkdemonlaser_50: -794417151535171919
+      thedarkdemonlaser_51: 7089077521083305899
+      thedarkdemonlaser_52: 4449952004145453657
+      thedarkdemonlaser_53: -2125968088832987091
+      thedarkdemonlaser_54: -4144815823761292063
+      thedarkdemonlaser_55: -1341596822624590473
+      thedarkdemonlaser_56: -731593609064971876
+      thedarkdemonlaser_57: 2957588940881931752
+      thedarkdemonlaser_58: 5353896925048623250
+      thedarkdemonlaser_59: 1049774913705361547
+      thedarkdemonlaser_6: -4129798503547191685
+      thedarkdemonlaser_60: 8060181823394524508
+      thedarkdemonlaser_61: -5652025118731125453
+      thedarkdemonlaser_62: 7941019265997370379
+      thedarkdemonlaser_63: 9198204202309546967
+      thedarkdemonlaser_64: 5211055082561839578
+      thedarkdemonlaser_65: 3990156438783179591
+      thedarkdemonlaser_66: 1932604052701974839
+      thedarkdemonlaser_67: -6455150114989894213
+      thedarkdemonlaser_68: 7771826577654326400
+      thedarkdemonlaser_69: -2206716810753149696
+      thedarkdemonlaser_7: -7280390278777345000
+      thedarkdemonlaser_70: 308237365573707926
+      thedarkdemonlaser_71: -5412194336191830620
+      thedarkdemonlaser_72: 4281394622192447998
+      thedarkdemonlaser_73: 3831166917738685521
+      thedarkdemonlaser_8: 5354427642773564692
+      thedarkdemonlaser_9: -8445456607526932399
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

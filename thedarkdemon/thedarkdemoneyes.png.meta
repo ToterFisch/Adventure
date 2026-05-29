@@ -1,0 +1,676 @@
+fileFormatVersion: 2
+guid: e341f467e0e622aa3a04dae8ea1c1d26
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3064120964772997272
+    second: thedarkdemoneyes_0
+  - first:
+      213: -2945294256812964074
+    second: thedarkdemoneyes_1
+  - first:
+      213: -7431520086932387600
+    second: thedarkdemoneyes_2
+  - first:
+      213: 586905716875990855
+    second: thedarkdemoneyes_3
+  - first:
+      213: 322966171815046077
+    second: thedarkdemoneyes_4
+  - first:
+      213: -7747082590954870979
+    second: thedarkdemoneyes_5
+  - first:
+      213: 7454968733091484531
+    second: thedarkdemoneyes_6
+  - first:
+      213: 1474128142532406852
+    second: thedarkdemoneyes_7
+  - first:
+      213: -2421896214543046014
+    second: thedarkdemoneyes_8
+  - first:
+      213: 6682105430784728817
+    second: thedarkdemoneyes_9
+  - first:
+      213: 2768246016580017509
+    second: thedarkdemoneyes_10
+  - first:
+      213: -8060308554946493056
+    second: thedarkdemoneyes_11
+  - first:
+      213: 3452612749680353008
+    second: thedarkdemoneyes_12
+  - first:
+      213: -7171038194265618068
+    second: thedarkdemoneyes_13
+  - first:
+      213: 410565808779054454
+    second: thedarkdemoneyes_14
+  - first:
+      213: -1499644655550469290
+    second: thedarkdemoneyes_15
+  - first:
+      213: -9199773962886435789
+    second: thedarkdemoneyes_16
+  - first:
+      213: 3141265491029248798
+    second: thedarkdemoneyes_17
+  - first:
+      213: 3353030048533181078
+    second: thedarkdemoneyes_18
+  - first:
+      213: -7917577066922381717
+    second: thedarkdemoneyes_19
+  - first:
+      213: -4143869036228379081
+    second: thedarkdemoneyes_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: thedarkdemoneyes_0
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1325
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867d0e9873e0a75d0800000000000000
+      internalID: -3064120964772997272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_1
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 1325
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6174aaf6a763027d0800000000000000
+      internalID: -2945294256812964074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_2
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 1325
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f80735dadfedd890800000000000000
+      internalID: -7431520086932387600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_3
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 1109
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7471a03d3ab152800800000000000000
+      internalID: 586905716875990855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_4
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 1109
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbbe089a5086b7400800000000000000
+      internalID: 322966171815046077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_5
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 1109
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d37a588ed65dc7490800000000000000
+      internalID: -7747082590954870979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_6
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 893
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 373df8b809e557760800000000000000
+      internalID: 7454968733091484531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_7
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 893
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44eec014cb7257410800000000000000
+      internalID: 1474128142532406852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_8
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 893
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a6c418932b36ed0800000000000000
+      internalID: -2421896214543046014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_9
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 677
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fed1a96c7b9bbc50800000000000000
+      internalID: 6682105430784728817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_10
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 677
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56d5425d519ca6620800000000000000
+      internalID: 2768246016580017509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_11
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 677
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0854f5a1318042090800000000000000
+      internalID: -8060308554946493056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_12
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 461
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fe9eabc0052aef20800000000000000
+      internalID: 3452612749680353008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_13
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 461
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c690a0091ca5b7c90800000000000000
+      internalID: -7171038194265618068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_14
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 461
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d42358d6f92b500800000000000000
+      internalID: 410565808779054454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_15
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 245
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65be9989121303be0800000000000000
+      internalID: -1499644655550469290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_16
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 245
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c2440c256d35080800000000000000
+      internalID: -9199773962886435789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_17
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 245
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1bcdf92254089b20800000000000000
+      internalID: 3141265491029248798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_18
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 29
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 692f704601b588e20800000000000000
+      internalID: 3353030048533181078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_19
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 29
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6eef445b9d1f1290800000000000000
+      internalID: -7917577066922381717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thedarkdemoneyes_20
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 29
+        width: 98
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73efdd311150e76c0800000000000000
+      internalID: -4143869036228379081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      thedarkdemoneyes_0: -3064120964772997272
+      thedarkdemoneyes_1: -2945294256812964074
+      thedarkdemoneyes_10: 2768246016580017509
+      thedarkdemoneyes_11: -8060308554946493056
+      thedarkdemoneyes_12: 3452612749680353008
+      thedarkdemoneyes_13: -7171038194265618068
+      thedarkdemoneyes_14: 410565808779054454
+      thedarkdemoneyes_15: -1499644655550469290
+      thedarkdemoneyes_16: -9199773962886435789
+      thedarkdemoneyes_17: 3141265491029248798
+      thedarkdemoneyes_18: 3353030048533181078
+      thedarkdemoneyes_19: -7917577066922381717
+      thedarkdemoneyes_2: -7431520086932387600
+      thedarkdemoneyes_20: -4143869036228379081
+      thedarkdemoneyes_3: 586905716875990855
+      thedarkdemoneyes_4: 322966171815046077
+      thedarkdemoneyes_5: -7747082590954870979
+      thedarkdemoneyes_6: 7454968733091484531
+      thedarkdemoneyes_7: 1474128142532406852
+      thedarkdemoneyes_8: -2421896214543046014
+      thedarkdemoneyes_9: 6682105430784728817
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

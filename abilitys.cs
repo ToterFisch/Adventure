@@ -6,7 +6,8 @@ public class abilitys : MonoBehaviour
     public GameObject spellinv;
     public GameObject spellui;
     public GameObject content;
-    
+    public GameObject selectedspell;
+    public GameObject spellpos;
     
     public class spell
     {
@@ -18,9 +19,13 @@ public class abilitys : MonoBehaviour
             this.explanation = explanation;
         }
     }
-    public Dictionary< string, spell> playerspells = new Dictionary< string, spell>()
+    public Dictionary< string, spell> playerspells = new Dictionary < string, spell>(){
+        {"Eisstachel", new spell(1,"Applyes 3 Frost to enemy")},
+        {"Feuerball", new spell(1,"Applyes 3 Fire to enemy")}
+    };
+    public Dictionary< string, spell> playerspellsdonned = new Dictionary < string, spell>()
     {
-        {"Eisstachel", new spell(1,"Applyes 3 Frost to enemy")}
+
     };
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
