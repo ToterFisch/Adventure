@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 853980933611123547}
   - component: {fileID: 6025313457920615587}
   - component: {fileID: 6573448502767842946}
-  - component: {fileID: 5640097551650327424}
+  - component: {fileID: 8717512135219598965}
   m_Layer: 5
   m_Name: spell
   m_TagString: Untagged
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5640097551650327424
+--- !u!114 &8717512135219598965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -366,14 +366,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72fd8e231a6bf3648ab800104b15ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 2
-  name: deine Mudda
-  description: nice argument but your mother
-  pic: {fileID: -1407426088828243128, guid: 5f757ef221488dc8aaedc19479b68b3d, type: 3}
+  cost: 0
+  name: 
+  description: 
+  pic: {fileID: 0}
   picpic: {fileID: 1817885379901233941}
   costtext: {fileID: 6561713364656186074}
   descrtext: {fileID: 7279232687494584696}
   nametext: {fileID: 1052421112479080123}
+  mouseon: 0
+  manager: {fileID: 0}
 --- !u!1 &3432214864852035244
 GameObject:
   m_ObjectHideFlags: 0

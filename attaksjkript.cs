@@ -1,0 +1,43 @@
+using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour
+{
+    //this skript was written by ai because i didnt want to do it, i will update it with my own version at some point i hope
+    //just hate this math stuff
+    public Transform player;
+    public float distanceFromPlayer;
+
+    public void Start(){
+
+    }
+    public void Update()
+    {
+        Vector3 mousePosition =
+            Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        mousePosition.z = player.position.z;
+
+        Vector3 direction =
+            mousePosition - player.position;
+
+        direction.z = 0f;
+
+        if (direction.sqrMagnitude < 0.001f)
+            return;
+
+        direction.Normalize();
+
+        // Objekt mit Abstand zum Spieler platzieren
+        transform.position =
+            player.position + direction * distanceFromPlayer;
+
+        // Objekt selbst zur Maus ausrichten
+        float angle =
+            Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        transform.rotation =
+            Quaternion.Euler(0f, 0f, angle);
+        //this part is written by me again
+        
+    }
+}
