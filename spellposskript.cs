@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Collections;
 public class spellposskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public string lastone;

@@ -1,0 +1,63 @@
+using UnityEngine;
+using System.Collections.Generic;
+public class inventory : MonoBehaviour
+{
+    public bool invan;
+    public GameObject spellinv;
+    public GameObject spellui;
+    public GameObject content;
+    public GameObject selectedspell;
+    public GameObject spellpos;
+    
+    public class spell
+    {
+        public int costs;
+        public string explanation;
+        public spell(int costs, string explanation)
+        {
+            this.costs = costs;
+            this.explanation = explanation;
+        }
+    }
+    public Dictionary< string, spell> playerspells = new Dictionary < string, spell>(){
+        {"Schuhe", new spell(1,"Applyes 3 Frost to enemy")},
+        {"Schwert", new spell(1,"Applyes 3 Fire to enemy")}
+    };
+    public Dictionary< string, spell> playerspellsdonned = new Dictionary < string, spell>()
+    {
+
+    };
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        invan = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R)){
+            if (invan == false){
+                spellinv.SetActive(true);
+                foreach (KeyValuePair<string, spell> spello in playerspells)
+                {
+                    GameObject obj = Instantiate(spellui, Vector3.zero, Quaternion.identity);
+                    obj.transform.SetParent(content.transform);
+                    spellinvspellskript script = obj.GetComponent<spellinvspellskript>();
+                    script.name = spello.Key;
+                    script.cost = spello.Value.costs;
+                    script.description = spello.Value.explanation;
+                }
+                invan = true;
+            }
+            else if (invan == true){
+                spellinv.SetActive(false);
+                for (int i = 0; i < content.transform.childCount; i=i+1)
+                {
+                    Destroy(content.transform.GetChild(i).gameObject);
+                }       
+                invan = false;
+            }
+        }
+    }
+}

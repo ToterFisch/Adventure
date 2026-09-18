@@ -1,17 +1,25 @@
 using UnityEngine;
-
+using TMPro;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System.Collections;
+using System.Collections.Generic;
 public class NewBehaviourScript : MonoBehaviour
 {
-    //this skript was written by ai because i didnt want to do it, i will update it with my own version at some point i hope
-    //just hate this math stuff
+    public GameObject swordattack;
     public Transform player;
     public float distanceFromPlayer;
-
-    public void Start(){
-
+    public float speed;
+    public bool cando;
+    public string todo;
+    public void Start()
+    {
+        cando=true;
     }
     public void Update()
     {
+        //this skript was written by ai because i didnt want to do it, i will update it with my own version at some point i hope
+        //just hate this math stuff
         Vector3 mousePosition =
             Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -38,6 +46,20 @@ public class NewBehaviourScript : MonoBehaviour
         transform.rotation =
             Quaternion.Euler(0f, 0f, angle);
         //this part is written by me again
+        if (Input.GetMouseButton(0)&& cando==true){
+            this.gameObject.SendMessage(todo);
+            cando = false;
+            StartCoroutine(makeready());
+        }
+    }
+    public void sword(){
+        GameObject swordle = Instantiate(swordattack,transform.position,transform.rotation);
         
+        swordle.transform.Rotate(new Vector3(0,0,-90));
+    }
+    public IEnumerator makeready()
+    {
+        yield return new WaitForSeconds(1);
+        cando=true;
     }
 }
