@@ -369,7 +369,7 @@ MonoBehaviour:
   cost: 0
   name: 
   description: 
-  pic: {fileID: 0}
+  pic: {fileID: -7547486848080256417, guid: 4f2c5bed876b2b3429fffd7b61c967d1, type: 3}
   picpic: {fileID: 1817885379901233941}
   costtext: {fileID: 6561713364656186074}
   descrtext: {fileID: 7279232687494584696}

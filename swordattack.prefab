@@ -161,4 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf479d7397f19e6f2b15f0d8333b821f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0.2
+  player: {fileID: 0}
+  distanceFromPlayer: 1
+  time: 0.4

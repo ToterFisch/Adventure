@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "New Actions",
+    "maps": [
+        {
+            "name": "controller",
+            "id": "40b1199d-c5fa-4fa0-95df-a83bf7ac10a7",
+            "actions": [
+                {
+                    "name": "laufen",
+                    "type": "Value",
+                    "id": "2f3b2dcb-5fa9-47ea-9e32-a2c1f601d96a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6c3a213b-c1ca-4ceb-9971-77280491522d",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "laufen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

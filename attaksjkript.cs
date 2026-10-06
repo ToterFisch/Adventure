@@ -40,16 +40,28 @@ public class NewBehaviourScript : MonoBehaviour
             player.position + direction * distanceFromPlayer;
 
         // Objekt selbst zur Maus ausrichten
-        float angle =
-            Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         transform.rotation =
             Quaternion.Euler(0f, 0f, angle);
         //this part is written by me again
-        if (Input.GetMouseButton(0)&& cando==true){
-            this.gameObject.SendMessage(todo);
+        if(Input.GetMouseButton(0)){
+            int layerMask = LayerMask.GetMask("truhe","npc","Default");
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, Mathf.Infinity, layerMask);
+            if(hit.collider != null){
+                if (hit.collider.gameObject.transform.CompareTag("truhe")){
+                    hit.collider.gameObject.SendMessage("offnen");
+                }
+                else if(hit.collider.gameObject.transform.CompareTag("drop")){
+                    hit.collider.gameObject.SendMessage("aufheben");
+                }
+            }
+            else if (cando==true){
+                this.gameObject.SendMessage(todo);
             cando = false;
             StartCoroutine(makeready());
+            }
         }
     }
     public void sword(){
@@ -62,4 +74,5 @@ public class NewBehaviourScript : MonoBehaviour
         yield return new WaitForSeconds(1);
         cando=true;
     }
+    
 }
