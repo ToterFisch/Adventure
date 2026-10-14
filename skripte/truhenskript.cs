@@ -19,7 +19,7 @@ public class truhenskript : MonoBehaviour
         offen=false;
         kistenbild = this.gameObject.GetComponent<SpriteRenderer>();
         inv  = GameObject.Find("Manger").GetComponent<inventory>();
-        Contains.Add(new inventory.item("penis",1,1,1,1,"penis","einfach Penis", closed));
+        Contains.Add(new inventory.item("penis",1,1,"idiotie",1,1,"penis","einfach Penis",1,1,1,1,1,"ponis","panis", closed));
     }
 
     // Update is called once per frame
@@ -35,13 +35,22 @@ public class truhenskript : MonoBehaviour
                     
                     dropskript script = obj.GetComponent<dropskript>();
                     Debug.Log(ito.name+"huhu");
+                    this.name = name;
                     script.name = ito.name;
                     script.schaden = ito.schaden;
                     script.angriffsart = ito.angriffsart;
+                    script.schadensart = ito.schadensart;
                     script.schadensreduktion = ito.schadensreduktion;
                     script.verteidigung = ito.verteidigung;
+                    script.resistenz = ito.resistenz;
+                    script.effekt = ito.effekt;
+                    script.effektstaerke = ito.effektstaerke;
+                    script.geschw = ito.geschw;
+                    script.speed = ito.speed;
+                    script.wert = ito.wert;
+                    script.gewicht = ito.gewicht;
                     script.art = ito.art;
-                    script.description = ito.explanation;
+                    script.explanation = ito.explanation;
                     script.pic = ito.pic;
                     
                     Debug.Log("penis");

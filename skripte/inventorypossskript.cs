@@ -2,35 +2,32 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Collections;
 using System.Collections.Generic;
-public class iteminvskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+
+public class inventorypossskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public string name;
-    public int schaden;
-    public int angriffsart;
-    public int schadensreduktion;
-    public int verteidigung;
-    public string art;
-    public string description;
-    public Sprite pic;
-    public Image picpic;
-    
+    public int art;
+    public string was;
+    public inventory.item lastone;
     public bool mouseon;
     public inventory manager;
+    public Image im;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         manager = GameObject.Find("Manger").GetComponent<inventory>();
+        im = GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        picpic.sprite = pic;
         if (mouseon == true){
-            if (Input.GetMouseButtonDown(0)){
-                manager.selecteditem = this.gameObject;
+            if (Input.GetMouseButtonDown(0))
+            {
+                mouseon = false;
+                manager.invon(manager.shoes,manager.content,manager.iteminv,was,art);
             }
         }
     }
