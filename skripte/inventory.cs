@@ -4,8 +4,13 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
+
 public class inventory : MonoBehaviour
 {
+    public GameObject anzeigendingens;
+    public TMP_Text[] anzeigen = new TMP_Text[15];
+    public TMP_Text[] waffenanzeigen = new TMP_Text[15];
+    public Image anzeigenbild;
     public bool invan;
     public GameObject iteminv;
     public GameObject invents;
@@ -17,11 +22,10 @@ public class inventory : MonoBehaviour
     public GameObject spellpos;
     public Sprite feuerball;
     
-    public List<item> shoes;
-    public item[] donned = new item[5];
-    public Image[] pospic = new Image[5];
-    //0:head; 1:breast; 2:shoes; 3:left; 4:right
+    
+
     public int lastone;
+    [System.Serializable]
     public class item
     {
         public string name;
@@ -70,7 +74,10 @@ public class inventory : MonoBehaviour
             this.pic = pic;
         }
     }
-    
+    //0:head; 1:breast; 2:shoes; 3:left; 4:right
+    public List<item> shoes;
+    public item[] donned = new item[5];
+    public Image[] pospic = new Image[5];
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -85,7 +92,17 @@ public class inventory : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R)){
-            invents.SetActive(true);
+            if(invan == false && iteminv.activeInHierarchy != true){
+                invents.SetActive(true);
+                anzeigendingens.SetActive(true);
+                invan = true;
+            }
+            else if(iteminv.activeInHierarchy != true)
+            {
+                invents.SetActive(false);
+                anzeigendingens.SetActive(false);
+                invan = false;
+            }
         }
         for (int i = 0; i < 5; i++)
         {
@@ -95,15 +112,17 @@ public class inventory : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            selecteditem = null;
-            foreach(Transform child in content.transform)
-            {
-                Debug.Log(child.name);
-                Destroy(child.gameObject);
+            if(invan == true){
+                selecteditem = null;
+                foreach(Transform child in content.transform)
+                {
+                    Debug.Log(child.name);
+                    Destroy(child.gameObject);
+                }
+                Debug.Log("were in");
+                invents.SetActive(true);
+                iteminv.SetActive(false);
             }
-            Debug.Log("were in");
-            invents.SetActive(true);
-            iteminv.SetActive(false);
         }
     }
     public void invon(List<item> das,GameObject cont,GameObject itin, string was, int waswas){

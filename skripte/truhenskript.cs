@@ -19,7 +19,7 @@ public class truhenskript : MonoBehaviour
         offen=false;
         kistenbild = this.gameObject.GetComponent<SpriteRenderer>();
         inv  = GameObject.Find("Manger").GetComponent<inventory>();
-        Contains.Add(new inventory.item("penis",1,1,"idiotie",1,1,"penis","einfach Penis",1,1,1,1,1,"ponis","panis", closed));
+        Contains.Add(new inventory.item("Schuhe",1,1,"",1,1,"Dornen","einfach Penis",1,1,1,1,1,"shoes","panis", closed));
     }
 
     // Update is called once per frame

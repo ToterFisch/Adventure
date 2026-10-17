@@ -45,7 +45,7 @@ public class NewBehaviourScript : MonoBehaviour
         transform.rotation =
             Quaternion.Euler(0f, 0f, angle);
         //this part is written by me again
-        if(Input.GetMouseButton(0)){
+        if(Input.GetMouseButtonDown(0)){
             int layerMask = LayerMask.GetMask("truhe","npc","Default");
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, Mathf.Infinity, layerMask);
