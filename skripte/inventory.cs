@@ -83,7 +83,7 @@ public class inventory : MonoBehaviour
     void Start()
     {
         invan = false;
-        shoes = new List<item>(){new item("penis",1,1,"idiotie",1,1,"penis","einfach Penis",1,1,1,1,1,"shoes","panis", feuerball)};
+        shoes = new List<item>(){};
         
         
     }

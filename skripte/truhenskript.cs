@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class truhenskript : MonoBehaviour
 {
-    
+    public Sprite[] info = new Sprite[5];
     public bool offen;
     public Sprite closed;
     public SpriteRenderer kistenbild;
@@ -19,7 +19,7 @@ public class truhenskript : MonoBehaviour
         offen=false;
         kistenbild = this.gameObject.GetComponent<SpriteRenderer>();
         inv  = GameObject.Find("Manger").GetComponent<inventory>();
-        Contains.Add(new inventory.item("Schuhe",1,1,"",1,1,"Dornen","einfach Penis",1,1,1,1,1,"shoes","panis", closed));
+        Contains.Add(new inventory.item("Iron Boots",1,1,"",1,1,"Thorns","idk",1,1,1,1,1,"shoes","A simple pair of iron boots", info[0]));
     }
 
     // Update is called once per frame

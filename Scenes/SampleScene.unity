@@ -2736,7 +2736,7 @@ Transform:
   m_GameObject: {fileID: 601991693}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -70.066, y: 48.138, z: 0.28614447}
+  m_LocalPosition: {x: -30.16, y: 32.8, z: 0.28614447}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7556,6 +7556,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c6f8942c8722c02a5bf00c2e85814f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  info:
+  - {fileID: 3311556390555826406, guid: bd36b6fdeca61dbeead94305aa26ca54, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   offen: 0
   closed: {fileID: -4616452705918104813, guid: 4f2c5bed876b2b3429fffd7b61c967d1, type: 3}
   kistenbild: {fileID: 0}
