@@ -7,31 +7,7 @@ using System.Collections.Generic;
 
 public class iteminvskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public string name;
-     
-    //fuer waffen
-    public int schaden;
-    public int angriffsart;
-    public string schadensart;
-        
-    //fuer ruestung
-    public int schadensreduktion;
-    public int verteidigung;
-    public string resistenz;
-
-    //fuer ausrustung
-    public string effekt;
-    public int effektstaerke;
-    public int geschw;
-    public int speed;
-
-        
-    //fuer alles
-    public int wert;
-    public int gewicht;
-    public string art;
-    public string explanation;
-    public Sprite pic;
+    public inventory.item das;
     public Image picpic;
     public int fickdeinemutter;
     public bool mouseon;
@@ -41,33 +17,30 @@ public class iteminvskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     void Start()
     {
         manager = GameObject.Find("Manger").GetComponent<inventory>();
-        if(art == "head")
+        if(das.art == "head")
         {
             was = 0;
         }
-        else if(art == "breast")
+        else if(das.art == "breast")
         {
             was = 1;
         }
-        else if(art == "shoes")
+        else if(das.art == "shoes")
         {
             was = 2;
         }
-        else if(art == "right")
+        else if(das.art == "weapon")
         {
             was = 3;
         }
-        else if(art == "left")
-        {
-            was = 4;
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        picpic.sprite = pic;
+        picpic.sprite = das.pic;
         if (mouseon == true){
             if (Input.GetMouseButtonDown(0))
             {
@@ -81,28 +54,30 @@ public class iteminvskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             if(was > 2)
             {
                 if(manager.donned[was] != null){
-                    manager.anzeigen[0].text = name;
-                    manager.anzeigen[1].text = schaden.ToString();
-                    manager.anzeigen[2].text = angriffsart.ToString();
-                    manager.anzeigen[3].text = schadensart.ToString();
+                    manager.waffenanzeigen[0].text = das.name;
+                    manager.waffenanzeigen[1].text = das.schaden.ToString();
+                    manager.waffenanzeigen[2].text = das.angriffsart.ToString();
+                    manager.waffenanzeigen[3].text = das.schadensart.ToString();
                     
-                    manager.anzeigen[10].text = speed.ToString();
-                    manager.anzeigen[11].text = wert.ToString();
-                    manager.anzeigen[12].text = gewicht.ToString();
-                    manager.anzeigen[14].text = explanation;
+                    manager.waffenanzeigen[10].text = das.speed.ToString();
+                    manager.waffenanzeigen[11].text = das.wert.ToString();
+                    manager.waffenanzeigen[12].text = das.gewicht.ToString();
+                    manager.waffenanzeigen[14].text = das.explanation;
+                    manager.waffenanzeigenbild.sprite = das.pic;
                 }
             }
             else if(was < 3)
             {
                 if(manager.donned[was] != null){
-                    manager.anzeigen[0].text = name;
-                    manager.anzeigen[4].text = schadensreduktion.ToString();
-                    manager.anzeigen[5].text = verteidigung.ToString();
-                    manager.anzeigen[6].text = resistenz.ToString();
-                    manager.anzeigen[10].text = speed.ToString();
-                    manager.anzeigen[11].text = wert.ToString();
-                    manager.anzeigen[12].text = gewicht.ToString();
-                    manager.anzeigen[14].text = explanation;
+                    manager.anzeigen[0].text = das.name;
+                    manager.anzeigen[4].text = das.schadensreduktion.ToString();
+                    manager.anzeigen[5].text = das.verteidigung.ToString();
+                    manager.anzeigen[6].text = das.resistenz.ToString();
+                    manager.anzeigen[10].text = das.speed.ToString();
+                    manager.anzeigen[11].text = das.wert.ToString();
+                    manager.anzeigen[12].text = das.gewicht.ToString();
+                    manager.anzeigen[14].text = das.explanation;
+                    manager.anzeigenbild.sprite = das.pic;
                 }
             
         }
@@ -111,8 +86,8 @@ public class iteminvskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     }
     public void equip()
     {
-        if (manager.donned[manager.lastone] != new inventory.item (name,schaden,angriffsart,schadensart,schadensreduktion,verteidigung,resistenz,effekt,effektstaerke,geschw,speed,wert,gewicht,art,explanation,pic)){
-            manager.donned[manager.lastone] = new inventory.item (name,schaden,angriffsart,schadensart,schadensreduktion,verteidigung,resistenz,effekt,effektstaerke,geschw,speed,wert,gewicht,art,explanation,pic);
+        if (manager.donned[manager.lastone] != das){
+            manager.donned[manager.lastone] = das;
             manager.selecteditem = null;
             foreach(Transform child in manager.content.transform)
             {

@@ -5,12 +5,17 @@ using UnityEngine.EventSystems;
 using System.Collections.Generic;
 
 
+
+
+
 public class inventory : MonoBehaviour
 {
     public GameObject anzeigendingens;
     public TMP_Text[] anzeigen = new TMP_Text[15];
+    
     public TMP_Text[] waffenanzeigen = new TMP_Text[15];
     public Image anzeigenbild;
+    public Image waffenanzeigenbild;
     public bool invan;
     public GameObject iteminv;
     public GameObject invents;
@@ -21,7 +26,7 @@ public class inventory : MonoBehaviour
     public GameObject selecteditem;
     public GameObject spellpos;
     public Sprite feuerball;
-    
+    public uimanagerskript uman;
     
 
     public int lastone;
@@ -29,10 +34,10 @@ public class inventory : MonoBehaviour
     public class item
     {
         public string name;
-
+        
         //fuer waffen
         public int schaden;
-        public int angriffsart;
+        public string angriffsart;
         public string schadensart;
         
         //fuer ruestung
@@ -54,7 +59,7 @@ public class inventory : MonoBehaviour
         public string explanation;
         public Sprite pic;
 
-        public item(string name,int schaden,int angriffsart, string schadensart,int schadensreduktion,int verteidigung,string resistenz, string effekt, int effektstaerke, int geschw, int speed, int wert, int gewicht, string art, string explanation, Sprite pic)
+        public item(string name,int schaden,string angriffsart, string schadensart,int schadensreduktion,int verteidigung,string resistenz, string effekt, int effektstaerke, int geschw, int speed, int wert, int gewicht, string art, string explanation, Sprite pic)
         {
             this.name = name;
             this.schaden = schaden;
@@ -85,7 +90,7 @@ public class inventory : MonoBehaviour
         invan = false;
         shoes = new List<item>(){};
         
-        
+        uman = this.gameObject.GetComponent<uimanagerskript>();
     }
 
     // Update is called once per frame
@@ -112,7 +117,8 @@ public class inventory : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(invan == true){
+            Debug.Log(invents.activeInHierarchy);
+            if(invan == true && iteminv.activeInHierarchy == true){
                 selecteditem = null;
                 foreach(Transform child in content.transform)
                 {
@@ -122,6 +128,14 @@ public class inventory : MonoBehaviour
                 Debug.Log("were in");
                 invents.SetActive(true);
                 iteminv.SetActive(false);
+            }
+            
+            else if(invents.activeInHierarchy == true)
+            {
+                Debug.Log("definitly here");
+                invents.SetActive(false);
+                anzeigendingens.SetActive(false);
+                invan = false;
             }
         }
     }
@@ -139,23 +153,7 @@ public class inventory : MonoBehaviour
                         GameObject obj = Instantiate(itemui, Vector3.zero, Quaternion.identity);
                         obj.transform.SetParent(cont.transform);
                         iteminvskript script = obj.GetComponent<iteminvskript>();
-                        Debug.Log(ito.name+"huhu");
-                        script.name = ito.name;
-                        script.schaden = ito.schaden;
-                        script.angriffsart = ito.angriffsart;
-                        script.schadensart = ito.schadensart;
-                        script.schadensreduktion = ito.schadensreduktion;
-                        script.verteidigung = ito.verteidigung;
-                        script.resistenz = ito.resistenz;
-                        script.effekt = ito.effekt;
-                        script.effektstaerke = ito.effektstaerke;
-                        script.geschw = ito.geschw;
-                        script.speed = ito.speed;
-                        script.wert = ito.wert;
-                        script.gewicht = ito.gewicht;
-                        script.art = ito.art;
-                        script.explanation = ito.explanation;
-                        script.pic = ito.pic;
+                        script.das = ito;
                     
                         Debug.Log("penis");
                     }

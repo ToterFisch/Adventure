@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
+
 public class NewBehaviourScript : MonoBehaviour
 {
     public GameObject swordattack;
@@ -12,9 +13,11 @@ public class NewBehaviourScript : MonoBehaviour
     public float speed;
     public bool cando;
     public string todo;
+    public inventory invman;
     public void Start()
     {
         cando=true;
+        invman = GameObject.Find("Manger").GetComponent<inventory>();
     }
     public void Update()
     {
@@ -51,16 +54,17 @@ public class NewBehaviourScript : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, Mathf.Infinity, layerMask);
             if(hit.collider != null){
                 if (hit.collider.gameObject.transform.CompareTag("truhe")){
-                    hit.collider.gameObject.SendMessage("offnen");
+                    hit.collider.gameObject.SendMessage("Offnen");
                 }
                 else if(hit.collider.gameObject.transform.CompareTag("drop")){
                     hit.collider.gameObject.SendMessage("aufheben");
                 }
             }
             else if (cando==true){
-                this.gameObject.SendMessage(todo);
-            cando = false;
-            StartCoroutine(makeready());
+                this.gameObject.SendMessage(invman.donned[3].angriffsart);
+                Debug.Log(invman.donned[3].art);
+                cando = false;
+                StartCoroutine(makeready(3));
             }
         }
     }
@@ -69,9 +73,10 @@ public class NewBehaviourScript : MonoBehaviour
         
         swordle.transform.Rotate(new Vector3(0,0,-90));
     }
-    public IEnumerator makeready()
+    public IEnumerator makeready(int wepint)
     {
-        yield return new WaitForSeconds(1);
+        
+        yield return new WaitForSeconds(invman.donned[wepint].geschw);
         cando=true;
     }
     

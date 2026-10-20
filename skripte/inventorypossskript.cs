@@ -4,12 +4,15 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+
 
 
 
 public class inventorypossskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public int art;
+    public int artart;
     public string was;
     public inventory.item lastone;
     public bool mouseon;
@@ -34,15 +37,15 @@ public class inventorypossskript : MonoBehaviour, IPointerEnterHandler, IPointer
             if(art > 2)
             {
                 if(manager.donned[art] != null){
-                    manager.anzeigen[0].text = manager.donned[art].name;
-                    manager.anzeigen[1].text = manager.donned[art].schaden.ToString();
-                    manager.anzeigen[2].text = manager.donned[art].angriffsart.ToString();
-                    manager.anzeigen[3].text = manager.donned[art].schadensart.ToString();
-                    
-                    manager.anzeigen[10].text = manager.donned[art].speed.ToString();
-                    manager.anzeigen[11].text = manager.donned[art].wert.ToString();
-                    manager.anzeigen[12].text = manager.donned[art].gewicht.ToString();
-                    manager.anzeigen[14].text = manager.donned[art].explanation;
+                    manager.waffenanzeigen[0].text = manager.donned[art].name;
+                    manager.waffenanzeigen[1].text = manager.donned[art].schaden.ToString();
+                    manager.waffenanzeigen[2].text = manager.donned[art].angriffsart.ToString();
+                    manager.waffenanzeigen[3].text = manager.donned[art].schadensart.ToString();
+                    manager.waffenanzeigen[10].text = manager.donned[art].speed.ToString();
+                    manager.waffenanzeigen[11].text = manager.donned[art].wert.ToString();
+                    manager.waffenanzeigen[12].text = manager.donned[art].geschw.ToString();
+                    manager.waffenanzeigen[14].text = manager.donned[art].explanation;
+                    manager.waffenanzeigenbild.sprite = manager.donned[art].pic;
                 }
             }
             else if(art < 3)
@@ -56,6 +59,7 @@ public class inventorypossskript : MonoBehaviour, IPointerEnterHandler, IPointer
                     manager.anzeigen[11].text = manager.donned[art].wert.ToString();
                     manager.anzeigen[12].text = manager.donned[art].gewicht.ToString();
                     manager.anzeigen[14].text = manager.donned[art].explanation;
+                    manager.anzeigenbild.sprite = manager.donned[art].pic;
                 }
             }
         }
