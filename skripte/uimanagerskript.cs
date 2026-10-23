@@ -8,6 +8,7 @@ using System.Linq;
 
 public class uimanagerskript : MonoBehaviour
 {
+    public TMP_Text[] choiceuis = new TMP_Text[3];
     public List<GameObject> lasts = new List<GameObject>();
     public GameObject active;
     public GameObject talkbox;
@@ -31,8 +32,9 @@ public class uimanagerskript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && ausgebabbelt == true)
         {
             talkbox.SetActive(false);
+            said.gameObject.SetActive(false);
             Debug.Log("weggemacht");
-            lastone.SendMessage("Gesagt");
+            lastone.SendMessage("Done",5);
         }
         if(Input.GetKey(KeyCode.Space) && ausgebabbelt == false)
         {
@@ -44,23 +46,22 @@ public class uimanagerskript : MonoBehaviour
             speakspeed = 0.1f;
         }
     }
-    public void entscheide(GameObject anweiser, Sprite npcimage, string[] options)
+    public void Entscheide(GameObject anweiser, Sprite npcimage, string[] options)
     {
-        choicebox.SetActive(true);
-        foreach (string opt in options)
+        talkbox.SetActive(true);
+        content.SetActive(true);
+        for(int i = 0; i<3; i++)
         {
-            GameObject obj = Instantiate(choiceui, Vector3.zero, Quaternion.identity);
-            obj.transform.SetParent(content.transform);
-            choiceuiscript script = obj.GetComponent<choiceuiscript>();
-            script.text = opt;
-            
+            choiceuis[i].text = options[i];
         }
+        lastone = anweiser;
     }
     public void Sag(GameObject anweiser, Sprite npcimage, string text)
     {
         if(ausgebabbelt == true)
         {
             talkbox.SetActive(true);
+            said.gameObject.SetActive(true);
             speaker.sprite = npcimage;
             StartCoroutine(Sprechen(anweiser, text));
             lastone = anweiser;
@@ -84,5 +85,5 @@ public class uimanagerskript : MonoBehaviour
             ausgebabbelt = true;
         }
     }
-    
+
 }
