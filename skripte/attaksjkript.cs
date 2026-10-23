@@ -48,6 +48,9 @@ public class NewBehaviourScript : MonoBehaviour
         transform.rotation =
             Quaternion.Euler(0f, 0f, angle);
         //this part is written by me again
+
+
+
         if(Input.GetMouseButtonDown(0)){
             int layerMask = LayerMask.GetMask("truhe","npc","Default");
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -58,6 +61,9 @@ public class NewBehaviourScript : MonoBehaviour
                 }
                 else if(hit.collider.gameObject.transform.CompareTag("drop")){
                     hit.collider.gameObject.SendMessage("aufheben");
+                }
+                else if(hit.collider.gameObject.transform.CompareTag("npc")){
+                    hit.collider.gameObject.SendMessage("Angesprochen");
                 }
             }
             else if (cando==true){
