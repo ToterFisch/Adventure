@@ -20,36 +20,43 @@ public class uimanagerskript : MonoBehaviour
     public GameObject content;
     public GameObject choicebox;
     public GameObject choiceui;
+    public playermovement uiman;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         ausgebabbelt = true;
+        uiman = GameObject.Find("Player").GetComponent<playermovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && ausgebabbelt == true)
+        
+    }
+    public void Space()
+    {
+        if (ausgebabbelt == true)
         {
             talkbox.SetActive(false);
             said.gameObject.SetActive(false);
+            uiman.uiopen = null;
             Debug.Log("weggemacht");
             lastone.SendMessage("Done",5);
         }
-        if(Input.GetKey(KeyCode.Space) && ausgebabbelt == false)
+        else if (ausgebabbelt == false)
         {
             speakspeed = 0.02f;
-            Debug.Log("skip");
         }
-        else
-        {
-            speakspeed = 0.1f;
-        }
+    }
+    public void Antispace()
+    {
+        speakspeed = 0.1f;
     }
     public void Entscheide(GameObject anweiser, Sprite npcimage, string[] options)
     {
         talkbox.SetActive(true);
         content.SetActive(true);
+        uiman.uiopen = talkbox;
         for(int i = 0; i<3; i++)
         {
             choiceuis[i].text = options[i];
@@ -60,6 +67,7 @@ public class uimanagerskript : MonoBehaviour
     {
         if(ausgebabbelt == true)
         {
+            uiman.uiopen = talkbox;
             talkbox.SetActive(true);
             said.gameObject.SetActive(true);
             speaker.sprite = npcimage;

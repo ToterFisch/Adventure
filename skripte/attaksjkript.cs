@@ -14,8 +14,10 @@ public class NewBehaviourScript : MonoBehaviour
     public bool cando;
     public string todo;
     public inventory invman;
+    public playermovement uiman;
     public void Start()
     {
+        uiman = GameObject.Find("Player").GetComponent<playermovement>();
         cando=true;
         invman = GameObject.Find("Manger").GetComponent<inventory>();
     }
@@ -51,7 +53,7 @@ public class NewBehaviourScript : MonoBehaviour
 
 
 
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButtonDown(0) && uiman.uiopen == null){
             int layerMask = LayerMask.GetMask("truhe","npc","Default");
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, Mathf.Infinity, layerMask);

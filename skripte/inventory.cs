@@ -27,7 +27,7 @@ public class inventory : MonoBehaviour
     public GameObject spellpos;
     public Sprite feuerball;
     public uimanagerskript uman;
-    
+    public playermovement uiman;
 
     public int lastone;
     [System.Serializable]
@@ -89,54 +89,71 @@ public class inventory : MonoBehaviour
     {
         invan = false;
         shoes = new List<item>(){};
-        
+        uiman = GameObject.Find("Player").GetComponent<playermovement>();
         uman = this.gameObject.GetComponent<uimanagerskript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)){
-            if(invan == false && iteminv.activeInHierarchy != true){
-                invents.SetActive(true);
-                anzeigendingens.SetActive(true);
-                invan = true;
-            }
-            else if(iteminv.activeInHierarchy != true)
-            {
-                invents.SetActive(false);
-                anzeigendingens.SetActive(false);
-                invan = false;
-            }
-        }
+        
         for (int i = 0; i < 5; i++)
         {
             if(donned[i] != null){
                 pospic[i].sprite = donned[i].pic;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+       
+    }
+    public void R()
+    {
+        if(uiman.uiopen == null && iteminv.activeInHierarchy != true){
+            invents.SetActive(true);
+            anzeigendingens.SetActive(true);
+            invan = true;
+            uiman.uiopen = invents;
+        }
+        else if (uiman.uiopen == iteminv)
         {
-            Debug.Log(invents.activeInHierarchy);
-            if(invan == true && iteminv.activeInHierarchy == true){
-                selecteditem = null;
-                foreach(Transform child in content.transform)
-                {
-                    Debug.Log(child.name);
-                    Destroy(child.gameObject);
-                }
-                Debug.Log("were in");
-                invents.SetActive(true);
-                iteminv.SetActive(false);
-            }
-            
-            else if(invents.activeInHierarchy == true)
+            selecteditem = null;
+            foreach(Transform child in content.transform)
             {
-                Debug.Log("definitly here");
-                invents.SetActive(false);
-                anzeigendingens.SetActive(false);
-                invan = false;
+                Debug.Log(child.name);
+                Destroy(child.gameObject);
             }
+            Debug.Log("were in");
+            iteminv.SetActive(false);
+            anzeigendingens.SetActive(false);
+            uiman.uiopen = null;
+        }
+        else
+        {
+            Escape();
+        }
+    }
+    public void Escape()
+    {
+        
+        if(invan == true && iteminv.activeInHierarchy == true){
+            selecteditem = null;
+            foreach(Transform child in content.transform)
+            {
+                Debug.Log(child.name);
+                Destroy(child.gameObject);
+            }
+            Debug.Log("were in");
+            invents.SetActive(true);
+            iteminv.SetActive(false);
+            uiman.uiopen = invents;
+        }
+            
+        else if(invents.activeInHierarchy == true)
+        {
+            Debug.Log("definitly here");
+            invents.SetActive(false);
+            anzeigendingens.SetActive(false);
+            invan = false;
+            uiman.uiopen = null;
         }
     }
     public void invon(List<item> das,GameObject cont,GameObject itin, string was, int waswas){
@@ -146,6 +163,7 @@ public class inventory : MonoBehaviour
             Debug.Log(das[i].art+was+waswas);
         }
                 itin.SetActive(true);
+                
                 invents.SetActive(false);
                 foreach (item ito in das)
                 {

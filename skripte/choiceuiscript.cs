@@ -28,6 +28,7 @@ public class choiceuiscript : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             {
                 manni.talkbox.SetActive(false);
                 manni.content.SetActive(false);
+                manni.uiman.uiopen = null;
                 manni.lastone.SendMessage("Done",zahl);
             }
         }
