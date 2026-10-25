@@ -1664,7 +1664,7 @@ Transform:
   m_GameObject: {fileID: 278785758}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -74.534, y: 47.446, z: 5.136783}
+  m_LocalPosition: {x: -74.449, y: 47.464, z: 5.136783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1721,6 +1721,7 @@ MonoBehaviour:
   einsatz: 1
   walk: {fileID: 0}
   speed: 1
+  anna: {fileID: 278785763}
 --- !u!1 &279722272
 GameObject:
   m_ObjectHideFlags: 0

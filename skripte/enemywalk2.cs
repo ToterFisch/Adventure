@@ -24,13 +24,13 @@ public class enemywalk2 : MonoBehaviour
     {
         
     }
-    public void Move(GameObject npc, Vector3 target, float speed)
+    public void Move(GameObject npc, Vector3 target, float speed, Animator anna)
     {
         Vector3Int npcposs = map.WorldToCell(npc.transform.position);
         Vector3Int targetposs = map.WorldToCell(target);
         path.Add(Pathfinding(npcposs,targetposs,new List<Vector3Int>()));
         
-        StartCoroutine(Walking(npc,speed));
+        StartCoroutine(Walking(npc,speed,anna));
         
     }
     public Vector3Int Pathfinding(Vector3Int npc, Vector3Int target, List<Vector3Int> didnot)
@@ -167,9 +167,10 @@ public class enemywalk2 : MonoBehaviour
         }
     }
     //for later: xdir + 10 mod4
-    public IEnumerator Walking(GameObject npc, float speed)
+    public IEnumerator Walking(GameObject npc, float speed, Animator anna)
     {
         Debug.Log("iswalking"+npc.transform.name);
+        anna.SetInteger("laufend", 1);
         while (path.Count > 1){
             if(npc.transform.position != new Vector3 (map.GetCellCenterWorld(path.LastOrDefault()).x,map.GetCellCenterWorld(path.LastOrDefault()).y,npc.transform.position.z))
             {
@@ -178,12 +179,19 @@ public class enemywalk2 : MonoBehaviour
             else
             {
                 path.Remove(path.LastOrDefault());
-                Debug.Log("removed");
             }
-            yield return new WaitForSeconds(0.1f);
+            if(npc.transform.position.x > map.GetCellCenterWorld(path.LastOrDefault()).x)
+            {
+                //links
+                anna.SetInteger("richtung", 1);
+            }
+            else
+            {
+                anna.SetInteger("richtung", 0);
+            }
+            yield return new WaitForSeconds(0.01f);
         }
-        
-        
+        anna.SetInteger("laufend", 0);
     }
     
     public bool Istok(Vector3Int o, List<Vector3Int> didnot)
