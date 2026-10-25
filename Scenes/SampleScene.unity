@@ -1664,7 +1664,7 @@ Transform:
   m_GameObject: {fileID: 278785758}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -72.63, y: 46.65, z: 5.136783}
+  m_LocalPosition: {x: -74.534, y: 47.446, z: 5.136783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9197,6 +9197,7 @@ GameObject:
   - component: {fileID: 1802844345}
   - component: {fileID: 1802844346}
   - component: {fileID: 1802844347}
+  - component: {fileID: 1802844348}
   m_Layer: 0
   m_Name: Manger
   m_TagString: Untagged
@@ -9429,6 +9430,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 382214381}
   target: {x: 0, y: 0, z: 0}
+  path: []
+--- !u!114 &1802844348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802844342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e20f659bdae4af9af8eeb0017f77dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 382214381}
+  target: {x: 0, y: 0, z: 0}
+  path: []
 --- !u!1 &1862543075
 GameObject:
   m_ObjectHideFlags: 0

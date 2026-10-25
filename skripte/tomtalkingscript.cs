@@ -9,14 +9,15 @@ public class tomtalkingscript : MonoBehaviour
     public uimanagerskript mikro;
     public SpriteRenderer bild;
     public int einsatz;
-    public enemywalk walk;
+    public enemywalk2 walk;
     public float speed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         bild = this.gameObject.GetComponent<SpriteRenderer>();
         mikro = GameObject.Find("Manger").GetComponent<uimanagerskript>();
-        walk = GameObject.Find("Manger").GetComponent<enemywalk>();
+        walk = GameObject.Find("Manger").GetComponent<enemywalk2>();
+        walk.Move(this.gameObject,new Vector3(-70.5f,42.5f,transform.position.z), 10f);
     }
 
     // Update is called once per frame
