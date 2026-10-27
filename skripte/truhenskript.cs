@@ -22,8 +22,7 @@ public class truhenskript : MonoBehaviour
         offen=false;
         kistenbild = this.gameObject.GetComponent<SpriteRenderer>();
         inv  = GameObject.Find("Manger").GetComponent<inventory>();
-        Contains.Add(new inventory.item("Iron Boots",1,"","",1,1,"Thorns","idk",1,1,1,1,1,"shoes","A simple pair of iron boots", info[0]));
-        Contains.Add(new inventory.item("Iron Sword",1,"sword","slash",1,1,"","idk",1,1,1,1,1,"weapon","A simple iron sword as used by the adventurers roaming the realm", info[1]));
+        
     }
 
     // Update is called once per frame

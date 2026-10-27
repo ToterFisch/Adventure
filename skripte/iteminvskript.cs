@@ -86,7 +86,8 @@ public class iteminvskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     }
     public void equip()
     {
-        if (manager.donned[manager.lastone] != das){
+        if (manager.donned[manager.lastone] != das || manager.donned[7-manager.lastone] != das && manager.donned[manager.lastone] != das && manager.lastone>2){
+            
             manager.donned[manager.lastone] = das;
             manager.selecteditem = null;
             foreach(Transform child in manager.content.transform)

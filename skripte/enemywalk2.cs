@@ -13,6 +13,7 @@ public class enemywalk2 : MonoBehaviour
     public Vector3 target;
     
     public List<Vector3Int> path = new List<Vector3Int>();
+    public List<int> pathdir = new List<int>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,7 +32,7 @@ public class enemywalk2 : MonoBehaviour
         path.Add(Pathfinding(npcposs,targetposs,new List<Vector3Int>()));
         
         StartCoroutine(Walking(npc,speed,anna));
-        
+              
     }
     public Vector3Int Pathfinding(Vector3Int npc, Vector3Int target, List<Vector3Int> didnot)
     {
@@ -59,6 +60,7 @@ public class enemywalk2 : MonoBehaviour
                     {
                         path.Add(Pathfinding(dir[xdir],target,didnot));
                         return npc;
+                        
                     }
                     else if(dirs[ydir] == null && Istok(dir[ydir],didnot))
                     {
@@ -184,14 +186,28 @@ public class enemywalk2 : MonoBehaviour
             {
                 //links
                 anna.SetInteger("richtung", 1);
+                Debug.Log("links");
             }
-            else
+            else if (npc.transform.position.x < map.GetCellCenterWorld(path.LastOrDefault()).x)
             {
-                anna.SetInteger("richtung", 0);
+                anna.SetInteger("richtung", 2);
+                Debug.Log("rechts");
+            }
+            else if(npc.transform.position.y > map.GetCellCenterWorld(path.LastOrDefault()).y)
+            {
+                
+                anna.SetInteger("richtung", 3);
+                Debug.Log("oben");
+            }
+            else if (npc.transform.position.y < map.GetCellCenterWorld(path.LastOrDefault()).y)
+            {
+                anna.SetInteger("richtung", 4);
+                Debug.Log("unten");
             }
             yield return new WaitForSeconds(0.01f);
+            
         }
-        anna.SetInteger("laufend", 0);
+        anna.SetInteger("laufend", 0);  
     }
     
     public bool Istok(Vector3Int o, List<Vector3Int> didnot)

@@ -30,6 +30,11 @@ public class dropskript : MonoBehaviour
             this.gameObject.GetComponent<Collider2D>().isTrigger = true;
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position , speed * Time.deltaTime);
         }
+        if(this.transform.position == player.transform.position)
+        {
+            inv.shoes.Add(das);
+            Destroy(this.gameObject);
+        }
     }
     public void aufheben(){
         clicked = true;
@@ -42,4 +47,5 @@ public class dropskript : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    
 }

@@ -48,7 +48,7 @@ public class inventory : MonoBehaviour
         //fuer ausrustung
         public string effekt;
         public int effektstaerke;
-        public int geschw;
+        public float geschw;
         public int speed;
 
         
@@ -59,7 +59,7 @@ public class inventory : MonoBehaviour
         public string explanation;
         public Sprite pic;
 
-        public item(string name,int schaden,string angriffsart, string schadensart,int schadensreduktion,int verteidigung,string resistenz, string effekt, int effektstaerke, int geschw, int speed, int wert, int gewicht, string art, string explanation, Sprite pic)
+        public item(string name,int schaden,string angriffsart, string schadensart,int schadensreduktion,int verteidigung,string resistenz, string effekt, int effektstaerke, float geschw, int speed, int wert, int gewicht, string art, string explanation, Sprite pic)
         {
             this.name = name;
             this.schaden = schaden;

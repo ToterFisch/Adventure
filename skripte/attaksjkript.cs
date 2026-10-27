@@ -8,9 +8,12 @@ using System.Collections.Generic;
 public class NewBehaviourScript : MonoBehaviour
 {
     public GameObject swordattack;
+    public GameObject hammerattack;
+    public GameObject lanceattack;
     public Transform player;
     public float distanceFromPlayer;
     public float speed;
+    public bool cando2;
     public bool cando;
     public string todo;
     public inventory invman;
@@ -19,6 +22,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         uiman = GameObject.Find("Player").GetComponent<playermovement>();
         cando=true;
+        cando2=true;
         invman = GameObject.Find("Manger").GetComponent<inventory>();
     }
     public void Update()
@@ -53,7 +57,8 @@ public class NewBehaviourScript : MonoBehaviour
 
 
 
-        if(Input.GetMouseButtonDown(0) && uiman.uiopen == null){
+        if(Input.GetMouseButtonDown(0) && uiman.uiopen == null)
+        {
             int layerMask = LayerMask.GetMask("truhe","npc","Default");
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, Mathf.Infinity, layerMask);
@@ -75,11 +80,54 @@ public class NewBehaviourScript : MonoBehaviour
                 StartCoroutine(makeready(3));
             }
         }
+        if(Input.GetMouseButtonDown(1) && uiman.uiopen == null)
+        {
+            if (cando2==true){
+                
+                this.gameObject.SendMessage(invman.donned[4].angriffsart);
+                Debug.Log(invman.donned[4].art);
+                cando2 = false;
+                StartCoroutine(makeready2(4));
+            }
+        }
     }
     public void sword(){
         GameObject swordle = Instantiate(swordattack,transform.position,transform.rotation);
         
         swordle.transform.Rotate(new Vector3(0,0,-90));
+    }
+    public void hammer(){
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = player.position.z;
+        Vector3 direction = mousePosition - player.position;
+        direction.z = 0f;
+
+        if (direction.sqrMagnitude < 0.001f)
+            return;
+
+        direction.Normalize();
+
+        transform.position = player.position + direction * hammerattack.GetComponent<swordattakskript>().distanceFromPlayer;
+        GameObject hamle = Instantiate(hammerattack,transform.position,transform.rotation);
+        hamle.transform.Rotate(new Vector3(0,0,-90));
+    }
+    public void lance(){
+
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = player.position.z;
+        Vector3 direction = mousePosition - player.position;
+        direction.z = 0f;
+
+        if (direction.sqrMagnitude < 0.001f)
+            return;
+
+        direction.Normalize();
+
+        transform.position = player.position + direction * hammerattack.GetComponent<swordattakskript>().distanceFromPlayer;
+
+        GameObject lancle = Instantiate(lanceattack,transform.position,transform.rotation);
+        
+        lancle.transform.Rotate(new Vector3(0,0,-90));
     }
     public IEnumerator makeready(int wepint)
     {
@@ -87,5 +135,10 @@ public class NewBehaviourScript : MonoBehaviour
         yield return new WaitForSeconds(invman.donned[wepint].geschw);
         cando=true;
     }
-    
+    public IEnumerator makeready2(int wepint)
+    {
+        
+        yield return new WaitForSeconds(invman.donned[wepint].geschw);
+        cando2=true;
+    }
 }

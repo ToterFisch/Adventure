@@ -113,7 +113,7 @@ public class tomtalkingscript : MonoBehaviour
         }
         else if(einsatz == 9)
         {
-            walk.Move(this.gameObject,new Vector3(-70.5f,42.5f,transform.position.z), 15f, anna);
+            walk.Move(this.gameObject,new Vector3(-60.5f,42.5f,transform.position.z), 7f, anna);
         }
     }
 }

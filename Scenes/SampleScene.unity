@@ -1664,7 +1664,7 @@ Transform:
   m_GameObject: {fileID: 278785758}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -74.449, y: 47.464, z: 5.136783}
+  m_LocalPosition: {x: -73.84, y: 45.43, z: 5.136783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3000,7 +3000,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -68.504, y: 47.278, z: -5}
+  m_LocalPosition: {x: -71.42, y: 46.7, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3158,9 +3158,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swordattack: {fileID: 7570245399171283451, guid: 368f1e49119dd84659e6ec06cf1e4410, type: 3}
+  hammerattack: {fileID: 7570245399171283451, guid: 502cb6a82c460b4b2bb128f7ec461d2b, type: 3}
+  lanceattack: {fileID: 7570245399171283451, guid: 83e3a2e59da8debaf8683f0a583f345d, type: 3}
   player: {fileID: 1282994892}
   distanceFromPlayer: 1
   speed: 0
+  cando2: 0
   cando: 0
   todo: sword
   invman: {fileID: 0}
@@ -6597,7 +6600,7 @@ Transform:
   m_GameObject: {fileID: 1282994889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -68.504, y: 47.278, z: 0}
+  m_LocalPosition: {x: -71.42, y: 46.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8604,7 +8607,7 @@ Transform:
   m_GameObject: {fileID: 1663553621}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -75.53, y: 47.472, z: 0.005385816}
+  m_LocalPosition: {x: -72.6, y: 46.57, z: 0.005385816}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8633,7 +8636,23 @@ MonoBehaviour:
   kistenbild: {fileID: 0}
   drop: {fileID: 3136888012632221366, guid: 79e90287ba7b3af9da21ac7d4939a044, type: 3}
   inv: {fileID: 0}
-  Contains: []
+  Contains:
+  - name: Iron Boots
+    schaden: 0
+    angriffsart: 
+    schadensart: 
+    schadensreduktion: 1
+    verteidigung: 10
+    resistenz: Thorns
+    effekt: Noise
+    effektstaerke: 0
+    geschw: 1
+    speed: 5
+    wert: 0
+    gewicht: 0
+    art: shoes
+    explanation: Just some simple iron boots. Nothing special about it.
+    pic: {fileID: 3311556390555826406, guid: bd36b6fdeca61dbeead94305aa26ca54, type: 3}
 --- !u!1 &1725679578
 GameObject:
   m_ObjectHideFlags: 0
@@ -73349,6 +73368,213 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966852972}
   m_CullTransparentMesh: 1
+--- !u!1 &1967986243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1967986247}
+  - component: {fileID: 1967986246}
+  - component: {fileID: 1967986245}
+  - component: {fileID: 1967986244}
+  m_Layer: 6
+  m_Name: Waffentruhe
+  m_TagString: truhe
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1967986244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967986243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c6f8942c8722c02a5bf00c2e85814f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info:
+  - {fileID: 3311556390555826406, guid: bd36b6fdeca61dbeead94305aa26ca54, type: 3}
+  - {fileID: 7549946110953997302, guid: 868637bc8a84a6565aad77270d8d06b3, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  offen: 0
+  closed: {fileID: -4616452705918104813, guid: 4f2c5bed876b2b3429fffd7b61c967d1, type: 3}
+  kistenbild: {fileID: 0}
+  drop: {fileID: 3136888012632221366, guid: 79e90287ba7b3af9da21ac7d4939a044, type: 3}
+  inv: {fileID: 0}
+  Contains:
+  - name: Iron Sword
+    schaden: 5
+    angriffsart: sword
+    schadensart: Slice
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0.5
+    speed: 5
+    wert: 5
+    gewicht: 1
+    art: weapon
+    explanation: A simple iron sword. Nothing special about it.
+    pic: {fileID: 7549946110953997302, guid: 868637bc8a84a6565aad77270d8d06b3, type: 3}
+  - name: Iron Hammer
+    schaden: 5
+    angriffsart: hammer
+    schadensart: squash
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 3
+    speed: 5
+    wert: 5
+    gewicht: 1
+    art: weapon
+    explanation: A simple iron sword. Nothing special about it.
+    pic: {fileID: 4201879736879725654, guid: cc654fe45a19c8300a31879461a1145d, type: 3}
+  - name: Iron Spear
+    schaden: 5
+    angriffsart: lance
+    schadensart: pierce
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 2
+    speed: 5
+    wert: 5
+    gewicht: 1
+    art: weapon
+    explanation: A simple spear with an iron tip. Nothing special about it.
+    pic: {fileID: -6101804006561483568, guid: cbc7df4402a9d7b0987ce8fadb5c199e, type: 3}
+--- !u!61 &1967986245
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967986243}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.8, y: 0.7}
+  m_EdgeRadius: 0
+--- !u!212 &1967986246
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967986243}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
+  m_Sprite: {fileID: -7547486848080256417, guid: 4f2c5bed876b2b3429fffd7b61c967d1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1967986247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967986243}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -70.25, y: 46.59, z: 0.005385816}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1994588568
 GameObject:
   m_ObjectHideFlags: 0
@@ -74394,7 +74620,7 @@ Transform:
   m_GameObject: {fileID: 2145230961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -68.504, y: 47.278, z: -5}
+  m_LocalPosition: {x: -71.42, y: 46.7, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74412,4 +74638,5 @@ SceneRoots:
   - {fileID: 405863968}
   - {fileID: 1480060104}
   - {fileID: 1663553624}
+  - {fileID: 1967986247}
   - {fileID: 278785762}
