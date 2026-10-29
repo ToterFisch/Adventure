@@ -6,6 +6,13 @@ using System.Collections;
 using System.Collections.Generic;
 public class tomtalkingscript : MonoBehaviour
 {
+    public int leben;
+    public int schadensreduktion;
+    public int verteidigung;
+    public int schaden;
+    public string resistenz;
+    public string schadensart;
+    public bool aggro;
     public uimanagerskript mikro;
     public SpriteRenderer bild;
     public int einsatz;
@@ -113,7 +120,7 @@ public class tomtalkingscript : MonoBehaviour
         }
         else if(einsatz == 9)
         {
-            walk.Move(this.gameObject,new Vector3(-60.5f,42.5f,transform.position.z), 7f, anna);
+            walk.Move(this.gameObject,new Vector3(-60.5f,42.5f,transform.position.z), 3f, anna);
         }
     }
 }

@@ -72,6 +72,10 @@ public class NewBehaviourScript : MonoBehaviour
                 else if(hit.collider.gameObject.transform.CompareTag("npc")){
                     hit.collider.gameObject.SendMessage("Angesprochen");
                 }
+                else if (hit.collider.gameObject.transform.CompareTag("attack"))
+                {
+                    hit.collider.gameObject.SendMessage("Pariert");
+                }
             }
             else if (cando==true){
                 this.gameObject.SendMessage(invman.donned[3].angriffsart);

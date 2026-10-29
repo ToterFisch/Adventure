@@ -1667,7 +1667,8 @@ Transform:
   m_LocalPosition: {x: -73.84, y: 45.43, z: 5.136783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1107488745}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &278785763
@@ -5249,6 +5250,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069959586}
   m_CullTransparentMesh: 1
+--- !u!1 &1107488744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1107488745}
+  - component: {fileID: 1107488746}
+  m_Layer: 0
+  m_Name: collision
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1107488745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107488744}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4, y: -0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 278785762}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1107488746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107488744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5ab893c49efb766a48a14c9fb026fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leben: 10
+  player: {fileID: 0}
+  tom: {fileID: 0}
+  distance: 1
+  distancetokeep: 2
+  schadensreduktion: 1
+  verteidigung: 4
+  schaden: 3
+  schadensart: schadensart
+  spear: {fileID: 7570245399171283451, guid: 83e3a2e59da8debaf8683f0a583f345d, type: 3}
+  sword: {fileID: 7570245399171283451, guid: 368f1e49119dd84659e6ec06cf1e4410, type: 3}
+  speed: 3
+  aggro: 0
+  cando: 0
+  geschw: 1
 --- !u!1 &1112798637
 GameObject:
   m_ObjectHideFlags: 0
@@ -6718,9 +6778,9 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.05, y: 0}
-  m_Size: {x: 0.4, y: 1}
-  m_Direction: 0
+  m_Offset: {x: -0.05, y: -0.3}
+  m_Size: {x: 0.4, y: 0.4}
+  m_Direction: 1
 --- !u!1 &1284837583
 GameObject:
   m_ObjectHideFlags: 0
@@ -9466,6 +9526,7 @@ MonoBehaviour:
   map: {fileID: 382214381}
   target: {x: 0, y: 0, z: 0}
   path: []
+  pathdir: 
 --- !u!1 &1862543075
 GameObject:
   m_ObjectHideFlags: 0

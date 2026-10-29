@@ -18,6 +18,17 @@ public class swordattakskript : MonoBehaviour
     {
         
     }
+    public void Pariert()
+    {
+        
+    }
+    public void OnTriggerEnter2D(Collider2D collsion)
+    {
+        if (collision.transform.CompareTag("Player"))
+        {
+            
+        }
+    }
     public IEnumerator delete()
     {
 
