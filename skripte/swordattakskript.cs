@@ -5,6 +5,17 @@ public class swordattakskript : MonoBehaviour
     public Transform player;
     public float distanceFromPlayer;
     public float time;
+    public class values
+    {
+        public int damage;
+        public string kind;
+        public values (int damage, string kind)
+        {
+            this.damage = damage;
+            this.kind = kind;
+        }
+    }
+    public values werte;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,11 +33,11 @@ public class swordattakskript : MonoBehaviour
     {
         
     }
-    public void OnTriggerEnter2D(Collider2D collsion)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.CompareTag("Player"))
+        if (collision.transform.CompareTag("Player") || collision.transform.CompareTag("npc"))
         {
-            
+            collision.transform.gameObject.SendMessage("Hit", werte);
         }
     }
     public IEnumerator delete()

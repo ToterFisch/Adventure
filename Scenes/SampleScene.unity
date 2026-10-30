@@ -1705,6 +1705,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d347941b95642ad16bc1756c84eea2db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anna: {fileID: 0}
+  tomtalk: {fileID: 0}
+  tom: {fileID: 0}
+  itch: 0
 --- !u!114 &278785765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,6 +1721,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0bfb74befb2145595ffad6351d04de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leben: 10
+  schadensreduktion: 1
+  verteidigung: 3
+  schaden: 2
+  resistenz: 
+  schadensart: 
+  aggro: 0
   mikro: {fileID: 0}
   bild: {fileID: 0}
   einsatz: 1
@@ -5294,19 +5305,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5ab893c49efb766a48a14c9fb026fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leben: 10
+  itch: 0
+  tomtalk: {fileID: 0}
+  anna: {fileID: 0}
   player: {fileID: 0}
   tom: {fileID: 0}
   distance: 1
   distancetokeep: 2
-  schadensreduktion: 1
-  verteidigung: 4
-  schaden: 3
-  schadensart: schadensart
   spear: {fileID: 7570245399171283451, guid: 83e3a2e59da8debaf8683f0a583f345d, type: 3}
   sword: {fileID: 7570245399171283451, guid: 368f1e49119dd84659e6ec06cf1e4410, type: 3}
-  speed: 3
-  aggro: 0
   cando: 0
   geschw: 1
 --- !u!1 &1112798637

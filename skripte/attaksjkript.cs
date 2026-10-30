@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 
-public class NewBehaviourScript : MonoBehaviour
+public class attackscript : MonoBehaviour
 {
     public GameObject swordattack;
     public GameObject hammerattack;
@@ -78,7 +78,7 @@ public class NewBehaviourScript : MonoBehaviour
                 }
             }
             else if (cando==true){
-                this.gameObject.SendMessage(invman.donned[3].angriffsart);
+                this.gameObject.SendMessage(invman.donned[3].angriffsart,3);
                 Debug.Log(invman.donned[3].art);
                 cando = false;
                 StartCoroutine(makeready(3));
@@ -88,19 +88,20 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (cando2==true){
                 
-                this.gameObject.SendMessage(invman.donned[4].angriffsart);
+                this.gameObject.SendMessage(invman.donned[4].angriffsart,4);
                 Debug.Log(invman.donned[4].art);
                 cando2 = false;
                 StartCoroutine(makeready2(4));
             }
         }
     }
-    public void sword(){
+    public void sword(int i){
         GameObject swordle = Instantiate(swordattack,transform.position,transform.rotation);
         
         swordle.transform.Rotate(new Vector3(0,0,-90));
+        swordle.GetComponent<swordattakskript>().werte = new swordattakskript.values(invman.donned[i].schaden,invman.donned[i].schadensart);
     }
-    public void hammer(){
+    public void hammer(int i){
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = player.position.z;
         Vector3 direction = mousePosition - player.position;
@@ -114,8 +115,9 @@ public class NewBehaviourScript : MonoBehaviour
         transform.position = player.position + direction * hammerattack.GetComponent<swordattakskript>().distanceFromPlayer;
         GameObject hamle = Instantiate(hammerattack,transform.position,transform.rotation);
         hamle.transform.Rotate(new Vector3(0,0,-90));
+        hamle.GetComponent<swordattakskript>().werte = new swordattakskript.values(invman.donned[i].schaden,invman.donned[i].schadensart);
     }
-    public void lance(){
+    public void lance(int i){
 
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = player.position.z;
@@ -132,6 +134,7 @@ public class NewBehaviourScript : MonoBehaviour
         GameObject lancle = Instantiate(lanceattack,transform.position,transform.rotation);
         
         lancle.transform.Rotate(new Vector3(0,0,-90));
+        lancle.GetComponent<swordattakskript>().werte = new swordattakskript.values(invman.donned[i].schaden,invman.donned[i].schadensart);
     }
     public IEnumerator makeready(int wepint)
     {

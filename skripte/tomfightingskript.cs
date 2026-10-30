@@ -11,8 +11,9 @@ using System.Linq;
 
 public class tomfightingskript : MonoBehaviour
 {
+    public float itch;
     public tomtalkingscript tomtalk;
-    
+    public Animator anna;
     public GameObject player;
     public GameObject tom;
     public float distance;
@@ -32,6 +33,7 @@ public class tomfightingskript : MonoBehaviour
         tomtalk = tom.GetComponent<tomtalkingscript>();
         tomtalk.aggro = false;
         cando = true;
+        anna = this.gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -42,8 +44,11 @@ public class tomfightingskript : MonoBehaviour
             
             if (Vector3.Distance(tom.transform.position, player.transform.position) > distancetokeep)
             {
-                tom.transform.position = Vector3.MoveTowards(tom.transform.position, player.transform.position, speed*Time.deltaTime);
-                
+                tom.transform.position = Vector3.MoveTowards(tom.transform.position, player.transform.position, tomtalk.speed*Time.deltaTime);
+                if (Math.Abs(tom.transform.position.x - player.transform.position.x) > Math.Abs(tom.transform.position.y - player.transform.position.y))
+                {
+                    
+                }
             }
             else
             {
@@ -85,21 +90,5 @@ public class tomfightingskript : MonoBehaviour
         atta.transform.Rotate(new Vector3(0,0,-90));
         atta.transform.SetParent(tom.transform);
     }
-    public void Damage(int damage, string kind)
-    {
-        if (kind == tomtalk.resistenz){
-            damage -= schadensreduktion;
-            for (int i = damage; i > 0; i--)
-            {
-                if (verteidigung > 0)
-                {
-                    tomtalk.verteidigung --;
-                }
-                else
-                {
-                    tomtalk.leben --;
-                }
-            }
-        }
-    }
+    
 }
