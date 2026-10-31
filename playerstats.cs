@@ -56,8 +56,8 @@ public class playerstats : MonoBehaviour
             Debug.Log(child.name);
             Destroy(child.gameObject);
         }
-        Debug.Log("gefäße: "+Mathf.RoundToInt(Mathf.Ceil(leben-damagetaken / 4)));
-        for(int i = Mathf.RoundToInt(Mathf.Ceil(leben-damagetaken / 4)); i > 0; i--)
+        
+        for(int i = Mathf.RoundToInt(Mathf.Ceil((leben-damagetaken) / 4)); i > 0; i--)
         {
             GameObject gefickt = Instantiate(gefäß,Vector3.zero, Quaternion.identity);
             gefickt.transform.SetParent(lebensanzeige.transform);
