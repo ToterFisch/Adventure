@@ -99,6 +99,7 @@ public class attackscript : MonoBehaviour
         GameObject swordle = Instantiate(swordattack,transform.position,transform.rotation);
         
         swordle.transform.Rotate(new Vector3(0,0,-90));
+        swordle.transform.SetParent(player);
         swordle.GetComponent<swordattakskript>().werte = new swordattakskript.values(invman.donned[i].schaden,invman.donned[i].schadensart);
     }
     public void hammer(int i){
@@ -115,6 +116,7 @@ public class attackscript : MonoBehaviour
         transform.position = player.position + direction * hammerattack.GetComponent<swordattakskript>().distanceFromPlayer;
         GameObject hamle = Instantiate(hammerattack,transform.position,transform.rotation);
         hamle.transform.Rotate(new Vector3(0,0,-90));
+        hamle.transform.SetParent(player);
         hamle.GetComponent<swordattakskript>().werte = new swordattakskript.values(invman.donned[i].schaden,invman.donned[i].schadensart);
     }
     public void lance(int i){
@@ -132,7 +134,7 @@ public class attackscript : MonoBehaviour
         transform.position = player.position + direction * hammerattack.GetComponent<swordattakskript>().distanceFromPlayer;
 
         GameObject lancle = Instantiate(lanceattack,transform.position,transform.rotation);
-        
+        lancle.transform.SetParent(player);
         lancle.transform.Rotate(new Vector3(0,0,-90));
         lancle.GetComponent<swordattakskript>().werte = new swordattakskript.values(invman.donned[i].schaden,invman.donned[i].schadensart);
     }

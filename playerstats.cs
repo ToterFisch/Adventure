@@ -63,7 +63,7 @@ public class playerstats : MonoBehaviour
             gefickt.transform.SetParent(lebensanzeige.transform);
             if(i == 1)
             {
-                gefickt.SendMessage("Gesprungen",(leben-damagetaken)%4);
+                gefickt.SendMessage("Gesprungen",Mathf.RoundToInt((leben-damagetaken)%4));
             }
         }
         /*for(int i = Mathf.RoundToInt(Mathf.Ceil(verteidigung-rüstunglost / 4)); i > 0; i--)
@@ -94,6 +94,7 @@ public class playerstats : MonoBehaviour
                 }
             }
             StartCoroutine(GotHit());
+            UpdateLife();
         }
     }
     public IEnumerator GotHit()

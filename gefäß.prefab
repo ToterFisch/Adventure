@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2059048062385639702}
+  - component: {fileID: 9130250929099892500}
   m_Layer: 5
   m_Name: "gef\xE4\xDF"
   m_TagString: Untagged
@@ -36,6 +37,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9130250929099892500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4833894478378410570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43d6d90370066289b2a1c0937912a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  full: {fileID: 0}
+  "f\xE4\xDFe":
+  - {fileID: -5385709220305871654, guid: 940656e958fb6808eb021cfbb59c4164, type: 3}
+  - {fileID: -1142890422202472451, guid: 940656e958fb6808eb021cfbb59c4164, type: 3}
+  - {fileID: -9014376251432076132, guid: 940656e958fb6808eb021cfbb59c4164, type: 3}
+  - {fileID: -983157414896977394, guid: 940656e958fb6808eb021cfbb59c4164, type: 3}
+  img: {fileID: 0}
 --- !u!1 &5009546376373921003
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class swordattakskript : MonoBehaviour
     {
         player = GameObject.Find("Player").GetComponent<Transform>();
         StartCoroutine(delete());
-        this.transform.SetParent(player);
+        
     }
 
     // Update is called once per frame
@@ -35,8 +35,10 @@ public class swordattakskript : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("wannahit: "+collision.transform.tag);
         if (collision.transform.CompareTag("Player") || collision.transform.CompareTag("npc"))
         {
+            Debug.Log("hithim");
             collision.transform.gameObject.SendMessage("Hit", werte);
         }
     }

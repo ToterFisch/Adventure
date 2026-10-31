@@ -85,7 +85,7 @@ public class tomfightingskript : MonoBehaviour
 
     public IEnumerator makeready()
     {
-        yield return new WaitForSeconds(geschw);
+        yield return new WaitForSeconds(2f);
         cando=true;
     }
 
@@ -109,6 +109,7 @@ public class tomfightingskript : MonoBehaviour
         GameObject atta = Instantiate(attak,transform.position,transform.rotation);
         atta.transform.Rotate(new Vector3(0,0,-90));
         atta.transform.SetParent(tom.transform);
+        atta.GetComponent<swordattakskript>().werte = new swordattakskript.values(2,"pierce");
     }
     
 }
