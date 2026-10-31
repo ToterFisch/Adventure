@@ -33,7 +33,7 @@ public class tomfightingskript : MonoBehaviour
         tomtalk = tom.GetComponent<tomtalkingscript>();
         tomtalk.aggro = false;
         cando = true;
-        anna = this.gameObject.GetComponent<Animator>();
+        anna = tom.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -44,10 +44,29 @@ public class tomfightingskript : MonoBehaviour
             
             if (Vector3.Distance(tom.transform.position, player.transform.position) > distancetokeep)
             {
+                anna.SetInteger("laufend",1);
                 tom.transform.position = Vector3.MoveTowards(tom.transform.position, player.transform.position, tomtalk.speed*Time.deltaTime);
                 if (Math.Abs(tom.transform.position.x - player.transform.position.x) > Math.Abs(tom.transform.position.y - player.transform.position.y))
                 {
-                    
+                    if(tom.transform.position.x > player.transform.position.x)
+                    {
+                        anna.SetInteger("richtung",1);
+                    }
+                    else
+                    {
+                        anna.SetInteger("richtung",2);
+                    }
+                }
+                else
+                {
+                    if(tom.transform.position.y > player.transform.position.y)
+                    {
+                        anna.SetInteger("richtung",3);
+                    }
+                    else
+                    {
+                        anna.SetInteger("richtung",4);
+                    }
                 }
             }
             else
@@ -61,6 +80,7 @@ public class tomfightingskript : MonoBehaviour
                 }
             }
         }
+        
     }
 
     public IEnumerator makeready()
