@@ -13,10 +13,12 @@ public class iteminvskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public bool mouseon;
     public inventory manager;
     public int was;
+    public playerstats stats;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         manager = GameObject.Find("Manger").GetComponent<inventory>();
+        stats = GameObject.Find("Player").GetComponent<playerstats>();
         if(das.art == "head")
         {
             was = 0;
@@ -96,6 +98,7 @@ public class iteminvskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             }
             manager.invents.SetActive(true);
             manager.iteminv.SetActive(false);
+            stats.CalculateValues();
         }
                 
     }
