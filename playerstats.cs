@@ -44,7 +44,7 @@ public class playerstats : MonoBehaviour
     {
         verteidigung = inv.donned[0].verteidigung+inv.donned[1].verteidigung+inv.donned[2].verteidigung;
         schadensreduktion = inv.donned[0].schadensreduktion+inv.donned[1].schadensreduktion+inv.donned[2].schadensreduktion;
-        leben = (gefcount*4)-damagetaken;
+        leben = gefcount*4;
         UpdateLife();
     }
     public void UpdateLife()
@@ -59,18 +59,23 @@ public class playerstats : MonoBehaviour
             Debug.Log(child.name);
             Destroy(child.gameObject);
         }
+        Debug.Log("penus: "+(leben-damagetaken));
+        Debug.Log("penis: " +Mathf.Ceil((leben-damagetaken) / 4f));
         
-        for(int i = Mathf.RoundToInt(Mathf.Ceil((leben-damagetaken) / 4)); i > 0; i--)
+        for(int i = Mathf.RoundToInt(Mathf.Ceil((leben-damagetaken) / 4f)); i > 0; i--)
         {
             Debug.Log("Schritt"+i);
+            
             GameObject gefickt = Instantiate(gefäß,Vector3.zero, Quaternion.identity);
             gefickt.transform.SetParent(lebensanzeige.transform);
             if(i == 1)
             {
+                Debug.Log("modulo: "+(leben-damagetaken)%4);
+                Debug.Log("unmodulo: "+(leben-damagetaken));
                 gefickt.SendMessage("Gesprungen", Mathf.RoundToInt((leben-damagetaken)%4));
             }
         }
-        /*for(int i = Mathf.RoundToInt(Mathf.Ceil(verteidigung-rüstunglost / 4)); i > 0; i--)
+        for(int i = Mathf.RoundToInt(Mathf.Ceil(verteidigung-rüstunglost / 4f)); i > 0; i--)
         {
             GameObject fucked = Instantiate(rüfäß,Vector3.zero, Quaternion.identity);
             fucked.transform.SetParent(rüstungsanzeige.transform);
@@ -78,7 +83,7 @@ public class playerstats : MonoBehaviour
             {
                 fucked.SendMessage("Gesprungen",(verteidigung-rüstunglost)%4);
             }
-        }*/
+        }
             
     }
     public void Hit(swordattakskript.values werte)
@@ -106,10 +111,8 @@ public class playerstats : MonoBehaviour
     {
         Debug.Log("started coroutine");
         int before = anna.GetInteger("richtung");
-        Debug.Log("before: "+before);
-        anna.SetInteger("richtung", before+10);
-        Debug.Log("after: "+anna.GetInteger("richtung"));
+        anna.SetTrigger("GotHit");
         yield return new WaitForSeconds(itch);
-        anna.SetInteger("richtung", before);
+        anna.ResetTrigger("GotHit");
     }
 }

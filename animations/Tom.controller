@@ -710,7 +710,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: tomwalkback
-  m_Speed: 1
+  m_Speed: 0.37
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8440839428164478908}
@@ -918,7 +918,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: tomwalkfront
-  m_Speed: 1
+  m_Speed: 0.37
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 6385649816497109064}
