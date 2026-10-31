@@ -24,10 +24,13 @@ public class playerstats : MonoBehaviour
     public GameObject rüstungsanzeige;
     public GameObject gefäß;
     public GameObject rüfäß;
+    public Animator anna;
+    public float itch;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         inv = GameObject.Find("Manger").GetComponent<inventory>();
+        anna = this.gameObject.GetComponent<Animator>();
         leben = gefcount*4;
         CalculateValues();
     }
@@ -41,7 +44,7 @@ public class playerstats : MonoBehaviour
     {
         verteidigung = inv.donned[0].verteidigung+inv.donned[1].verteidigung+inv.donned[2].verteidigung;
         schadensreduktion = inv.donned[0].schadensreduktion+inv.donned[1].schadensreduktion+inv.donned[2].schadensreduktion;
-        leben = gefcount*4-damagetaken;
+        leben = (gefcount*4)-damagetaken;
         UpdateLife();
     }
     public void UpdateLife()
@@ -59,11 +62,12 @@ public class playerstats : MonoBehaviour
         
         for(int i = Mathf.RoundToInt(Mathf.Ceil((leben-damagetaken) / 4)); i > 0; i--)
         {
+            Debug.Log("Schritt"+i);
             GameObject gefickt = Instantiate(gefäß,Vector3.zero, Quaternion.identity);
             gefickt.transform.SetParent(lebensanzeige.transform);
             if(i == 1)
             {
-                gefickt.SendMessage("Gesprungen",Mathf.RoundToInt((leben-damagetaken)%4));
+                gefickt.SendMessage("Gesprungen", Mathf.RoundToInt((leben-damagetaken)%4));
             }
         }
         /*for(int i = Mathf.RoundToInt(Mathf.Ceil(verteidigung-rüstunglost / 4)); i > 0; i--)
@@ -93,12 +97,19 @@ public class playerstats : MonoBehaviour
                     damagetaken++;
                 }
             }
+            Debug.Log("starting coroutine");
             StartCoroutine(GotHit());
-            UpdateLife();
+            
         }
     }
     public IEnumerator GotHit()
     {
-        yield return new WaitForSeconds(1f);
+        Debug.Log("started coroutine");
+        int before = anna.GetInteger("richtung");
+        Debug.Log("before: "+before);
+        anna.SetInteger("richtung", before+10);
+        Debug.Log("after: "+anna.GetInteger("richtung"));
+        yield return new WaitForSeconds(itch);
+        anna.SetInteger("richtung", before);
     }
 }

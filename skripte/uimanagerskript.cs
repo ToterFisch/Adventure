@@ -8,6 +8,8 @@ using System.Linq;
 
 public class uimanagerskript : MonoBehaviour
 {
+    public Sprite[] fese = new Sprite[4];
+    public Sprite[] rüse = new Sprite[4];
     public TMP_Text[] choiceuis = new TMP_Text[3];
     public List<GameObject> lasts = new List<GameObject>();
     public GameObject active;

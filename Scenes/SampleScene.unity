@@ -5449,7 +5449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5ab893c49efb766a48a14c9fb026fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itch: 0
+  itch: 1
   tomtalk: {fileID: 0}
   anna: {fileID: 0}
   player: {fileID: 0}
@@ -6957,6 +6957,8 @@ MonoBehaviour:
   "r\xFCstungsanzeige": {fileID: 330080368}
   "gef\xE4\xDF": {fileID: 4833894478378410570, guid: 265922086b2c92e17beea2110d8a87a4, type: 3}
   "r\xFCf\xE4\xDF": {fileID: 6114073715560300774, guid: b412179f694acc23fbcc46c2b33a403f, type: 3}
+  anna: {fileID: 0}
+  itch: 0.2
 --- !u!1 &1284837583
 GameObject:
   m_ObjectHideFlags: 0
@@ -9656,6 +9658,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6cd949fee994d17a29054f8e7ac7e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fese:
+  - {fileID: -5385709220305871654, guid: 940656e958fb6808eb021cfbb59c4164, type: 3}
+  - {fileID: -1142890422202472451, guid: 940656e958fb6808eb021cfbb59c4164, type: 3}
+  - {fileID: -9014376251432076132, guid: 940656e958fb6808eb021cfbb59c4164, type: 3}
+  - {fileID: -983157414896977394, guid: 940656e958fb6808eb021cfbb59c4164, type: 3}
+  "r\xFCse":
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   choiceuis:
   - {fileID: 1878071081}
   - {fileID: 904134236}
