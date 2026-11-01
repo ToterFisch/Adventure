@@ -75,7 +75,7 @@ public class playerstats : MonoBehaviour
                 gefickt.SendMessage("Gesprungen", Mathf.RoundToInt((leben-damagetaken)%4));
             }
         }
-        for(int i = Mathf.RoundToInt(Mathf.Ceil(verteidigung-rüstunglost / 4f)); i > 0; i--)
+        for(int i = Mathf.RoundToInt(Mathf.Ceil((verteidigung-rüstunglost) / 4f)); i > 0; i--)
         {
             GameObject fucked = Instantiate(rüfäß,Vector3.zero, Quaternion.identity);
             fucked.transform.SetParent(rüstungsanzeige.transform);

@@ -35,6 +35,11 @@ public class tomtalkingscript : MonoBehaviour
         {
             aggro=false;
             anna.SetInteger("laufend",0);
+            leben = -50;
+        }
+        if(leben < -50)
+        {
+            aggro=false;
         }
     }
     public void Angesprochen()
