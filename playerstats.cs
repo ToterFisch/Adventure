@@ -104,7 +104,7 @@ public class playerstats : MonoBehaviour
             }
             Debug.Log("starting coroutine");
             StartCoroutine(GotHit());
-            
+            CalculateValues();
         }
     }
     public IEnumerator GotHit()

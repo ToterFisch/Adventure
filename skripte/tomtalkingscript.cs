@@ -31,7 +31,11 @@ public class tomtalkingscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(leben <= 0)
+        {
+            aggro=false;
+            anna.SetInteger("laufend",0);
+        }
     }
     public void Angesprochen()
     {

@@ -44,6 +44,7 @@ public class enemyattackskript : MonoBehaviour
             }
             StartCoroutine(GotHit());
         }
+        tomtalk.aggro=true;
     }
     public IEnumerator GotHit()
     {
