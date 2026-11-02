@@ -43,6 +43,7 @@ public class enemywalk2 : MonoBehaviour
         if(npc != target)
         {
             didnot.Add(npc);
+            
             if (Math.Abs(npc.x-target.x) > Math.Abs(npc.y - target.y))
             {
                 if(npc.y > target.y)
@@ -56,41 +57,41 @@ public class enemywalk2 : MonoBehaviour
                 if(npc.x > target.x)
                 {
                     xdir = 3;
-                    if(dirs[xdir] == null && Istok(dir[xdir],didnot))
+                    if(dirs[xdir] == null && Istok(dir[xdir],didnot) && TheoraticalPathfinding(dir[xdir],target, new List<Vector3Int>(didnot))!=new Vector3Int(0,0,0))
                     {
                         path.Add(Pathfinding(dir[xdir],target,didnot));
                         return npc;
                         
                     }
-                    else if(dirs[ydir] == null && Istok(dir[ydir],didnot))
+                    else if(dirs[ydir] == null && Istok(dir[ydir],didnot) && TheoraticalPathfinding(dir[ydir],target,new List<Vector3Int>(didnot))!=new Vector3Int(0,0,0))
                     {
                         path.Add(Pathfinding(dir[ydir],target,didnot));
                         return npc;
                     }
-                    else if (dirs[Math.Abs(ydir-2)] == null && Istok(dir[Math.Abs(ydir - 2)], didnot))
+                    else if (dirs[Math.Abs(ydir-2)] == null && Istok(dir[Math.Abs(ydir - 2)], didnot) && TheoraticalPathfinding(dir[Math.Abs(ydir-2)],target,new List<Vector3Int>(didnot))!=new Vector3Int(0,0,0))
                     {
                         path.Add(Pathfinding(dir[Math.Abs(ydir-2)],target,didnot));
                         return npc;
                     }
                     else
                     {
-                        //not quite shure what to do here  kinda should head back or something
-                        return Vector3Int.zero;
+                        //not quite shure what to do here kinda should head back or something
+                        return new Vector3Int(0,0,0);
                     }
                 }
                 else
                 {
                     xdir = 1;
-                    if(dirs[xdir] == null && Istok(dir[xdir], didnot)){
+                    if(dirs[xdir] == null && Istok(dir[xdir], didnot) && TheoraticalPathfinding(dir[xdir],target,new List<Vector3Int>(didnot))!=new Vector3Int(0,0,0)){
                         path.Add(Pathfinding(dir[xdir],target,didnot));
                         return npc;
                     }
-                    else if(dirs[ydir] == null && Istok(dir[ydir],didnot))
+                    else if(dirs[ydir] == null && Istok(dir[ydir],didnot) && TheoraticalPathfinding(dir[ydir],target,new List<Vector3Int>(didnot))!=new Vector3Int(0,0,0))
                     {
                         path.Add(Pathfinding(dir[ydir],target,didnot));
                         return npc;
                     }
-                    else if (dirs[Math.Abs(ydir-2)] == null && Istok(dir[Math.Abs(ydir - 2)], didnot))
+                    else if (dirs[Math.Abs(ydir-2)] == null && Istok(dir[Math.Abs(ydir - 2)], didnot) && TheoraticalPathfinding(dir[Math.Abs(ydir-2)],target,new List<Vector3Int>(didnot))!=new Vector3Int(0,0,0))
                     {
                         path.Add(Pathfinding(dir[Math.Abs(ydir-2)],target,didnot));
                         return npc;
@@ -98,7 +99,7 @@ public class enemywalk2 : MonoBehaviour
                     else
                     {
                         //not quite shure what to do here  kinda should head back or something
-                        return Vector3Int.zero;
+                        return new Vector3Int(0,0,0);
                     }
                 }
                 
@@ -116,17 +117,17 @@ public class enemywalk2 : MonoBehaviour
                 if(npc.y > target.y)
                 {
                     ydir = 2;
-                    if(dirs[ydir] == null && Istok(dir[ydir],didnot))
+                    if(dirs[ydir] == null && Istok(dir[ydir],didnot) && TheoraticalPathfinding(dir[ydir],target,new List<Vector3Int>(didnot)) != new Vector3Int(0,0,0))
                     {
                         path.Add(Pathfinding(dir[ydir],target,didnot));
                         return npc;
                     }
-                    else if(dirs[xdir] == null && Istok(dir[xdir],didnot))
+                    else if(dirs[xdir] == null && Istok(dir[xdir],didnot) && TheoraticalPathfinding(dir[xdir],target,new List<Vector3Int>(didnot)) != new Vector3Int(0,0,0))
                     {
                         path.Add(Pathfinding(dir[xdir],target,didnot));
                         return npc;
                     }
-                    else if (dirs[(xdir +10)%4] == null && Istok(dir[(xdir +10)%4], didnot))
+                    else if (dirs[(xdir +10)%4] == null && Istok(dir[(xdir +10)%4], didnot) && TheoraticalPathfinding(dir[(xdir +10)%4],target,new List<Vector3Int>(didnot))!=new Vector3Int(0,0,0))
                     {
                         path.Add(Pathfinding(dir[(xdir +10)%4],target,didnot));
                         return npc;
@@ -134,38 +135,162 @@ public class enemywalk2 : MonoBehaviour
                     else
                     {
                         //not quite shure what to do here  kinda should head back or something
-                        return Vector3Int.zero;
+                        return new Vector3Int(0,0,0);
                     }
                 }
                 else
                 {
                     ydir = 0;
-                    if(dirs[ydir] == null && Istok(dir[ydir],didnot))
+                    if(dirs[ydir] == null && Istok(dir[ydir],didnot) && TheoraticalPathfinding(dir[ydir],target,new List<Vector3Int>(didnot)) != new Vector3Int(0,0,0))
                     {
                         path.Add(Pathfinding(dir[ydir],target,didnot));
                         return npc;
                     }
-                    else if(dirs[xdir] == null && Istok(dir[xdir],didnot))
+                    else if(dirs[xdir] == null && Istok(dir[xdir],didnot) && TheoraticalPathfinding(dir[xdir],target,new List<Vector3Int>(didnot)) != new Vector3Int(0,0,0))
                     {
                         path.Add(Pathfinding(dir[xdir],target,didnot));
                         return npc;
                     }
-                    else if (dirs[(xdir +10)%4] == null && Istok(dir[(xdir +10)%4], didnot))
+                    else if (dirs[(xdir +10)%4] == null && Istok(dir[(xdir +10)%4], didnot) && TheoraticalPathfinding(dir[(xdir +10)%4],target,new List<Vector3Int>(didnot))!=new Vector3Int(0,0,0))
                     {
                         path.Add(Pathfinding(dir[(xdir +10)%4],target,didnot));
                         return npc;
                     }
                     else
                     {
-                        //not quite shure what to do here  kinda should head back or something
-                        return Vector3Int.zero;
+                        //not quite shure what to do here  kinda should head back or something List<Vector3Int>(didnot
+                        return new Vector3Int(0,0,0);
                     }
                 }
             }
         }
         else
         {
-            return Vector3Int.zero;
+            return npc;
+        }
+    }
+    public Vector3Int TheoraticalPathfinding(Vector3Int npc, Vector3Int target, List<Vector3Int> didnot)
+    {
+        Vector3Int[] dir = new Vector3Int[4] {npc + Vector3Int.up, npc + Vector3Int.right, npc + Vector3Int.down, npc + Vector3Int.left};
+        TileBase[] dirs = new TileBase[4]{map.GetTile(dir[0]), map.GetTile(dir[1]), map.GetTile(dir[2]), map.GetTile(dir[3])};
+        int ydir = 5;
+        int xdir = 5;
+        if(npc != target)
+        {
+            didnot.Add(npc);
+            
+            if (Math.Abs(npc.x-target.x) > Math.Abs(npc.y - target.y))
+            {
+                if(npc.y > target.y)
+                {
+                    ydir = 2;
+                }
+                else
+                {
+                    ydir = 0;
+                }
+                if(npc.x > target.x)
+                {
+                    xdir = 3;
+                    if(dirs[xdir] == null && Istok(dir[xdir],didnot) && TheoraticalPathfinding(dir[xdir],target,didnot)!=new Vector3Int(0,0,0))
+                    {
+                        return npc;
+                        
+                    }
+                    else if(dirs[ydir] == null && Istok(dir[ydir],didnot) && TheoraticalPathfinding(dir[ydir],target,didnot)!=new Vector3Int(0,0,0))
+                    {
+                        return npc;
+                    }
+                    else if (dirs[Math.Abs(ydir-2)] == null && Istok(dir[Math.Abs(ydir - 2)], didnot) && TheoraticalPathfinding(dir[Math.Abs(ydir-2)],target,didnot)!=new Vector3Int(0,0,0))
+                    {
+                        return npc;
+                    }
+                    else
+                    {
+                        //not quite shure what to do here kinda should head back or something
+                        return new Vector3Int(0,0,0);
+                    }
+                }
+                else
+                {
+                    xdir = 1;
+                    if(dirs[xdir] == null && Istok(dir[xdir], didnot) && TheoraticalPathfinding(dir[xdir],target,didnot)!=new Vector3Int(0,0,0)){
+                        return npc;
+                    }
+                    else if(dirs[ydir] == null && Istok(dir[ydir],didnot) && TheoraticalPathfinding(dir[ydir],target,didnot)!=new Vector3Int(0,0,0))
+                    {
+                        return npc;
+                    }
+                    else if (dirs[Math.Abs(ydir-2)] == null && Istok(dir[Math.Abs(ydir - 2)], didnot) && TheoraticalPathfinding(dir[Math.Abs(ydir-2)],target,didnot)!=new Vector3Int(0,0,0))
+                    {
+                        return npc;
+                    }
+                    else
+                    {
+                        //not quite shure what to do here  kinda should head back or something
+                        return new Vector3Int(0,0,0);
+                    }
+                }
+                
+            }
+            else
+            {
+                if(npc.x > target.x)
+                {
+                    xdir = 3;
+                }
+                else
+                {
+                    xdir = 1;
+                }
+                if(npc.y > target.y)
+                {
+                    ydir = 2;
+                    if(dirs[ydir] == null && Istok(dir[ydir],didnot) && TheoraticalPathfinding(dir[ydir],target,didnot) != new Vector3Int(0,0,0))
+                    {
+                        return npc;
+                    }
+                    else if(dirs[xdir] == null && Istok(dir[xdir],didnot) && TheoraticalPathfinding(dir[xdir],target,didnot) != new Vector3Int(0,0,0))
+                    {
+                        return npc;
+                    }
+                    else if (dirs[(xdir +10)%4] == null && Istok(dir[(xdir +10)%4], didnot) && TheoraticalPathfinding(dir[(xdir +10)%4],target,didnot)!=new Vector3Int(0,0,0))
+                    {
+                        return npc;
+                    }
+                    else
+                    {
+                        //not quite shure what to do here  kinda should head back or something
+                        return new Vector3Int(0,0,0);
+                    }
+                }
+                else
+                {
+                    ydir = 0;
+                    
+                    if(dirs[ydir] == null && Istok(dir[ydir],didnot) && TheoraticalPathfinding(dir[ydir],target,didnot) != new Vector3Int(0,0,0))
+                    {
+                        return npc;
+                    }
+                    else if(dirs[xdir] == null && Istok(dir[xdir],didnot) && TheoraticalPathfinding(dir[xdir],target,didnot) != new Vector3Int(0,0,0))
+                    {
+                        return npc;
+                    }
+                    else if (dirs[(xdir +10)%4] == null && Istok(dir[(xdir +10)%4], didnot) && TheoraticalPathfinding(dir[(xdir +10)%4],target,didnot)!=new Vector3Int(0,0,0))
+                    {
+                        return npc;
+                    }
+                    else
+                    {
+                        //not quite shure what to do here  kinda should head back or something
+                        return new Vector3Int(0,0,0);
+                    }
+                }
+            }
+        }
+        else
+        {
+            return npc;
         }
     }
     //for later: xdir + 10 mod4
