@@ -73,6 +73,11 @@ public class enemywalk2 : MonoBehaviour
                         path.Add(Pathfinding(dir[Math.Abs(ydir-2)],target,didnot));
                         return npc;
                     }
+                    else if (dirs[(xdir +10)%4] == null && Istok(dir[(xdir +10)%4], didnot) && TheoraticalPathfinding(dir[(xdir +10)%4],target,didnot)!=new Vector3Int(0, 0, 0))
+                    {
+                        path.Add(Pathfinding(dir[(xdir +10)%4],target,didnot));
+                        return npc;
+                    }
                     else
                     {
                         //not quite shure what to do here kinda should head back or something
@@ -94,6 +99,11 @@ public class enemywalk2 : MonoBehaviour
                     else if (dirs[Math.Abs(ydir-2)] == null && Istok(dir[Math.Abs(ydir - 2)], didnot) && TheoraticalPathfinding(dir[Math.Abs(ydir-2)],target,new List<Vector3Int>(didnot))!=new Vector3Int(0,0,0))
                     {
                         path.Add(Pathfinding(dir[Math.Abs(ydir-2)],target,didnot));
+                        return npc;
+                    }
+                    else if (dirs[(xdir +10)%4] == null && Istok(dir[(xdir +10)%4], didnot) && TheoraticalPathfinding(dir[(xdir +10)%4],target,didnot)!=new Vector3Int(0, 0, 0))
+                    {
+                        path.Add(Pathfinding(dir[(xdir +10)%4],target,didnot));
                         return npc;
                     }
                     else
@@ -132,6 +142,11 @@ public class enemywalk2 : MonoBehaviour
                         path.Add(Pathfinding(dir[(xdir +10)%4],target,didnot));
                         return npc;
                     }
+                    else if (dirs[Math.Abs(ydir-2)] == null && Istok(dir[Math.Abs(ydir - 2)], didnot) && TheoraticalPathfinding(dir[Math.Abs(ydir-2)],target,didnot)!=new Vector3Int(0,0,0))
+                    {
+                        path.Add(Pathfinding(dir[Math.Abs(ydir-2)],target,didnot));
+                        return npc;
+                    }
                     else
                     {
                         //not quite shure what to do here  kinda should head back or something
@@ -154,6 +169,11 @@ public class enemywalk2 : MonoBehaviour
                     else if (dirs[(xdir +10)%4] == null && Istok(dir[(xdir +10)%4], didnot) && TheoraticalPathfinding(dir[(xdir +10)%4],target,new List<Vector3Int>(didnot))!=new Vector3Int(0,0,0))
                     {
                         path.Add(Pathfinding(dir[(xdir +10)%4],target,didnot));
+                        return npc;
+                    }
+                    else if (dirs[Math.Abs(ydir-2)] == null && Istok(dir[Math.Abs(ydir - 2)], didnot) && TheoraticalPathfinding(dir[Math.Abs(ydir-2)],target,didnot)!=new Vector3Int(0,0,0))
+                    {
+                        path.Add(Pathfinding(dir[Math.Abs(ydir-2)],target,didnot));
                         return npc;
                     }
                     else
@@ -205,6 +225,10 @@ public class enemywalk2 : MonoBehaviour
                     {
                         return npc;
                     }
+                    /*else if (dirs[(xdir +10)%4] == null && Istok(dir[(xdir +10)%4], didnot) && TheoraticalPathfinding(dir[(xdir +10)%4],target,didnot)!=new Vector3Int(0, 0, 0))
+                    {
+                        return npc;
+                    }*/
                     else
                     {
                         //not quite shure what to do here kinda should head back or something
@@ -225,6 +249,10 @@ public class enemywalk2 : MonoBehaviour
                     {
                         return npc;
                     }
+                    /*else if (dirs[(xdir +10)%4] == null && Istok(dir[(xdir +10)%4], didnot) && TheoraticalPathfinding(dir[(xdir +10)%4],target,didnot)!=new Vector3Int(0, 0, 0))
+                    {
+                        return npc;
+                    }*/
                     else
                     {
                         //not quite shure what to do here  kinda should head back or something
@@ -258,6 +286,10 @@ public class enemywalk2 : MonoBehaviour
                     {
                         return npc;
                     }
+                    /*else if (dirs[Math.Abs(ydir-2)] == null && Istok(dir[Math.Abs(ydir - 2)], didnot) && TheoraticalPathfinding(dir[Math.Abs(ydir-2)],target,didnot)!=new Vector3Int(0,0,0))
+                    {
+                        return npc;
+                    }*/
                     else
                     {
                         //not quite shure what to do here  kinda should head back or something
@@ -280,6 +312,10 @@ public class enemywalk2 : MonoBehaviour
                     {
                         return npc;
                     }
+                    /*else if (dirs[Math.Abs(ydir-2)] == null && Istok(dir[Math.Abs(ydir - 2)], didnot) && TheoraticalPathfinding(dir[Math.Abs(ydir-2)],target,didnot)!=new Vector3Int(0,0,0))
+                    {
+                        return npc;
+                    }*/
                     else
                     {
                         //not quite shure what to do here  kinda should head back or something

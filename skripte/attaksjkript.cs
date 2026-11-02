@@ -76,6 +76,7 @@ public class attackscript : MonoBehaviour
                 {
                     hit.collider.gameObject.SendMessage("Pariert");
                 }
+                
             }
             else if (cando==true){
                 this.gameObject.SendMessage(invman.donned[3].angriffsart,3);
