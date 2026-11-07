@@ -25,9 +25,11 @@ public class beardotalkingscript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        player = GameObject.Find("Player");
         bild = this.gameObject.GetComponent<SpriteRenderer>();
         mikro = GameObject.Find("Manger").GetComponent<uimanagerskript>();
         walk = GameObject.Find("Manger").GetComponent<enemywalk2>();
+        anna = this.gameObject.GetComponent<Animator>();
         einsatz = 1;
     }
 
@@ -45,8 +47,10 @@ public class beardotalkingscript : MonoBehaviour
     {
         if (i == 1)
         {
-            walk.Move(this.gameObject,new Vector3(player.transform.position.x,transform.position.y,transform.position.z), 3f, anna);
-            Done(5);
+            if(einsatz == 1){
+                walk.Move(this.gameObject,new Vector3(player.transform.position.x,player.transform.position.y,transform.position.z), 3f, anna);
+                Done(5);
+            }
         }
     }
     public void Done (int i)
