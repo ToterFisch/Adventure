@@ -1754,6 +1754,7 @@ MonoBehaviour:
   force: 30
   player: {fileID: 0}
   penis: 0
+  dampeningRate: 0.5
 --- !u!114 &278785765
 MonoBehaviour:
   m_ObjectHideFlags: 0

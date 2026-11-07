@@ -16,7 +16,7 @@ public class enemyattackskript : MonoBehaviour
     public float force;
     public Transform player;
     public bool penis;
-    
+    public float dampeningRate;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,8 +30,11 @@ public class enemyattackskript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(penis == true){
-            
+        Rigidbody2D rb = tom.GetComponent<Rigidbody2D>();
+        if(rb.velocity.magnitude != 0) 
+        {
+            Vector3 dampeningDirection = rb.velocity.normalized * -1.0f;
+	        rb.AddForce( dampeningDirection * dampeningRate);
         }
     }
     public void Hit(swordattakskript.values werte)
