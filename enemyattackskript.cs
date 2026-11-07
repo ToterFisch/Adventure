@@ -13,12 +13,15 @@ public class enemyattackskript : MonoBehaviour
     public tomtalkingscript tomtalk;
     public GameObject tom;
     public float itch;
+    public float force;
+    public Transform player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         tom = GameObject.Find("Tom");
         anna = this.gameObject.GetComponent<Animator>();
         tomtalk = tom.GetComponent<tomtalkingscript>();
+        player = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame
@@ -42,6 +45,9 @@ public class enemyattackskript : MonoBehaviour
                     tomtalk.leben --;
                 }
             }
+            Vector3 direction = tom.transform.position-player.position;
+            Vector3.Normalize(direction);
+            tom.GetComponent<Rigidbody2D>().velocity = direction;
             StartCoroutine(GotHit());
         }
         tomtalk.aggro=true;

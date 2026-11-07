@@ -102,6 +102,7 @@ public class attackscript : MonoBehaviour
         swordle.transform.Rotate(new Vector3(0,0,-90));
         swordle.transform.SetParent(player);
         swordle.GetComponent<swordattakskript>().werte = new swordattakskript.values(invman.donned[i].schaden,invman.donned[i].schadensart);
+        
     }
     public void hammer(int i){
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

@@ -26,6 +26,8 @@ public class playerstats : MonoBehaviour
     public GameObject rüfäß;
     public Animator anna;
     public float itch;
+    public float timer;
+    public float healtime;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,7 +40,15 @@ public class playerstats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (rüstunglost > 0 && timer < healtime)
+        {
+            timer += Time.deltaTime;
+        }
+        else
+        {
+            timer = 0;
+            rüstunglost --;
+        }
     }
     public void CalculateValues()
     {

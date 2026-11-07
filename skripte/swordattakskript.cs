@@ -17,10 +17,12 @@ public class swordattakskript : MonoBehaviour
     {
         public int damage;
         public string kind;
+        
         public values (int damage, string kind)
         {
             this.damage = damage;
             this.kind = kind;
+            
         }
     }
     public values werte;
