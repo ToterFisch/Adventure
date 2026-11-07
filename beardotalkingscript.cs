@@ -44,27 +44,24 @@ public class beardotalkingscript : MonoBehaviour
     {
         if (i == 1)
         {
-            walk.Move(this.gameObject,new Vector3(player.transform.positon.x,transform.position.y,transform.position.z), 3f, anna);
+            walk.Move(this.gameObject,new Vector3(player.transform.position.x,transform.position.y,transform.position.z), 3f, anna);
             Done(5);
         }
     }
     public void Done (int i)
     {
-        if(einsatz == 0)
-        {
-            mikro.Sag(this.gameObject,bild.sprite,"You shouldnt be able to talk to me right now, are you cheating?");
-        }
+        
         if(einsatz == 1)
         {
             mikro.Sag(this.gameObject,bild.sprite,"Praised be the gods and you as you are theire eyes and ears in this world.");
             einsatz = 2;
         }
-        if(einsatz == 2)
+        else if(einsatz == 2)
         {
             mikro.Sag(this.gameObject,bild.sprite,"The gods have send you and we are here to reseive. You are our blessing and we will serve you as long as you need.");
             einsatz = 3;
         }
-        if(einsatz == 3)
+        else if(einsatz == 3)
         {
             if (i == 5){
                 mikro.Entscheide(this.gameObject,bild.sprite,new string[3]{"Where am I?", "Who are you?", "Please guide me."});
@@ -77,17 +74,73 @@ public class beardotalkingscript : MonoBehaviour
             if (i == 2)
             {
                 mikro.Sag(this.gameObject,bild.sprite,"I am Bartolo, a monk in this kloster, as we call it. Me and my fellow monks live here to serve the gods by guarding theire portal and welcoming theire prophets. We will prepare you for the world.");
-                einsatz = 21;
+                einsatz = 5;
             }
             if (i == 3)
             {
                 mikro.Sag(this.gameObject,bild.sprite,"Be our guest. Do you want to understand the rules of this world, or will you be fine on your own?");
-                einsatz = 31;
+                einsatz = 10;
             }
         }
-        if(einsatz == 4)
+        else if(einsatz == 4)
         {
-            mikro.Entscheide(this.gameObject,bild.sprite,new string[]{})
+            if (i == 5){
+                mikro.Entscheide(this.gameObject,bild.sprite,new string[3]{"How am I supposed to do that?", "The realms?", "I understand."});
+            }
+            else if (i == 1)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"It is easyer than you would think. Just explore and discover the world, help its inhabitants and if the gods want something specific from you, they will tell.");
+            }
+            else if (i == 2)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"The three realms. There is the Fungae lands in the west, the Baat kingdom in the south and the free land in the east. And the three big dragons just lay in these parts with theyre tribes on top. One is only a two day journey from here.");
+            }
+            else if (i == 3)
+            {
+                einsatz = 3;
+                Done(5);
+            }
+        }
+        else if(einsatz == 5)
+        {
+            if (i == 5)
+            {
+                mikro.Entscheide(this.gameObject,bild.sprite,new string[3]{"How will you prepare me?","What gods do you serve?","I understand."});
+            }
+            if (i == 1)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"We will give you a bed when you need it, feed you, teach you some basics and the history of the world which we preserve and give you council whenever you need it.");
+            }
+            if (i == 2)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"We dont know much of the gods, they are there, somewhere behind this portal. We dont have names, nor numbers or words of them. All we know we know from prophets. And never has someone returned from climbing into that portal.");
+            }
+            if(i==3)
+            {
+                einsatz = 3;
+                Done(5);
+            }        
+        }
+        else if(einsatz == 10)
+        {
+            if (i == 5)
+            {
+                mikro.Entscheide(this.gameObject,bild.sprite,new string[3]{"I do know the rules of this world.","Please teach me some basics",""});
+            }
+            if (i == 1)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"Then feel free to take the items out of these chests and be on your way. If you should have some questions after all feel free to just ask any monk");
+                einsatz = 8;
+            }
+            if (i == 2)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"Ill be glad to help you. First please take the items out of the chests over there. The old prophecies say you should leftclick on them, but i dont know what is meant.");
+            }
+            if(i==3)
+            {
+                einsatz = 10;
+                Done(5);
+            } 
         }
     }
 }
