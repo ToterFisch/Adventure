@@ -21,6 +21,7 @@ public class beardotalkingscript : MonoBehaviour
     public float speed;
     public Animator anna;
     public GameObject player;
+    public int ungeduld = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -135,12 +136,67 @@ public class beardotalkingscript : MonoBehaviour
             if (i == 2)
             {
                 mikro.Sag(this.gameObject,bild.sprite,"Ill be glad to help you. First please take the items out of the chests over there. The old prophecies say you should leftclick on them, but i dont know what is meant.");
+                einsatz = 11;
             }
             if(i==3)
             {
                 einsatz = 10;
                 Done(5);
             } 
+        }
+        else if(einsatz == 11)
+        {
+            einsatz = 12;
+        }
+        else if(einsatz == 12)
+        {
+            mikro.Sag(this.gameObject,bild.sprite,"Did you collect the items?");
+            einsatz = 13;
+        }
+        else if (einsatz == 13)
+        {
+            if (i == 5)
+            {
+                mikro.Entscheide(this.gameObject,bild.sprite,new string[3]{"Yes i did.","No i didnt.","How do i do that."});
+            }
+            if (i == 1)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"Perfectly, then please equip this new gear. For this topic the prophecies tell us that you should press some kind of R to open your inventory. There you should be able to interact with some kind of item slots?");
+                einsatz = 14;
+            }
+            if (i == 2)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"Please do so.");
+                ungeduld ++;
+            }
+            if (i == 3)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"The old prophecies talk about leftclicking the chest to open it and then left clicking the items to collect them. But i cannot understand what that is supposed to mean.");
+            }
+        }
+        else if (einsatz == 14)
+        {
+            mikro.Sag(this.gameObject,bild.sprite,"Have you equipped your gear already?");
+            einsatz = 15;
+        }
+        else if (einsatz == 15)
+        {
+            if (i == 5){
+                mikro.Entscheide(this.gameObject,bild.sprite,new string[3]{"Yes i equipped it.","No i didnt.","How do i do that." });
+            }
+            if (i == 1)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"Great, then please follow me to the training court.");
+                einsatz = 16;
+            }
+            if (i == 2)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"Please do so.");
+            }
+            if (i == 3)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"The old prophecies say you should press some kind of R to open an inventory and then there are supposed to be item slots with which you can interact. I wonder what that means.");
+            }
         }
     }
 }
