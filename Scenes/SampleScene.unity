@@ -1706,7 +1706,7 @@ Transform:
   m_GameObject: {fileID: 278785758}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -54.28, y: 65.15, z: 5.136783}
+  m_LocalPosition: {x: -54.6, y: 35.85, z: 5.136783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1751,6 +1751,8 @@ MonoBehaviour:
   tomtalk: {fileID: 0}
   tom: {fileID: 0}
   itch: 0
+  force: 0
+  player: {fileID: 0}
 --- !u!114 &278785765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11379,7 +11381,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51.89, y: 41.35, z: -5}
+  m_LocalPosition: {x: -51.4, y: 35.14, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15442,7 +15444,7 @@ Transform:
   m_GameObject: {fileID: 1282994889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -51.89, y: 41.35, z: 0}
+  m_LocalPosition: {x: -51.4, y: 35.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15590,6 +15592,8 @@ MonoBehaviour:
   "r\xFCf\xE4\xDF": {fileID: 6114073715560300774, guid: b412179f694acc23fbcc46c2b33a403f, type: 3}
   anna: {fileID: 0}
   itch: 0.2
+  timer: 0
+  healtime: 3
 --- !u!1 &1284837583
 GameObject:
   m_ObjectHideFlags: 0
@@ -84042,7 +84046,7 @@ Transform:
   m_GameObject: {fileID: 2145230961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -51.89, y: 41.35, z: -5}
+  m_LocalPosition: {x: -51.4, y: 35.14, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
