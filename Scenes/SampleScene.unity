@@ -17659,6 +17659,7 @@ GameObject:
   - component: {fileID: 1684158694}
   - component: {fileID: 1684158693}
   - component: {fileID: 1684158696}
+  - component: {fileID: 1684158697}
   m_Layer: 0
   m_Name: Beardo
   m_TagString: Untagged
@@ -17800,6 +17801,28 @@ MonoBehaviour:
   anna: {fileID: 0}
   player: {fileID: 0}
   ungeduld: 0
+--- !u!95 &1684158697
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684158692}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6f25c0f5f7bdbd51daebc511463a54cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1725679578
 GameObject:
   m_ObjectHideFlags: 0
