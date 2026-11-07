@@ -44,7 +44,7 @@ public class playerstats : MonoBehaviour
         {
             timer += Time.deltaTime;
         }
-        else
+        else if (timer >= healtime)
         {
             timer = 0;
             rüstunglost --;

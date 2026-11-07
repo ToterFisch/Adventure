@@ -42,7 +42,7 @@ public class enemyswordscript : MonoBehaviour
     public IEnumerator delete()
     {
         yield return new WaitForSeconds(time);
-        if (disarmed == false)
+        if (disarmed == false && hitted != null)
         {
             hitted.SendMessage("Hit",werte);
         }
