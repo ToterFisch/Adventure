@@ -39,6 +39,7 @@ public class swordattakskript : MonoBehaviour
     }
     public void Pariert()
     {
+        
         Destroy(this.gameObject);
     }
     public void OnTriggerEnter2D(Collider2D collision)
@@ -47,6 +48,7 @@ public class swordattakskript : MonoBehaviour
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log("iscalled");
         Hot();
     }
     public void Hut(Collider2D collision)
@@ -61,30 +63,36 @@ public class swordattakskript : MonoBehaviour
     }
     public void Hot()
     {
-        foreach (GameObject collision in liste)
+        Debug.Log("getscalled");
+        for (int i = 0; i<liste.Count; i++)
         {
-            if (collision.transform.CompareTag("attack"))
+            if (liste[i].transform.CompareTag("attack"))
             {
                 disarmed = true;
-                
+                liste[i].SendMessage("Pariert");
+                Debug.Log("Disarmed");
             }
         }
-        foreach (GameObject collision in liste)
+        Debug.Log("in the middle");
+        for (int i = 0; i<liste.Count; i++)
         {
-            if (collision.transform.CompareTag("Player") || collision.transform.CompareTag("npc"))
+            if (liste[i].transform.CompareTag("Player") || liste[i].transform.CompareTag("npc"))
             {
+                Debug.Log("itsplayer");
                 if(disarmed == false){
-                    collision.SendMessage("Hit",werte);
-                    
+                    liste[i].SendMessage("Hit",werte);
+                    Debug.Log("hitit");
                 }
             }
         }
+        Debug.Log("at the end");
         liste.Clear();
     }
     public IEnumerator delete()
     {
-
+        
         yield return new WaitForSeconds(time);
+        Hot();
         Destroy(gameObject);
         
     }

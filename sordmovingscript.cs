@@ -9,16 +9,16 @@ using System;
 public class sordmovingscript : MonoBehaviour
 {
     public GameObject attack;
-    public swordattakskript atti;
+    public enemyswordscript atti;
     public float speed;
     public float speed2;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         attack = transform.parent.gameObject;
-        atti = attack.GetComponent<swordattakskript>();
+        atti = attack.GetComponent<enemyswordscript>();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -27,7 +27,7 @@ public class sordmovingscript : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        atti.Hut(collision);
+        atti.Hitting(collision.gameObject);
     }
     public void Pariert()
     {

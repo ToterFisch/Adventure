@@ -109,7 +109,7 @@ public class tomfightingskript : MonoBehaviour
         GameObject atta = Instantiate(attak,transform.position,transform.rotation);
         atta.transform.Rotate(new Vector3(0,0,-90));
         atta.transform.SetParent(tom.transform);
-        atta.GetComponent<swordattakskript>().werte = new swordattakskript.values(2,"pierce");
+        atta.GetComponent<enemyswordscript>().werte = new swordattakskript.values(2,"pierce");
     }
     
 }

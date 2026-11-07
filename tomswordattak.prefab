@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2361888632909733544}
   - component: {fileID: 5796464788024918523}
   - component: {fileID: 5633595359884759652}
-  - component: {fileID: 7160848847020618072}
+  - component: {fileID: 3770603604887041753}
   m_Layer: 0
   m_Name: tomswordattak
   m_TagString: Untagged
@@ -112,7 +112,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7160848847020618072
+--- !u!114 &3770603604887041753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,11 +121,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7570245399171283451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf479d7397f19e6f2b15f0d8333b821f, type: 3}
+  m_Script: {fileID: 11500000, guid: 571efd1ab2caab4bf8b13e077d60aaf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  distanceFromPlayer: 1
   time: 0.4
 --- !u!1 &7680424082963224675
 GameObject:
