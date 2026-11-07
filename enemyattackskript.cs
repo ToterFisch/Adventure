@@ -45,11 +45,11 @@ public class enemyattackskript : MonoBehaviour
                     tomtalk.leben --;
                 }
             }
-            Vector2 playe = new Vector2 (player.transform.x,player.transform.y);
-            Vector2 to = new Vector2 (tom.transform.x,tom.transform.y);
+            Vector2 playe = new Vector2 (player.position.x,player.position.y);
+            Vector2 to = new Vector2 (tom.transform.position.x,tom.transform.position.y);
             Vector2 dir = playe-to;
-            Vector2.Normalize(dir);
-            tom.GetComponent<Rigidbody2D>().AddForce(transform.up*force);
+            
+            tom.GetComponent<Rigidbody2D>().AddForce(dir*force);
             Debug.Log("Done?");
             StartCoroutine(GotHit());
         }

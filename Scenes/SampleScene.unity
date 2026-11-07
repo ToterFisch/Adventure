@@ -1751,7 +1751,7 @@ MonoBehaviour:
   tomtalk: {fileID: 0}
   tom: {fileID: 0}
   itch: 0
-  force: 0
+  force: 10
   player: {fileID: 0}
 --- !u!114 &278785765
 MonoBehaviour:
