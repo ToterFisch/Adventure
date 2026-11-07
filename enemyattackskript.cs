@@ -15,6 +15,8 @@ public class enemyattackskript : MonoBehaviour
     public float itch;
     public float force;
     public Transform player;
+    public bool penis;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,12 +24,15 @@ public class enemyattackskript : MonoBehaviour
         anna = this.gameObject.GetComponent<Animator>();
         tomtalk = tom.GetComponent<tomtalkingscript>();
         player = GameObject.Find("Player").transform;
+        penis = false;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if(penis == true){
+            
+        }
     }
     public void Hit(swordattakskript.values werte)
     {
@@ -45,12 +50,13 @@ public class enemyattackskript : MonoBehaviour
                     tomtalk.leben --;
                 }
             }
+            penis = true;
             Vector2 playe = new Vector2 (player.position.x,player.position.y);
             Vector2 to = new Vector2 (tom.transform.position.x,tom.transform.position.y);
-            Vector2 dir = playe-to;
-            
+            Vector2 dir = to-playe;  
             tom.GetComponent<Rigidbody2D>().AddForce(dir*force);
             Debug.Log("Done?");
+            penis = false;
             StartCoroutine(GotHit());
         }
         tomtalk.aggro=true;

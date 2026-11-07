@@ -1604,7 +1604,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!70 &278785760
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1751,8 +1751,9 @@ MonoBehaviour:
   tomtalk: {fileID: 0}
   tom: {fileID: 0}
   itch: 0
-  force: 10
+  force: 30
   player: {fileID: 0}
+  penis: 0
 --- !u!114 &278785765
 MonoBehaviour:
   m_ObjectHideFlags: 0
