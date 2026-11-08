@@ -17,24 +17,37 @@ public class enemyattackskript : MonoBehaviour
     public Transform player;
     public bool penis;
     public float dampeningRate;
+    public Rigidbody2D rich;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //why did i do this stuff with tom isnt this script attached to him?
         tom = GameObject.Find("Tom");
         anna = this.gameObject.GetComponent<Animator>();
         tomtalk = tom.GetComponent<tomtalkingscript>();
         player = GameObject.Find("Player").transform;
+        rich = tom.GetComponent<Rigidbody2D>();
         penis = false;
     }
-
+    public void Update()
+    {
+        if(tomtalk.aggro == true)
+        {
+            rich.constraints = RigidbodyConstraints2D.None;
+            rich.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+        else
+        {
+            rich.constraints = RigidbodyConstraints2D.FreezePosition;
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
-        Rigidbody2D rb = tom.GetComponent<Rigidbody2D>();
-        if(rb.velocity.magnitude != 0) 
+        if(rich.velocity.magnitude != 0) 
         {
-            Vector3 dampeningDirection = rb.velocity.normalized * -1.0f;
-	        rb.AddForce( dampeningDirection * dampeningRate);
+            Vector3 dampeningDirection = rich.velocity.normalized * -1.0f;
+	        rich.AddForce( dampeningDirection * dampeningRate);
         }
     }
     public void Hit(swordattakskript.values werte)
@@ -63,6 +76,7 @@ public class enemyattackskript : MonoBehaviour
             StartCoroutine(GotHit());
         }
         tomtalk.aggro=true;
+
     }
     public IEnumerator GotHit()
     {

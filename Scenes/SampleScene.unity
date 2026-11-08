@@ -1604,7 +1604,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!70 &278785760
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1755,6 +1755,7 @@ MonoBehaviour:
   player: {fileID: 0}
   penis: 0
   dampeningRate: 0.5
+  rich: {fileID: 0}
 --- !u!114 &278785765
 MonoBehaviour:
   m_ObjectHideFlags: 0
