@@ -49,17 +49,20 @@ public class beardotalkingscript : MonoBehaviour
         {
             if(einsatz == 1){
                 walk.Move(this.gameObject,new Vector3(player.transform.position.x,player.transform.position.y,transform.position.z), 3f, anna);
-                
+                einsatz = 100;
+                mikro.uiman.uiopen = this.gameObject;
             }
         }
     }
     public void Done (int i)
     {
         
-        if(einsatz == 1)
+        if(einsatz == 100)
         {
+            mikro.uiman.uiopen = null;
             mikro.Sag(this.gameObject,bild.sprite,"Praised be the gods and you as you are theire eyes and ears in this world.");
             einsatz = 2;
+
         }
         else if(einsatz == 2)
         {
