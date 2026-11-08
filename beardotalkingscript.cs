@@ -169,7 +169,7 @@ public class beardotalkingscript : MonoBehaviour
             if (i == 1)
             {
                 mikro.Sag(this.gameObject,bild.sprite,"Perfectly, then please equip this new gear. For this topic the prophecies tell us that you should press some kind of R to open your inventory. There you should be able to interact with some kind of item slots?");
-                einsatz = 14;
+                einsatz = 140;
             }
             if (i == 2)
             {
@@ -180,6 +180,10 @@ public class beardotalkingscript : MonoBehaviour
             {
                 mikro.Sag(this.gameObject,bild.sprite,"The old prophecies talk about leftclicking the chest to open it and then left clicking the items to collect them. But i cannot understand what that is supposed to mean.");
             }
+        }
+        else if (einsatz == 140)
+        {
+            einsatz = 14;
         }
         else if (einsatz == 14)
         {
@@ -217,6 +221,7 @@ public class beardotalkingscript : MonoBehaviour
             if(transform.position == new Vector3(-64.5f, 33.5f, transform.position.z))
             {
                 mikro.Sag(this.gameObject,bild.sprite,"I would really love to teach you further, but as you see the lazy developer isnt done with this area yet so you are gonna have to wait for next weeks patch");
+                einsatz = 18;
             }
         }
     }
