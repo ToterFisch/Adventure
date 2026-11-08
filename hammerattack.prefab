@@ -70,7 +70,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1.7, y: 1.7}
   m_Direction: 1
 --- !u!212 &5796464788024918523
 SpriteRenderer:
@@ -116,7 +116,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
-  m_Sprite: {fileID: -864977941626129654, guid: 455c6f911764cd59bb5458e67e81f9cf, type: 3}
+  m_Sprite: {fileID: -7519865625164499681, guid: 859c9fcc82650d1039a4639f93b549cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,6 +142,8 @@ MonoBehaviour:
   player: {fileID: 0}
   distanceFromPlayer: 1.5
   time: 0.4
+  disarmed: 0
+  liste: []
 --- !u!95 &7911255731025086419
 Animator:
   serializedVersion: 7

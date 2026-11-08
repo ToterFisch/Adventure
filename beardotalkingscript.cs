@@ -49,7 +49,7 @@ public class beardotalkingscript : MonoBehaviour
         {
             if(einsatz == 1){
                 walk.Move(this.gameObject,new Vector3(player.transform.position.x,player.transform.position.y,transform.position.z), 3f, anna);
-                Done(5);
+                
             }
         }
     }
@@ -200,6 +200,20 @@ public class beardotalkingscript : MonoBehaviour
             if (i == 3)
             {
                 mikro.Sag(this.gameObject,bild.sprite,"The old prophecies say you should press some kind of R to open an inventory and then there are supposed to be item slots with which you can interact. I wonder what that means.");
+            }
+        }
+        else if (einsatz == 16)
+        {
+            
+            walk.Move(this.gameObject,new Vector3(-64.5f,33.5f,transform.position.z), 3f, anna);
+            einsatz = 17;
+            
+        }
+        else if (einsatz == 17)
+        {
+            if(transform.position == new Vector3(-64.5f, 33.5f, transform.position.z))
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"I would really love to teach you further, but as you see the lazy developer isnt done with this area yet so you are gonna have to wait for next weeks patch");
             }
         }
     }

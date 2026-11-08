@@ -369,6 +369,7 @@ public class enemywalk2 : MonoBehaviour
             
         }
         anna.SetInteger("laufend", 0);  
+        npc.SendMessage("Done",5);
     }
     
     public bool Istok(Vector3Int o, List<Vector3Int> didnot)
