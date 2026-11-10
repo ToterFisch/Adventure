@@ -220,9 +220,47 @@ public class beardotalkingscript : MonoBehaviour
         {
             if(transform.position == new Vector3(-64.5f, 33.5f, transform.position.z))
             {
-                mikro.Sag(this.gameObject,bild.sprite,"I would really love to teach you further, but as you see the lazy developer isnt done with this area yet so you are gonna have to wait for next weeks patch");
                 einsatz = 18;
             }
+        }
+        else if (einsatz == 18)
+        {
+            mikro.Sag(this.gameObject,bild.sprite,"I think that you should know how to punch, but the ancient prophecies also do have to say something for doing so. It is written that you can use the items equipped on the right and left slot by pressing the corresponding mouse button. Sounds like giberish if you ask me. But try by hitting the training dummy.");
+            einsatz = 19;        
+        }
+        else if (einsatz == 19)
+        {
+            if (i == 5)
+            {
+                mikro.Entscheide(this.gameObject,bild.sprite, new string[3]{"Yeah i can see it.", "No i cannot see it.", "How do i attack?"});
+            }
+            else if (i == 1)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"This is how getting hit looks for most enemys and yourself. You can pary an enemy attack by hitting it with your own attack. You will notice that every type of weapon has a different way to attack, be aware that they also deal different types of damage. Every enemy and some equipment have resistences against a specific kind of damage, which will not affect them.");
+                einsatz = 20;
+            }
+            else if (i == 2)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"That is odd. Try again. And make shure you hit it with an attack that does not deal poison damage.");
+            }
+            else if (i == 3)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"The old prophecies say you can use the items equipped on the right and left slot by pressing the corresponding mouse button. I hope that helps you, because i dont understand it.");
+            }
+        }
+        else if (einsatz == 20)
+        {
+            mikro.Sag(this.gameObject,bild.sprite,"If you have equipped some armour it will save your health for a few hits. It regenerates itself so it can be used often. If you want you can go on training with the dummies. Talk to me if you want to fight your first enemy.");
+            einsatz = 21;
+        }
+        else if (einsatz == 21)
+        {
+            mikro.Sag(this.gameObject,bild.sprite,"Do you want to battle your first enemy?");
+            einsatz = 22;
+        }
+        else if (einsatz == 22)
+        {
+            mikro.Entscheide(this.gameObject,bild.sprite,new string[3]{"Yes i am ready.","Please wait another minute."})
         }
     }
 }
