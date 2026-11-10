@@ -9,6 +9,8 @@ using System;
 using System.Linq;
 public class slimescript : MonoBehaviour
 {
+    public string schadensart;
+    public int damage;
     public int leben;
     public string resistenz;
     public int verteidigung;
@@ -20,6 +22,12 @@ public class slimescript : MonoBehaviour
     public bool penis;
     public float dampeningRate;
     public Rigidbody2D rich;
+    public Vector3 target;
+    public float howfar;
+    public float speed;
+    public float timer;
+    public float weiter;
+    public bool jump;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,32 +43,48 @@ public class slimescript : MonoBehaviour
     {
         if(aggro == true)
         {
-            if (Vector3.Distance(tom.transform.position, player.transform.position) > distancetokeep)
+            if (timer < weiter)
             {
-                if (Math.Abs(tom.transform.position.x - player.transform.position.x) > Math.Abs(tom.transform.position.y - player.transform.position.y))
+                timer += Time.deltaTime;
+            }
+            else
+            {
+                timer = 0;
+                jump = true;
+                if (Math.Abs(this.gameObject.transform.position.x - player.transform.position.x) > Math.Abs(this.transform.position.y - player.transform.position.y))
                 {
-                    if(tom.transform.position.x > player.transform.position.x)
+                    if(this.gameObject.transform.position.x > player.transform.position.x)
                     {
-                        anna.SetInteger("richtung",1);
+                        target = new Vector3(transform.position.x-howfar,transform.position.y,transform.position.z);
                     }
                     else
                     {
-                        anna.SetInteger("richtung",2);
+                        target = new Vector3(transform.position.x+howfar,transform.position.y,transform.position.z);
                     }
                 }
                 else
                 {
-                    if(tom.transform.position.y > player.transform.position.y)
+                    //why have i wrote this.gameObject.transform instead of just this.transform.position here????
+                    if(this.gameObject.transform.position.y > player.transform.position.y)
                     {
-                        anna.SetInteger("richtung",3);
+                        target = new Vector3(transform.position.x,transform.position.y-howfar,transform.position.z);
                     }
                     else
                     {
-                        anna.SetInteger("richtung",4);
+                        target = new Vector3(transform.position.x,transform.position.y+howfar,transform.position.z);
                     }
                 }
             }
         }
+        if (jump == true)
+        {
+            if (this.transform.position != target)
+            {
+                this.transform.position = Vector3.MoveTowards(this.transform.position, target, speed*Time.deltaTime);                   
+            }
+
+        }
+    }
     void FixedUpdate()
     {
         if(rich.velocity.magnitude != 0) 
@@ -104,4 +128,31 @@ public class slimescript : MonoBehaviour
         Debug.Log("afterafter: "+anna.GetInteger("richtung"));
         anna.SetInteger("richtung", before);
     }
+    public void OnCollisionEnter2D (Collision2D collision)
+    {
+        Debug.Log(collision);
+        if (collision.gameObject.transform.CompareTag("Player"))
+        {
+            collision.gameObject.SendMessage("Hit", new swordattakskript.values(damage,schadensart));
+            penis = true;
+            jump = false;
+            timer = 0;
+            Vector2 playe = new Vector2 (player.position.x,player.position.y);
+            Vector2 to = new Vector2 (this.gameObject.transform.position.x,this.gameObject.transform.position.y);
+            Vector2 dir = to-playe;  
+            this.gameObject.GetComponent<Rigidbody2D>().AddForce(dir*force);
+            Debug.Log("Done?");
+            penis = false;
+        }
+
+    }
+    //this didnt work
+    /*public IEnumerator DaJump(Vector3 target)
+    {
+        while (this.transform.position != target)
+        {
+            this.transform.position = Vector3.MoveTowards(this.transform.position, target, speed*Time.deltaTime);
+        }
+        yield return new WaitForSeconds(0.1f);
+    }*/
 }
