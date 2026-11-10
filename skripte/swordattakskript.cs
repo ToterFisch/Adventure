@@ -57,7 +57,7 @@ public class swordattakskript : MonoBehaviour
     {
         Debug.Log("wannahit: "+collision.transform.tag);
         
-        if (collision.transform.CompareTag("Player") || collision.transform.CompareTag("npc") || collision.transform.CompareTag("attack"))
+        if (collision.transform.CompareTag("Player") || collision.transform.CompareTag("npc") || collision.transform.CompareTag("attack") || collision.transform.CompareTag("enemy"))
         {
             liste.Add(collision.gameObject);
         }
@@ -78,7 +78,7 @@ public class swordattakskript : MonoBehaviour
         Debug.Log("in the middle");
         for (int i = 0; i<liste.Count; i++)
         {
-            if (liste[i].transform.CompareTag("Player") || liste[i].transform.CompareTag("npc"))
+            if (liste[i].transform.CompareTag("Player") || liste[i].transform.CompareTag("npc") || liste[i].transform.CompareTag("enemy"))
             {
                 Debug.Log("itsplayer");
                 if(disarmed == false){

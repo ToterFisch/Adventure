@@ -95,8 +95,10 @@ public class slimescript : MonoBehaviour
     }
     public void Hit(swordattakskript.values werte)
     {
+        
         Debug.Log("hit");
         if (werte.kind != resistenz){
+            jump = false;
             for (int i = werte.damage; i > 0; i--)
             {
                 if (verteidigung > 0)

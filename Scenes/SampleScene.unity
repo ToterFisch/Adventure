@@ -13822,7 +13822,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -64.21, y: 33.12, z: -5}
+  m_LocalPosition: {x: -50.34, y: 34.79, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13871,7 +13871,7 @@ GameObject:
   - component: {fileID: 560420721}
   - component: {fileID: 560420723}
   - component: {fileID: 560420722}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15939,7 +15939,7 @@ GameObject:
   - component: {fileID: 1021134811}
   m_Layer: 0
   m_Name: goo
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16093,7 +16093,7 @@ MonoBehaviour:
   anna: {fileID: 0}
   aggro: 0
   itch: 0
-  force: 30
+  force: 40
   player: {fileID: 0}
   penis: 0
   dampeningRate: 2
@@ -16102,7 +16102,7 @@ MonoBehaviour:
   howfar: 1
   speed: 1
   timer: 0
-  weiter: 3
+  weiter: 1.5
   jump: 0
 --- !u!50 &1021134811
 Rigidbody2D:
@@ -18175,7 +18175,7 @@ Transform:
   m_GameObject: {fileID: 1282994889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.21, y: 33.12, z: 0}
+  m_LocalPosition: {x: -50.34, y: 34.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -86777,7 +86777,7 @@ Transform:
   m_GameObject: {fileID: 2145230961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.21, y: 33.12, z: -5}
+  m_LocalPosition: {x: -50.34, y: 34.79, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
