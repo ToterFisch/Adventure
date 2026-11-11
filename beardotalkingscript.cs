@@ -29,7 +29,7 @@ public class beardotalkingscript : MonoBehaviour
         player = GameObject.Find("Player");
         bild = this.gameObject.GetComponent<SpriteRenderer>();
         mikro = GameObject.Find("Manger").GetComponent<uimanagerskript>();
-        walk = GameObject.Find("Manger").GetComponent<enemywalk2>();
+        walk = this.gameObject.GetComponent<enemywalk2>();
         anna = this.gameObject.GetComponent<Animator>();
         einsatz = 1;
     }
@@ -227,7 +227,16 @@ public class beardotalkingscript : MonoBehaviour
         else if (einsatz == 18)
         {
             mikro.Sag(this.gameObject,bild.sprite,"I think that you should know how to punch, but the ancient prophecies also do have to say something for doing so. It is written that you can use the items equipped on the right and left slot by pressing the corresponding mouse button. Sounds like giberish if you ask me. But try by hitting the training dummy.");
-            einsatz = 19;        
+            einsatz = 119;        
+        }
+        else if (einsatz == 119)
+        {
+            einsatz = 120;
+        }
+        else if (einsatz == 120)
+        {
+            mikro.Sag(this.gameObject,bild.sprite,"Can you see how the puppet reacts when hit?");
+            einsatz = 19;
         }
         else if (einsatz == 19)
         {
@@ -252,6 +261,10 @@ public class beardotalkingscript : MonoBehaviour
         else if (einsatz == 20)
         {
             mikro.Sag(this.gameObject,bild.sprite,"If you have equipped some armour it will save your health for a few hits. It regenerates itself so it can be used often. If you want you can go on training with the dummies. Talk to me if you want to fight your first enemy.");
+            einsatz = 121;
+        }
+        else if (einsatz == 121)
+        {
             einsatz = 21;
         }
         else if (einsatz == 21)

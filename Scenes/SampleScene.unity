@@ -1133,7 +1133,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232104626}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -23.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13093,7 +13093,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429774935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -22.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13822,7 +13822,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -63.55, y: 33.91, z: -5}
+  m_LocalPosition: {x: -51.78, y: 40.86, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17297,7 +17297,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170194716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -14.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17885,7 +17885,7 @@ Transform:
   m_GameObject: {fileID: 1282994889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -63.55, y: 33.91, z: 0}
+  m_LocalPosition: {x: -51.78, y: 40.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18961,6 +18961,7 @@ GameObject:
   - component: {fileID: 1429054734}
   - component: {fileID: 1429054733}
   - component: {fileID: 1429054736}
+  - component: {fileID: 1429054737}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: barrel
@@ -19078,7 +19079,7 @@ Transform:
   m_GameObject: {fileID: 1429054732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.449, y: 29.462, z: 0.14369898}
+  m_LocalPosition: {x: -63.38, y: 29.462, z: 0.14369898}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19097,6 +19098,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slime: {fileID: 5987816176344614075, guid: 1a10b22d5f47f98d9b1522cd2dc6d64a, type: 3}
+--- !u!114 &1429054737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429054732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e20f659bdae4af9af8eeb0017f77dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 382214381}
+  target: {x: 0, y: 0, z: 0}
+  path: []
+  pathdir: 
 --- !u!1 &1437720616
 GameObject:
   m_ObjectHideFlags: 0
@@ -20347,6 +20364,7 @@ GameObject:
   - component: {fileID: 1684158693}
   - component: {fileID: 1684158696}
   - component: {fileID: 1684158697}
+  - component: {fileID: 1684158698}
   m_Layer: 0
   m_Name: Beardo
   m_TagString: npc
@@ -20455,7 +20473,7 @@ Transform:
   m_GameObject: {fileID: 1684158692}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.59, y: 33.85, z: 0.02080204}
+  m_LocalPosition: {x: -51.17, y: 35.43, z: 0.02080204}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20473,6 +20491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50219ab0fc0806cbea88c93fc5c51a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barrel: {fileID: 1429054732}
   leben: 0
   schadensreduktion: 0
   verteidigung: 0
@@ -20482,7 +20501,7 @@ MonoBehaviour:
   aggro: 0
   mikro: {fileID: 0}
   bild: {fileID: 0}
-  einsatz: 0
+  einsatz: 22
   walk: {fileID: 0}
   speed: 0
   anna: {fileID: 0}
@@ -20510,6 +20529,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1684158698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684158692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19e20f659bdae4af9af8eeb0017f77dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 382214381}
+  target: {x: 0, y: 0, z: 0}
+  path: []
+  pathdir: 
 --- !u!1 &1725679578
 GameObject:
   m_ObjectHideFlags: 0
@@ -86635,7 +86670,7 @@ Transform:
   m_GameObject: {fileID: 2145230961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -63.55, y: 33.91, z: -5}
+  m_LocalPosition: {x: -51.78, y: 40.86, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
