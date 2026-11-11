@@ -7,7 +7,8 @@ using System.Collections.Generic;
 
 public class beardotalkingscript : MonoBehaviour
 {
-   public int leben;
+    public GameObject barrel;
+    public int leben;
     public int schadensreduktion;
     public int verteidigung;
     public int schaden;
@@ -260,7 +261,30 @@ public class beardotalkingscript : MonoBehaviour
         }
         else if (einsatz == 22)
         {
-            mikro.Entscheide(this.gameObject,bild.sprite,new string[3]{"Yes i am ready.","Please wait another minute."})
+            if(i == 5){
+                mikro.Entscheide(this.gameObject,bild.sprite,new string[3]{"Yes i am ready.","Please wait another minute.",""});
+            }
+            else if (i == 1)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"Ok, now im gonna let a slime out of the barrel over there. He will jump at you and try to hurt you. Fight and kill him, but be aware he is resistent to smash damage.");
+                einsatz = 23;
+            }
+            else if (i == 2)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"Just talk to me as soon as you are ready.");
+            }
+        }
+        else if (einsatz == 23)
+        {
+            walk.Move(this.gameObject,new Vector3(64.5f,30.5f,this.transform.position.z), 3f, anna);
+            einsatz = 24;
+        }
+        else if (einsatz == 24)
+        {
+            if(this.transform.position == new Vector3(64.5f, 30.5f, this.transform.position.z))
+            {
+                barrel.SendMessage("SpawnSlime",0);
+            }
         }
     }
 }
