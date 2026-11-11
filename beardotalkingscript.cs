@@ -311,7 +311,10 @@ public class beardotalkingscript : MonoBehaviour
             walk.Move(this.gameObject,new Vector3(-52.5f,17.5f,this.transform.position.z), 3f, anna);
             einsatz = 270;
         }
-        
+        else if (einsatz == 270)
+        {
+            einsatz = 27;
+        }
         else if (einsatz == 27)
         {
             if (transform.position == new Vector3(-52.5f, 17.5f, this.transform.position.z))
@@ -323,19 +326,27 @@ public class beardotalkingscript : MonoBehaviour
         else if (einsatz == 28)
         {
             walk.Move(this.gameObject,new Vector3(-52.5f,7.5f,this.transform.position.z), 3f, anna);
+            einsatz = 290;
+        }
+        else if (einsatz == 290)
+        {
             einsatz = 29;
         }
         else if (einsatz == 29)
         {
             if (transform.position == new Vector3(-52.5f,7.5f,this.transform.position.z))
             {
-                mikro.Sag(this.gameObject,bild.sprite,"This is our living house. Here we sleep, cook, eat and make all the stuff we need. You can alway come here to eat at our table.");
+                mikro.Sag(this.gameObject,bild.sprite,"This is our living house. Here we sleep, cook, eat and make all the stuff we need. You can always come here to eat at our table.");
                 einsatz = 30;
             }
         }
         else if (einsatz == 30)
         {
             walk.Move(this.gameObject,new Vector3(-53.5f,49.5f,this.transform.position.z), 3f, anna);
+            einsatz = 310;
+        }
+        else if (einsatz == 310)
+        {
             einsatz = 31;
         }
         else if (einsatz == 31)
@@ -348,7 +359,7 @@ public class beardotalkingscript : MonoBehaviour
         }
         else if (einsatz == 32)
         {
-            mikro.Sag(this.gameObject,bild.sprite,"Be on your way then, i will no longer hold you of your holy duties. Im shure the gods will bless you with on of theire orders soon enough. And as i said, you can alway come back.");
+            mikro.Sag(this.gameObject,bild.sprite,"Be on your way then, i will no longer hold you of your holy duties. Im shure the gods will bless you with on of theire orders soon enough. And as i said, you can always come back.");
             einsatz = 33;
         }
 

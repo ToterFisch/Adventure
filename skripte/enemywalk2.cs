@@ -337,7 +337,7 @@ public class enemywalk2 : MonoBehaviour
     {
         Debug.Log("iswalking"+npc.transform.name);
         anna.SetInteger("laufend", 1);
-        while (path.Count > 1){
+        while (path.Count > 0){
             if(npc.transform.position != new Vector3 (map.GetCellCenterWorld(path.LastOrDefault()).x,map.GetCellCenterWorld(path.LastOrDefault()).y,npc.transform.position.z))
             {
                 npc.transform.position = Vector3.MoveTowards(npc.transform.position, new Vector3 (map.GetCellCenterWorld(path.LastOrDefault()).x,map.GetCellCenterWorld(path.LastOrDefault()).y,npc.transform.position.z), speed * Time.deltaTime);

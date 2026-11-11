@@ -44,9 +44,9 @@ public class enemyattackskript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(rich.velocity.magnitude != 0) 
+        if(rich.linearVelocity.magnitude != 0) 
         {
-            Vector3 dampeningDirection = rich.velocity.normalized * -1.0f;
+            Vector3 dampeningDirection = rich.linearVelocity.normalized * -1.0f;
 	        rich.AddForce( dampeningDirection * dampeningRate);
         }
     }
