@@ -34,12 +34,14 @@ public class daytimescript : MonoBehaviour
         else
         {
             timer = 0;
-            zeit ++;
-            zeit = zeit%6;
             foreach (GameObject obj in npcs)
             {
+                Debug.Log("sendMessage");
                 obj.SendMessage("Tageszeit",zeit);
             }
+            zeit ++;
+            zeit = zeit%6;
+            
             
         }
     }

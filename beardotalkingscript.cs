@@ -23,6 +23,7 @@ public class beardotalkingscript : MonoBehaviour
     public float speed;
     public Animator anna;
     public GameObject player;
+    public GameObject bett;
     public int ungeduld = 0;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -62,6 +63,10 @@ public class beardotalkingscript : MonoBehaviour
         int ran = Random.Range(1,3);
         if (i == 1)
         {
+            StartCoroutine(Essenfassen());
+        }
+        if (i == 2)
+        {
             Debug.Log("running: "+ran);
             if(ran == 1)
             {
@@ -76,8 +81,59 @@ public class beardotalkingscript : MonoBehaviour
                 StartCoroutine(Talktopeasents());
             }
         }
+        if (i == 3)
+        {
+            StartCoroutine(Essenfassen());
+        }
+        if (i == 4)
+        {
+            Debug.Log("running: "+ran);
+            if(ran == 1)
+            {
+                StartCoroutine(Talktopeasents());
+            }
+            if(ran == 2)
+            {
+                StartCoroutine(Talktopeasents());
+            }
+            if(ran == 3)
+            {
+                StartCoroutine(Talktopeasents());
+            }
+        }
+        if (i == 5)
+        {
+            StartCoroutine(Essenfassen());
+        }
+        if (i == 6)
+        {
+            StartCoroutine(Goodnight());
+        }
     }
-    //I am writing this line to get hackatime to track a minute of time so i can post a clarifying devlog oh there it is
+    public IEnumerator Goodnight()
+    {
+        yield return new WaitForSeconds(Random.Range(1f,30f));
+        walk.Move(this.gameObject,new Vector3(-59.5f,1.5f,this.transform.position.z),5f,anna);
+        while (this.transform.position != new Vector3(-59.5f,1.5f, this.transform.position.z))
+        {
+            yield return new WaitForSeconds(5f);
+        }
+        //the bed is gonna follow soon
+        bett.SendMessage("Schlafen",this.gameObject);
+        yield return new WaitForSeconds(Random.Range(280f,340f));
+        bett.SendMessage("Aufstehen",this.gameObject);
+    }
+    public IEnumerator Essenfassen()
+    {
+        yield return new WaitForSeconds(Random.Range(1f,30f));
+        walk.Move(this.gameObject,new Vector3(-67.5f,6.5f,this.transform.position.z),5f,anna);
+        while (this.transform.position != new Vector3(-67.5f,6.5f, this.transform.position.z))
+        {
+            yield return new WaitForSeconds(5f);
+        }
+        yield return new WaitForSeconds(Random.Range(60f,80f));
+    }
+    //I am writing this line to get hackatime to track a minute of time so i can post a clarifying devlog oh there it is (somehow it got two minutes)
     public IEnumerator Talktopeasents()
     {
         yield return new WaitForSeconds(Random.Range(1f,10f));
@@ -122,6 +178,7 @@ public class beardotalkingscript : MonoBehaviour
             walk.Move(this.gameObject,new Vector3(-25.5f,36.5f,this.transform.position.z),3f,anna);
         }
     }
+    
     public IEnumerator Guardtheportal()
     {
         yield return new WaitForSeconds(Random.Range(1f,30f));
