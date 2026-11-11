@@ -63,6 +63,7 @@ public class beardotalkingscript : MonoBehaviour
             
         }
     }
+    //I am writing this line to get hackatime to track a minute of time so i can post a clarifying devlog oh there it is
     public IEnumerator Talktopeasents()
     {
         yield return new WaitForSeconds(Random.Range(1f,10f));

@@ -58,6 +58,7 @@ public class playerstats : MonoBehaviour
         leben = gefcount*4;
         UpdateLife();
     }
+
     public void Trigger(int i)
     {
         if (i == 100)
