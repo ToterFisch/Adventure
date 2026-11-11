@@ -14,6 +14,7 @@ public class daytimescript : MonoBehaviour
     public float lang;
     public float kurz;
     public int zeit;
+    public List<GameObject> npcs = new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,7 +36,11 @@ public class daytimescript : MonoBehaviour
             timer = 0;
             zeit ++;
             zeit = zeit%6;
-            SendMessage("Tageszeit",zeit);
+            foreach (GameObject obj in npcs)
+            {
+                obj.SendMessage("Tageszeit",zeit);
+            }
+            
         }
     }
 }

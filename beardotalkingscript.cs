@@ -24,6 +24,7 @@ public class beardotalkingscript : MonoBehaviour
     public Animator anna;
     public GameObject player;
     public int ungeduld = 0;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -58,9 +59,22 @@ public class beardotalkingscript : MonoBehaviour
     }
     public void Tageszeit(int i)
     {
+        int ran = Random.Range(1,3);
         if (i == 1)
         {
-            
+            Debug.Log("running: "+ran);
+            if(ran == 1)
+            {
+                StartCoroutine(Talktopeasents());
+            }
+            if(ran == 2)
+            {
+                StartCoroutine(Talktopeasents());
+            }
+            if(ran == 3)
+            {
+                StartCoroutine(Talktopeasents());
+            }
         }
     }
     //I am writing this line to get hackatime to track a minute of time so i can post a clarifying devlog oh there it is
@@ -75,6 +89,7 @@ public class beardotalkingscript : MonoBehaviour
             {
                 yield return new WaitForSeconds(5f);
             }
+            einsatz = 1001;
             yield return new WaitForSeconds(Random.Range(20f,60f));
             walk.Move(this.gameObject,new Vector3(-83.5f,34.5f,this.transform.position.z),3f,anna);
             yield return new WaitForSeconds(Random.Range(20f,60f));
@@ -87,6 +102,7 @@ public class beardotalkingscript : MonoBehaviour
             {
                 yield return new WaitForSeconds(5f);
             }
+            einsatz = 1001;
             yield return new WaitForSeconds(Random.Range(20f,60f));
             walk.Move(this.gameObject,new Vector3(-53.5f,61.5f,this.transform.position.z),3f,anna);
             yield return new WaitForSeconds(Random.Range(20f,60f));
@@ -99,6 +115,7 @@ public class beardotalkingscript : MonoBehaviour
             {
                 yield return new WaitForSeconds(5f);
             }
+            einsatz = 1001;
             yield return new WaitForSeconds(Random.Range(20f,60f));
             walk.Move(this.gameObject,new Vector3(-23.5f,39.5f,this.transform.position.z),3f,anna);
             yield return new WaitForSeconds(Random.Range(20f,60f));
@@ -113,7 +130,23 @@ public class beardotalkingscript : MonoBehaviour
         {
             yield return new WaitForSeconds(5f);
         }
-        
+        einsatz = 1001;
+        yield return new WaitForSeconds(Random.Range(60f,120f));
+        walk.Move(this.gameObject,new Vector3(-55.5f,36.5f,this.transform.position.z),3f,anna);
+        while (this.transform.position != new Vector3(-55.5f,36.5f, this.transform.position.z))
+        {
+            yield return new WaitForSeconds(5f);
+        }
+    }
+    public IEnumerator TrainMagic()
+    {
+        yield return new WaitForSeconds(Random.Range(1f,20f));
+        walk.Move(this.gameObject,new Vector3(-38.5f,33.5f,this.transform.position.z),3f,anna);
+        while (this.transform.position != new Vector3(-38.5f,33.5f, this.transform.position.z))
+        {
+            yield return new WaitForSeconds(5f);
+        }
+        //at this point he is supposed to be doing some magical training but i dont have the animations or an idea what it should look like yet
     }
     public void Done (int i)
     {
@@ -425,8 +458,46 @@ public class beardotalkingscript : MonoBehaviour
         else if (einsatz == 33)
         {
             walk.Move(this.gameObject,new Vector3(-52.5f,7.5f,this.transform.position.z), 3f, anna);
-            einsatz = 34;
+            einsatz = 499;
+        }
+        
+        
+        else if (einsatz == 498)
+        {
+            einsatz = 499;
+        }
+        else if (einsatz == 499)
+        {
+            mikro.Sag(this.gameObject,bild.sprite,"How can i help you?");
+            einsatz = 500;
+        }
+        else if (einsatz == 500)
+        {
+            if(i == 5){
+                mikro.Entscheide(this.gameObject,bild.sprite,new string[3]{"Why am i here, why have the gods send me here.","Can i help you somehow.","Forget it"});
+            }
+            else if (i == 1)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"Dont worry so much. You are doing fine. Just do whatever you want, or help the people around here.");
+                einsatz = 498;
+            }
+            else if (i == 2)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"Well it would help me if you could get rid of the rats in the cellar of the living house.");
+                einsatz = 470;
+            }
+            else if (i == 3)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"Well goodbye then.");
+                einsatz = 498;
+            }
         }
 
+
+        else if (einsatz == 1001)
+        {
+            mikro.Sag(this.gameObject,bild.sprite,"Oh hey, youre here again. I was just helping these pour souls. How can i help you?");
+            einsatz = 500;
+        }
     }
 }
