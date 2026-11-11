@@ -29,13 +29,15 @@ public class enemywalk2 : MonoBehaviour
     {
         Vector3Int npcposs = map.WorldToCell(npc.transform.position);
         Vector3Int targetposs = map.WorldToCell(target);
+        Debug.Log(targetposs);
         path.Add(Pathfinding(npcposs,targetposs,new List<Vector3Int>()));
-        
+        Debug.Log(targetposs);
         StartCoroutine(Walking(npc,speed,anna));
               
     }
     public Vector3Int Pathfinding(Vector3Int npc, Vector3Int target, List<Vector3Int> didnot)
     {
+        Debug.Log(npc);
         Vector3Int[] dir = new Vector3Int[4] {npc + Vector3Int.up, npc + Vector3Int.right, npc + Vector3Int.down, npc + Vector3Int.left};
         TileBase[] dirs = new TileBase[4]{map.GetTile(dir[0]), map.GetTile(dir[1]), map.GetTile(dir[2]), map.GetTile(dir[3])};
         int ydir = 5;
@@ -195,6 +197,7 @@ public class enemywalk2 : MonoBehaviour
         TileBase[] dirs = new TileBase[4]{map.GetTile(dir[0]), map.GetTile(dir[1]), map.GetTile(dir[2]), map.GetTile(dir[3])};
         int ydir = 5;
         int xdir = 5;
+        Debug.Log(npc);
         if(npc != target)
         {
             didnot.Add(npc);

@@ -289,13 +289,14 @@ public class beardotalkingscript : MonoBehaviour
         }
         else if (einsatz == 23)
         {
-            walk.Move(this.gameObject,new Vector3(64.5f,30.5f,this.transform.position.z), 3f, anna);
+            walk.Move(this.gameObject,new Vector3(-63.5f,30.5f,this.transform.position.z), 3f, anna);
             einsatz = 24;
         }
         else if (einsatz == 24)
         {
-            if(this.transform.position == new Vector3(64.5f, 30.5f, this.transform.position.z))
+            if(this.transform.position == new Vector3(-63.5f, 30.5f, this.transform.position.z))
             {
+                Debug.Log("sendthemessage");
                 barrel.SendMessage("SpawnSlime",0);
             }
         }
