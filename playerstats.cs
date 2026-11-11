@@ -10,6 +10,7 @@ using System.Linq;
 
 public class playerstats : MonoBehaviour
 {
+    public GameObject insidemap;
     public inventory inv;
     public int gefcount;
     
@@ -56,6 +57,21 @@ public class playerstats : MonoBehaviour
         schadensreduktion = inv.donned[0].schadensreduktion+inv.donned[1].schadensreduktion+inv.donned[2].schadensreduktion;
         leben = gefcount*4;
         UpdateLife();
+    }
+    public void Trigger(int i)
+    {
+        if (i == 100)
+        {
+            if (insidemap.activeInHierarchy)
+            {
+                insidemap.SetActive(false);
+            }
+            else
+            {
+                insidemap.SetActive(true);
+            }
+        }
+        
     }
     public void UpdateLife()
     {

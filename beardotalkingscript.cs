@@ -18,6 +18,7 @@ public class beardotalkingscript : MonoBehaviour
     public uimanagerskript mikro;
     public SpriteRenderer bild;
     public int einsatz;
+    public int todo;
     public enemywalk2 walk;
     public float speed;
     public Animator anna;
@@ -54,6 +55,64 @@ public class beardotalkingscript : MonoBehaviour
                 mikro.uiman.uiopen = this.gameObject;
             }
         }
+    }
+    public void Tageszeit(int i)
+    {
+        if (i == 1)
+        {
+            
+        }
+    }
+    public IEnumerator Talktopeasents()
+    {
+        yield return new WaitForSeconds(Random.Range(1f,10f));
+        int ran = Random.Range(1,3);
+        if (ran == 1)
+        {
+            walk.Move(this.gameObject,new Vector3(-76.5f,39.5f,this.transform.position.z),3f,anna);
+            while (this.transform.position != new Vector3(-76.5f, 39.5f, this.transform.position.z))
+            {
+                yield return new WaitForSeconds(5f);
+            }
+            yield return new WaitForSeconds(Random.Range(20f,60f));
+            walk.Move(this.gameObject,new Vector3(-83.5f,34.5f,this.transform.position.z),3f,anna);
+            yield return new WaitForSeconds(Random.Range(20f,60f));
+            walk.Move(this.gameObject,new Vector3(-76.5f,36.5f,this.transform.position.z),3f,anna);
+        }
+        else if(ran == 2)
+        {
+            walk.Move(this.gameObject,new Vector3(-50.5f,57.5f,this.transform.position.z),3f,anna);
+            while (this.transform.position != new Vector3(-50.5f,57.5f, this.transform.position.z))
+            {
+                yield return new WaitForSeconds(5f);
+            }
+            yield return new WaitForSeconds(Random.Range(20f,60f));
+            walk.Move(this.gameObject,new Vector3(-53.5f,61.5f,this.transform.position.z),3f,anna);
+            yield return new WaitForSeconds(Random.Range(20f,60f));
+            walk.Move(this.gameObject,new Vector3(-50.5f,65.5f,this.transform.position.z),3f,anna);
+        }
+        else if(ran == 3)
+        {
+            walk.Move(this.gameObject,new Vector3(-29.5f,36.5f,this.transform.position.z),3f,anna);
+            while (this.transform.position != new Vector3(-29.5f,36.5f, this.transform.position.z))
+            {
+                yield return new WaitForSeconds(5f);
+            }
+            yield return new WaitForSeconds(Random.Range(20f,60f));
+            walk.Move(this.gameObject,new Vector3(-23.5f,39.5f,this.transform.position.z),3f,anna);
+            yield return new WaitForSeconds(Random.Range(20f,60f));
+            walk.Move(this.gameObject,new Vector3(-25.5f,36.5f,this.transform.position.z),3f,anna);
+        }
+    }
+    public IEnumerator Guardtheportal()
+    {
+        yield return new WaitForSeconds(Random.Range(1f,30f));
+        walk.Move(this.gameObject,new Vector3(-54.5f,33.5f,this.transform.position.z),3f,anna);
+        while (this.transform.position != new Vector3(-54.5f,33.5f, this.transform.position.z))
+        {
+            yield return new WaitForSeconds(5f);
+        }
+        
     }
     public void Done (int i)
     {
@@ -361,6 +420,11 @@ public class beardotalkingscript : MonoBehaviour
         {
             mikro.Sag(this.gameObject,bild.sprite,"Be on your way then, i will no longer hold you of your holy duties. Im shure the gods will bless you with on of theire orders soon enough. And as i said, you can always come back.");
             einsatz = 33;
+        }
+        else if (einsatz == 33)
+        {
+            walk.Move(this.gameObject,new Vector3(-52.5f,7.5f,this.transform.position.z), 3f, anna);
+            einsatz = 34;
         }
 
     }
