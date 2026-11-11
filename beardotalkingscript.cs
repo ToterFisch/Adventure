@@ -294,11 +294,63 @@ public class beardotalkingscript : MonoBehaviour
         }
         else if (einsatz == 24)
         {
-            if(this.transform.position == new Vector3(-63.5f, 30.5f, this.transform.position.z))
+            if(this.transform.position == new Vector3(-64.5f, 30.5f, this.transform.position.z))
             {
                 Debug.Log("sendthemessage");
-                barrel.SendMessage("SpawnSlime",0);
+                barrel.SendMessage("SpawnSlime",1);
+                einsatz = 25;
             }
         }
+        else if (einsatz == 25)
+        {
+            mikro.Sag(this.gameObject,bild.sprite,"Great you have slain the slime. Now you are ready for the world. Let me show you this kloster.");
+            einsatz = 26;
+        }
+        else if (einsatz == 26)
+        {
+            walk.Move(this.gameObject,new Vector3(-52.5f,17.5f,this.transform.position.z), 3f, anna);
+            einsatz = 270;
+        }
+        
+        else if (einsatz == 27)
+        {
+            if (transform.position == new Vector3(-52.5f, 17.5f, this.transform.position.z))
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"These are our gardens where we grow all the food we need.");
+                einsatz = 28;
+            }
+        }
+        else if (einsatz == 28)
+        {
+            walk.Move(this.gameObject,new Vector3(-52.5f,7.5f,this.transform.position.z), 3f, anna);
+            einsatz = 29;
+        }
+        else if (einsatz == 29)
+        {
+            if (transform.position == new Vector3(-52.5f,7.5f,this.transform.position.z))
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"This is our living house. Here we sleep, cook, eat and make all the stuff we need. You can alway come here to eat at our table.");
+                einsatz = 30;
+            }
+        }
+        else if (einsatz == 30)
+        {
+            walk.Move(this.gameObject,new Vector3(-53.5f,49.5f,this.transform.position.z), 3f, anna);
+            einsatz = 31;
+        }
+        else if (einsatz == 31)
+        {
+            if (transform.position == new Vector3(-53.5f,49.5f,this.transform.position.z))
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"This is one of the three great entrance halls of the kloster. Here the pilgrims come to bring theire biddings and hope that the prophets will help them. They would appreciate it if you found the time to help them.");
+                einsatz = 32;
+            }
+        }
+        else if (einsatz == 32)
+        {
+            mikro.Sag(this.gameObject,bild.sprite,"Be on your way then, i will no longer hold you of your holy duties. Im shure the gods will bless you with on of theire orders soon enough. And as i said, you can alway come back.");
+            einsatz = 33;
+        }
+
     }
 }

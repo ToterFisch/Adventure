@@ -17,7 +17,8 @@ public class barrelscript : MonoBehaviour
     //i need one for every direction so i gotta make 4 functions or one with an if statement nvm found a solution
     public void SpawnSlime(int i)
     {
-        Vector3[] directions = new Vector3[4]{new Vector3(this.transform.position.x,this.transform.position.y+0.5f,this.transform.position.z),new Vector3(this.transform.position.x+0.5f,this.transform.position.y,this.transform.position.z),new Vector3(this.transform.position.x,this.transform.position.y-0.5f,this.transform.position.z),new Vector3(this.transform.position.x-0.5f,this.transform.position.y,this.transform.position.z)};
+        Vector3[] directions = new Vector3[5]{new Vector3 (0,0,0),new Vector3(this.transform.position.x,this.transform.position.y+0.5f,this.transform.position.z),new Vector3(this.transform.position.x+0.5f,this.transform.position.y,this.transform.position.z),new Vector3(this.transform.position.x,this.transform.position.y-0.5f,this.transform.position.z),new Vector3(this.transform.position.x-0.5f,this.transform.position.y,this.transform.position.z)};
+        Debug.Log("works?");
         Instantiate(slime,directions[i],this.transform.rotation);
     }
 }
