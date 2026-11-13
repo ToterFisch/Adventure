@@ -25,6 +25,7 @@ public class victortalkingscript : MonoBehaviour
     public GameObject bett;
     public int ungeduld = 0;
     public int merken;
+    public bool test;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -40,7 +41,11 @@ public class victortalkingscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (test == true)
+        {
+            StartCoroutine(Tischabdecken());
+            test = false;
+        }
     }
     public IEnumerator küchendinge()
     {
@@ -85,24 +90,48 @@ public class victortalkingscript : MonoBehaviour
     public IEnumerator Tischdecken()
     {
         int t = 0;
-        
+        einsatz = 400;
         for (int i = 0; i<wostehen.Length; i++)
         {
             walk.Move(this.gameObject,wostehen[i],5f,anna);
             while (this.transform.position != wostehen[i])
             {
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(1f);
             } 
-            yield return new WaitForSeconds(2f);
+            
             int ran = Random.Range(0,4);
-            SetTile(detailsup.WorldToCell(tisch[t]),food[ran]);
+            detailsup.SetTile(detailsup.WorldToCell(tisch[t]),food[ran]);
             t++;
-            yield return new WaitForSeconds(2f);
-            int ran = Random.Range(0,4);
-            SetTile(detailsup.WorldToCell(tisch[t]),food[ran]);
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
+            ran = Random.Range(0,4);
+            detailsup.SetTile(detailsup.WorldToCell(tisch[t]),food[ran]);
+            t++;
+            yield return new WaitForSeconds(1f);
         }
-        
+        walk.Move(this.gameObject,new Vector3(-67.5f,-1.5f,this.transform.position.z),5f,anna);
+    }
+    public IEnumerator Tischabdecken()
+    {
+        int t = 0;
+        einsatz = 400;
+        for (int i = 0; i<wostehen.Length; i++)
+        {
+            walk.Move(this.gameObject,wostehen[i],5f,anna);
+            while (this.transform.position != wostehen[i])
+            {
+                yield return new WaitForSeconds(1f);
+            } 
+            
+            int ran = Random.Range(0,4);
+            detailsup.SetTile(detailsup.WorldToCell(tisch[t]),null);
+            t++;
+            yield return new WaitForSeconds(1f);
+            ran = Random.Range(0,4);
+            detailsup.SetTile(detailsup.WorldToCell(tisch[t]),null);
+            t++;
+            yield return new WaitForSeconds(1f);
+        }
+        walk.Move(this.gameObject,new Vector3(-67.5f,-1.5f,this.transform.position.z),5f,anna);
     }
     public void Done(int i)
     {
@@ -120,8 +149,6 @@ public class victortalkingscript : MonoBehaviour
                 einsatz = merken;
             }
         }
-
-
         else if (einsatz == 300)
         {
             mikro.Sag(this.gameObject,bild.sprite,"Cooking is so stressfull. I am cooking a tasty meal right now, maybe we can talk later.");
