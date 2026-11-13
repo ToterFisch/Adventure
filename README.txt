@@ -4,18 +4,12 @@ In the game the character in this game is summoned through a portal without memo
 Some creepy cultists tell them theire being controlled by a god who wants to see the world through their eyes. 
 They then tell them to get out there and show this god the world, get stronger and perform miracles. 
 
-Right now you can do the following things:
+Ask the NPC to teach you some basics to start the tutorial. And of course you can see the dummie moving ok? i did not not implement it, nüch. 
+After that you can look into the living house to watch Victor do food stuff. according to a daily schedule. He will always talk to you when 
+he walks so just accept it and wait until he is done. 
 
-Open chests and collect items by clicking on them. You can equip your items by pressing R and choosing a place. 
-Specific items can only be equipped on specific places. You can use the item on the left and right spaces by 
-clicking the corresponding mousebutton. Pres ESC to go back.
-
-Click on the NPC to talk to him. Press Space to continue or speed up the dialogue.
-If you have to make a choice do not press Space, but rather choose one option. 
-If you denie his bidding he will walk away. If you attack him he will attack you. 
-You cannot die but still gonna loose life (just doesnt do anything). 
-If the NPC would die he just goes back to normal and doesnt attack you anymore. 
-After attacking the dialogue gets buggy i guess so maybe reload.
+In the moment there sometimes is a dialogue bug where the tutorial npc always gives you the same answer no matter which choices you make. 
+I could "fix" that by tabbing in and out of the browser waiting and hovering over the choice before clicking.
 
 The base idea is that you can just do anything you want in this game, open up a shop, help people or slay monsters. 
 I probably never gonna be able to finish this or get somewhere near to where i want to get, but i hope the journey to the inevitable point of giving up will be fun.
@@ -27,4 +21,8 @@ the Assets folder of a new project and try to start it (you may have to import s
 
 You can also check out the prototype on itch io: https://toterfisch.itch.io/portal-realm-working-title 
 
-Use of AI: there is one part of the skript where some angles need to be calculated, it is marked in the code and ai generated (I am deeply ashamed). Also there are some lines in the code i have done a wile back, these are not marked in the code but will likely be found somewhere in the movement part or the spellinventory part. I honestly cant remember how i did these but knowing me i would say its likely i copied them from some tutorial or generated them using ai (I do tend to copy such stuff from older projects where i used these methods).
+Use of AI: there is one part of the skript where some angles need to be calculated, it is marked in the code and ai 
+generated (I am deeply ashamed). Also there are some lines in the code i have done a wile back, these are not marked 
+in the code but will likely be found somewhere in the movement part or the spellinventory part. I honestly cant remember 
+how i did these but knowing me i would say its likely i copied them from some tutorial or generated them using ai 
+(I do tend to copy such stuff from older projects where i used these methods).
