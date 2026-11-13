@@ -14,6 +14,7 @@ public class daytimescript : MonoBehaviour
     public float lang;
     public float kurz;
     public int zeit;
+    public bool hatschon;
     public List<GameObject> npcs = new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,7 +32,7 @@ public class daytimescript : MonoBehaviour
             timer += Time.deltaTime;
             overall += Time.deltaTime;
         }
-        else
+        else if (timer>=tageszeit[zeit])
         {
             timer = 0;
             foreach (GameObject obj in npcs)
@@ -41,8 +42,19 @@ public class daytimescript : MonoBehaviour
             }
             zeit ++;
             zeit = zeit%6;
-            
-            
+            hatschon = false;
+        }
+        if (timer >= tageszeit[zeit]-10 && hatschon == false)
+        {
+            if (zeit == 1 ||zeit == 2 ||zeit == 3 ){
+                foreach (GameObject obj in npcs)
+                {
+                    Debug.Log("sendMessage");
+                    obj.SendMessage("Tageszeit",zeit);
+                }
+                hatschon = true;
+            }
         }
     }
+    
 }

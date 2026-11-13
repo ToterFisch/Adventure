@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-// using UnityEngine.TilemapModule;    this doesnt work
 public class victortalkingscript : MonoBehaviour
 {
     public Tilemap detailsup;
@@ -26,6 +25,7 @@ public class victortalkingscript : MonoBehaviour
     public int ungeduld = 0;
     public int merken;
     public bool test;
+    public int letztetageszeit;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -47,7 +47,52 @@ public class victortalkingscript : MonoBehaviour
             test = false;
         }
     }
-    public IEnumerator küchendinge()
+    public void Tageszeit(int i)
+    {
+        if (i == letztetageszeit){
+            if (i == 1)
+            {
+                StartCoroutine(Essenfassen());
+            }
+            else if (i == 3)
+            {
+                StartCoroutine(Essenfassen());
+            }
+            else if (i == 5)
+            {
+                StartCoroutine(Essenfassen());
+            }
+        }
+        else if (i != letztetageszeit)
+        {
+            if (i == 1)
+            {
+                StartCoroutine(Tischdecken());
+                letztetageszeit = i;
+            }
+            else if (i == 2)
+            {
+                StartCoroutine(Küchendinge());
+                letztetageszeit = i;
+            }
+            else if (i == 3)
+            {
+                StartCoroutine(Tischdecken());
+                letztetageszeit = i;
+            }
+            else if (i == 4)
+            {
+                StartCoroutine(Küchendinge());
+                letztetageszeit = i;
+            }
+            else if (i == 5)
+            {
+                StartCoroutine(Tischdecken());
+                letztetageszeit = i;
+            }
+        }
+    }
+    public IEnumerator Küchendinge()
     {
         yield return new WaitForSeconds(Random.Range(1f,10f));
         walk.Move(this.gameObject,new Vector3(-67.5f,-1.5f,this.transform.position.z),5f,anna);
@@ -63,8 +108,10 @@ public class victortalkingscript : MonoBehaviour
             walk.Move(this.gameObject,new Vector3(-69.5f,-2.5f,this.transform.position.z),5f,anna);
             while (this.transform.position != new Vector3(-69.5f,-2.5f, this.transform.position.z))
             {
+                einsatz = 301;
                 yield return new WaitForSeconds(5f);
             } 
+            einsatz = 300;
             yield return new WaitForSeconds(30f);
             }
             else if (ran == 2)
@@ -72,8 +119,10 @@ public class victortalkingscript : MonoBehaviour
                 walk.Move(this.gameObject,new Vector3(-65.5f,-2.5f,this.transform.position.z),5f,anna);
                 while (this.transform.position != new Vector3(-69.5f,-2.5f, this.transform.position.z))
                 {
+                    einsatz = 301;
                     yield return new WaitForSeconds(5f);
                 } 
+                einsatz = 300;
                 yield return new WaitForSeconds(30f);
             }
             else if (ran == 3)
@@ -81,8 +130,10 @@ public class victortalkingscript : MonoBehaviour
                 walk.Move(this.gameObject,new Vector3(-69.5f,-1.5f,this.transform.position.z),5f,anna);
                 while (this.transform.position != new Vector3(-69.5f,-2.5f, this.transform.position.z))
                 {
+                    einsatz = 301;
                     yield return new WaitForSeconds(5f);
                 } 
+                einsatz = 300;
                 yield return new WaitForSeconds(30f);
             }
         }
@@ -96,9 +147,10 @@ public class victortalkingscript : MonoBehaviour
             walk.Move(this.gameObject,wostehen[i],5f,anna);
             while (this.transform.position != wostehen[i])
             {
+                einsatz = 401;
                 yield return new WaitForSeconds(1f);
             } 
-            
+            einsatz = 400;
             int ran = Random.Range(0,4);
             detailsup.SetTile(detailsup.WorldToCell(tisch[t]),food[ran]);
             t++;
@@ -109,6 +161,7 @@ public class victortalkingscript : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
         walk.Move(this.gameObject,new Vector3(-67.5f,-1.5f,this.transform.position.z),5f,anna);
+        einsatz = 401;
     }
     public IEnumerator Tischabdecken()
     {
@@ -132,6 +185,17 @@ public class victortalkingscript : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
         walk.Move(this.gameObject,new Vector3(-67.5f,-1.5f,this.transform.position.z),5f,anna);
+    }
+    public IEnumerator Essenfassen()
+    {
+        yield return new WaitForSeconds(Random.Range(1f,30f));
+        walk.Move(this.gameObject,new Vector3(-67.5f,3.5f,this.transform.position.z),5f,anna);
+        while (this.transform.position != new Vector3(-67.5f,3.5f, this.transform.position.z))
+        {
+            yield return new WaitForSeconds(5f);
+        }
+        yield return new WaitForSeconds(Random.Range(80f,90f));
+        StartCoroutine(Tischabdecken());
     }
     public void Done(int i)
     {
@@ -157,6 +221,15 @@ public class victortalkingscript : MonoBehaviour
         else if (einsatz == 301)
         {
             einsatz = 300;
+        }
+        else if (einsatz == 400)
+        {
+            mikro.Sag(this.gameObject,bild.sprite,"If you want to eat anything just take some. Nobody will be mad at you.");
+            einsatz = 401;
+        }
+        else if (einsatz == 401)
+        {
+            einsatz = 400;
         }
     }
 }
