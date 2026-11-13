@@ -293,6 +293,7 @@ public class beardotalkingscript : MonoBehaviour
             {
                 mikro.Sag(this.gameObject,bild.sprite,"Then feel free to take the items out of these chests and be on your way. If you should have some questions after all feel free to just ask any monk");
                 einsatz = 8;
+                tutorial = false;
             }
             if (i == 2)
             {
@@ -447,7 +448,7 @@ public class beardotalkingscript : MonoBehaviour
         }
         else if (einsatz == 24)
         {
-            if(this.transform.position == new Vector3(-64.5f, 30.5f, this.transform.position.z))
+            if(this.transform.position == new Vector3(-63.5f, 30.5f, this.transform.position.z))
             {
                 Debug.Log("sendthemessage");
                 barrel.SendMessage("SpawnSlime",1);
@@ -457,7 +458,15 @@ public class beardotalkingscript : MonoBehaviour
         else if (einsatz == 25)
         {
             mikro.Sag(this.gameObject,bild.sprite,"Great you have slain the slime. Now you are ready for the world. Let me show you this kloster.");
-            einsatz = 26;
+            einsatz = 2670;
+        }
+        else if (einsatz == 2670)
+        {
+            walk.Move(this.gameObject,new Vector3(-69.5f,32.5f,this.transform.position.z), 3f, anna);
+            if (transform.position == new Vector3(-69.5f,32.5f, this.transform.position.z))
+            {
+                einsatz = 26;
+            }
         }
         else if (einsatz == 26)
         {

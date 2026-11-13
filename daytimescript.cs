@@ -35,22 +35,23 @@ public class daytimescript : MonoBehaviour
         else if (timer>=tageszeit[zeit])
         {
             timer = 0;
+            zeit ++;
+            zeit = zeit%6;
             foreach (GameObject obj in npcs)
             {
                 Debug.Log("sendMessage");
                 obj.SendMessage("Tageszeit",zeit);
             }
-            zeit ++;
-            zeit = zeit%6;
+            
             hatschon = false;
         }
         if (timer >= tageszeit[zeit]-10 && hatschon == false)
         {
-            if (zeit == 1 ||zeit == 2 ||zeit == 3 ){
+            if (zeit == 6 ||zeit == 2 ||zeit == 4 ){
                 foreach (GameObject obj in npcs)
                 {
                     Debug.Log("sendMessage");
-                    obj.SendMessage("Trageszeit",zeit);
+                    obj.SendMessage("Trageszeit",(zeit+1)%6);
                 }
                 hatschon = true;
             }

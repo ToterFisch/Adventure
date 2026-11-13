@@ -26,6 +26,7 @@ public class victortalkingscript : MonoBehaviour
     public int merken;
     public bool test;
     public int letztetageszeit;
+    public beardotalkingscript beardo;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -50,7 +51,7 @@ public class victortalkingscript : MonoBehaviour
     public void Tageszeit(int i)
     {
         Debug.Log("MessageRecieved");
-        
+        if(beardo.tutorial == false){
         
             if (i == 1)
             {
@@ -79,6 +80,7 @@ public class victortalkingscript : MonoBehaviour
                 Debug.Log("Essenfassen");
                 StartCoroutine(Essenfassen());
             }
+        }
     }
     public void Trageszeit(int i)
     {
