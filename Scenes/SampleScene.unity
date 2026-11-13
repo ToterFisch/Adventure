@@ -18790,7 +18790,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -65.62, y: -0.88, z: -5}
+  m_LocalPosition: {x: -64.01, y: 2.72, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52125,7 +52125,7 @@ Transform:
   m_GameObject: {fileID: 1282994889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -65.62, y: -0.88, z: 0}
+  m_LocalPosition: {x: -64.01, y: 2.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -55112,7 +55112,7 @@ Transform:
   m_GameObject: {fileID: 1684158692}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -59.47, y: -1.47, z: 0.02080204}
+  m_LocalPosition: {x: -51.97, y: 11.52, z: 0.02080204}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55148,6 +55148,7 @@ MonoBehaviour:
   player: {fileID: 0}
   bett: {fileID: 0}
   ungeduld: 0
+  tutorial: 0
 --- !u!95 &1684158697
 Animator:
   serializedVersion: 7
@@ -56222,6 +56223,7 @@ MonoBehaviour:
   hatschon: 0
   npcs:
   - {fileID: 1191132944}
+  - {fileID: 1684158692}
 --- !u!224 &1838404006 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7993753234875043734, guid: b412179f694acc23fbcc46c2b33a403f, type: 3}
@@ -144164,7 +144166,7 @@ Transform:
   m_GameObject: {fileID: 2145230961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -65.62, y: -0.88, z: -5}
+  m_LocalPosition: {x: -64.01, y: 2.72, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

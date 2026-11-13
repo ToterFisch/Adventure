@@ -25,7 +25,7 @@ public class beardotalkingscript : MonoBehaviour
     public GameObject player;
     public GameObject bett;
     public int ungeduld = 0;
-    
+    public bool tutorial;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,6 +35,7 @@ public class beardotalkingscript : MonoBehaviour
         walk = this.gameObject.GetComponent<enemywalk2>();
         anna = this.gameObject.GetComponent<Animator>();
         einsatz = 1;
+        tutorial = true;
     }
 
     // Update is called once per frame
@@ -60,6 +61,7 @@ public class beardotalkingscript : MonoBehaviour
     }
     public void Tageszeit(int i)
     {
+        if(tutorial = false){
         int ran = Random.Range(1,3);
         if (i == 1)
         {
@@ -108,6 +110,7 @@ public class beardotalkingscript : MonoBehaviour
         if (i == 6)
         {
             StartCoroutine(Goodnight());
+        }
         }
     }
     public IEnumerator Goodnight()
@@ -515,7 +518,8 @@ public class beardotalkingscript : MonoBehaviour
         else if (einsatz == 33)
         {
             walk.Move(this.gameObject,new Vector3(-52.5f,7.5f,this.transform.position.z), 3f, anna);
-            einsatz = 499;
+            einsatz = 498;
+            tutorial = false;
         }
         
         

@@ -50,7 +50,7 @@ public class daytimescript : MonoBehaviour
                 foreach (GameObject obj in npcs)
                 {
                     Debug.Log("sendMessage");
-                    obj.SendMessage("Tageszeit",zeit);
+                    obj.SendMessage("Trageszeit",zeit);
                 }
                 hatschon = true;
             }

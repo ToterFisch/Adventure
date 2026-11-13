@@ -49,48 +49,59 @@ public class victortalkingscript : MonoBehaviour
     }
     public void Tageszeit(int i)
     {
-        if (i == letztetageszeit){
+        Debug.Log("MessageRecieved");
+        
+        
             if (i == 1)
             {
+                Debug.Log("Essenfassen");
                 StartCoroutine(Essenfassen());
-            }
-            else if (i == 3)
-            {
-                StartCoroutine(Essenfassen());
-            }
-            else if (i == 5)
-            {
-                StartCoroutine(Essenfassen());
-            }
-        }
-        else if (i != letztetageszeit)
-        {
-            if (i == 1)
-            {
-                StartCoroutine(Tischdecken());
-                letztetageszeit = i;
             }
             else if (i == 2)
             {
+                Debug.Log("küchendinge");
                 StartCoroutine(Küchendinge());
                 letztetageszeit = i;
             }
             else if (i == 3)
             {
-                StartCoroutine(Tischdecken());
-                letztetageszeit = i;
+                Debug.Log("Essenfassen");
+                StartCoroutine(Essenfassen());
             }
             else if (i == 4)
             {
+                Debug.Log("küchendinge");
                 StartCoroutine(Küchendinge());
                 letztetageszeit = i;
             }
             else if (i == 5)
             {
-                StartCoroutine(Tischdecken());
-                letztetageszeit = i;
+                Debug.Log("Essenfassen");
+                StartCoroutine(Essenfassen());
             }
+    }
+    public void Trageszeit(int i)
+    {
+        
+        if (i == 1)
+        {
+            Debug.Log("tischdecken");
+            StartCoroutine(Tischdecken());
+            letztetageszeit = i;
         }
+        else if (i == 3)
+        {
+            Debug.Log("tischdecken");
+            StartCoroutine(Tischdecken());
+            letztetageszeit = i;
+        }
+        else if (i == 5)
+        {
+            Debug.Log("tischdecken");
+            StartCoroutine(Tischdecken());
+            letztetageszeit = i;
+        }
+        
     }
     public IEnumerator Küchendinge()
     {
