@@ -55862,17 +55862,6 @@ MonoBehaviour:
   camera: {fileID: 0}
   map: {fileID: 1753091695}
   erde: {fileID: 11400000, guid: 9002579635a9e877c88b840dc4f1935a, type: 2}
-  seeds:
-  - {fileID: 11400000, guid: 2c02b37da02d19292a4f9c10802666e0, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   seedname:
   - salad seeds
   - 
@@ -55884,7 +55873,24 @@ MonoBehaviour:
   - 
   - 
   - 
+  plantnames:
+  - salad
+  saladtiles:
+  - {fileID: 11400000, guid: 9e821769f752908ab8c0c7aa2094d96b, type: 2}
+  - {fileID: 11400000, guid: b05a85f26a625a0b8a17762c4983b618, type: 2}
+  - {fileID: 0}
   inv: {fileID: 1802844345}
+  wachszeiten:
+  - 1000
+  - 1000
+  - 1000
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!1 &1766983920
 GameObject:
   m_ObjectHideFlags: 0

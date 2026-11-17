@@ -12,40 +12,55 @@ public class feldscript : MonoBehaviour
     public Camera camera;
     public Tilemap map;
     public TileBase erde;
-    public TileBase[] seeds = new TileBase[10];
+    public TileBase[][] seeds = new TileBase[10][];
     public string[] seedname = new string[10];
-    public List<plant> plants = new List<plant>();
+    
     public List<string> plantnames = new List<string>();
     public TileBase[] saladtiles = new TileBase[3];
     public inventory inv;
+    public float[] wachszeiten = new float[10];
+    public GameObject[] crops = new GameObject[10];
     public class plant
     {
         public Vector3Int where;
         public string name;
         public int status;
+        public float wachszeit;
         public float growing;
-        public TileBase currentlook;
+        public TileBase erde;
         public TileBase[] looks;
-        public plant(Vector3Int where, string name, TileBase currentlook, TileBase[] looks)
+        public Tilemap map;
+        public GameObject crop;
+        public plant(Vector3Int where, string name, TileBase[] looks, Tilemap map, float wachszeit, GameObject crop, TileBase erde)
         {
             this.where = where;
             this.name = name;
             this.status = 0;
             this.growing = 0;
-            this.currentlook = currentlook;
             this.looks = looks;
+            this.map = map;
+            this.wachszeit = wachszeit;
+            this.crop = crop;
+            this.erde = erde;
         }
         public void Grow()
         {
-            status ++;
-            currentlook = look[status];
-            map.SetTile(where,look[status]);
+            if(status < 2){
+                if (growing >= wachszeit)
+                {
+                    status ++;
+                    map.SetTile(where,looks[status]);
+                    growing = 0;
+                }
+            }
         }
     }
+    public List<plant> plants = new List<plant>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         camera = Camera.main;
+        seeds[0] = saladtiles;
     }
 
     // Update is called once per frame
@@ -55,7 +70,11 @@ public class feldscript : MonoBehaviour
         {
             PlantDown();
         }
-        
+        foreach (plant pflanz in plants)
+        {
+            pflanz.growing += Time.deltaTime;
+            pflanz.Grow();
+        }
     }
     public void PlantDown()
     {
@@ -67,20 +86,36 @@ public class feldscript : MonoBehaviour
             {
                 int o = System.Array.IndexOf(seedname,inv.donned[3].name);
                 if (inv.donned[3].anzahl == 1){
-                    map.SetTile(selectedfield, seeds[o]);
-                    plants.Add(new plant(selectedfield,inv.donned[3].angriffsart)); //note for me: you have to continue here you want to make it make a plant which is added to the list of plants
+                    map.SetTile(selectedfield, seeds[o][0]);
+                    plants.Add(new plant(selectedfield,inv.donned[3].angriffsart,seeds[o],map,wachszeiten[o],crops[o],erde));
                     inv.shoes.Remove(inv.donned[3]);
                     inv.donned[3] = null;
                 }
                 else if(inv.donned[3].anzahl > 1)
                 {
-                    map.SetTile(selectedfield, seeds[o]);
-                    planted.Add(selectedfield);
-                    plantnames.Add(seedname,inv.donned[3].name);
+                    map.SetTile(selectedfield, seeds[o][0]);
+                    plants.Add(new plant(selectedfield,inv.donned[3].angriffsart,seeds[o],map,wachszeiten[o],crops[o],erde));
                     inv.donned[3].anzahl --;
                 }
             }
         }
+        plant pflanz = IsPlant(selectedfield);
+        if (pflanz != null)
+        {
+            map.SetTile(pflanz.where, erde){
+                
+            }
+        }
     }
-
+    public plant IsPlant(Vector3Int wo)
+    {
+        foreach (plant pflanz in plants)
+        {
+            if (pflanz.where == wo)
+            {
+                return pflanz;
+            }
+        }
+        return null;
+    }
 }
