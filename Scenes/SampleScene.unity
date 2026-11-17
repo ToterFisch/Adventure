@@ -49640,7 +49640,7 @@ MonoBehaviour:
   Contains:
   - name: salad seeds
     schaden: 0
-    angriffsart: klostersprites_3
+    angriffsart: salad
     schadensart: seed
     schadensreduktion: 0
     verteidigung: 0
