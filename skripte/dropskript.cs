@@ -32,8 +32,16 @@ public class dropskript : MonoBehaviour
         }
         if(this.transform.position == player.transform.position)
         {
-            inv.shoes.Add(das);
-            Destroy(this.gameObject);
+            if(inv.shoes.IndexOf(das) < 0){
+                inv.shoes.Add(das);
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                Debug.Log(inv.shoes.IndexOf(das));
+                inv.shoes[inv.shoes.IndexOf(das)].anzahl ++;
+                Destroy(this.gameObject);
+            }
         }
     }
     public void aufheben(){
@@ -43,8 +51,15 @@ public class dropskript : MonoBehaviour
     {
         if (clicked == true && collision.gameObject.transform.CompareTag("Player"))
         {
-            inv.shoes.Add(das);
-            Destroy(this.gameObject);
+            if(inv.shoes.IndexOf(das) >= 0){
+                inv.shoes.Add(das);
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                inv.shoes[inv.shoes.IndexOf(das)].anzahl ++;
+                Destroy(this.gameObject);
+            }
         }
     }
     
