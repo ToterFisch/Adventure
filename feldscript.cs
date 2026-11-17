@@ -27,13 +27,23 @@ public class feldscript : MonoBehaviour
         {
             Vector3Int selectedfield = map.WorldToCell(camera.ScreenToWorldPoint(Input.mousePosition));
             TileBase targettile = map.GetTile(selectedfield);
-            
+            Debug.Log(inv.donned[3]);
             if(targettile == erde){
-                if (inv.donned[3].angriffsart == "seed")
+                if (inv.donned[3].schadensart == "seed")
                 {
-                    int o = System.Array.IndexOf(seedname,inv.donned[3].schadensart);
-                    map.SetTile(selectedfield, seeds[o]);
-                    inv.shoes.Remove(inv.donned[3]);
+                    int o = System.Array.IndexOf(seedname,inv.donned[3].name);
+                    
+                    if (inv.donned[3].anzahl == 1){
+                        map.SetTile(selectedfield, seeds[o]);
+                        inv.shoes.Remove(inv.donned[3]);
+                        inv.donned[3] = null;
+                    }
+                    else if(inv.donned[3].anzahl > 1)
+                    {
+                        map.SetTile(selectedfield, seeds[o]);
+                        inv.donned[3].anzahl --;
+                    }
+                    
                 }
                 
             }

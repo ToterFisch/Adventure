@@ -53796,7 +53796,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -55863,7 +55863,7 @@ MonoBehaviour:
   map: {fileID: 1753091695}
   erde: {fileID: 11400000, guid: 9002579635a9e877c88b840dc4f1935a, type: 2}
   seeds:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 2c02b37da02d19292a4f9c10802666e0, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -55874,6 +55874,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   seedname:
+  - salad seeds
   - 
   - 
   - 
@@ -55883,8 +55884,7 @@ MonoBehaviour:
   - 
   - 
   - 
-  - 
-  inv: {fileID: 0}
+  inv: {fileID: 1802844345}
 --- !u!1 &1766983920
 GameObject:
   m_ObjectHideFlags: 0
