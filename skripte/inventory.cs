@@ -189,4 +189,15 @@ public class inventory : MonoBehaviour
             }*/
         lastone = waswas;
     }
+    public int durchsuchen (item it)
+    {
+        foreach (item ot in shoes)
+        {
+            if (ot.name == it.name)
+            {
+                return shoes.IndexOf(ot);
+            }
+        }
+        return -1;
+    }
 }
