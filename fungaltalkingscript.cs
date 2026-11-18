@@ -22,6 +22,7 @@ public class fungaltalkingscript : MonoBehaviour
     public bool test;
     public int letztetageszeit;
     public beardotalkingscript beardo;
+    public bool met;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -38,6 +39,10 @@ public class fungaltalkingscript : MonoBehaviour
     void Update()
     {
         
+    }
+    public void Angesprochen()
+    {
+        Done(5);
     }
     public void Done(int i)
     {
@@ -148,7 +153,7 @@ public class fungaltalkingscript : MonoBehaviour
                 }
                 if (i == 2)
                 {
-                    mikro.Sag(this.gameObjectt,bild.sprite,"Then you probably havent planted it yet. try again doing so.");
+                    mikro.Sag(this.gameObject,bild.sprite,"Then you probably havent planted it yet. try again doing so.");
                     einsatz = 6;
                 }
                 if(i== 3)
@@ -185,7 +190,7 @@ public class fungaltalkingscript : MonoBehaviour
             }
             else if(einsatz == 13)
             {
-                mikro.sag(this.gameObject,bild.sprite,"We let a small force defend the city while the others where hiding in a little forest nearby and then fell into the nemys back holding them on the ground with archers and destroyewd their army.");
+                mikro.Sag(this.gameObject,bild.sprite,"We let a small force defend the city while the others where hiding in a little forest nearby and then fell into the nemys back holding them on the ground with archers and destroyewd their army.");
                 einsatz = 14;
             }
             else if (einsatz == 14)

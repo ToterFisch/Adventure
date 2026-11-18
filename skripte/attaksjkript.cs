@@ -18,12 +18,14 @@ public class attackscript : MonoBehaviour
     public string todo;
     public inventory invman;
     public playermovement uiman;
+    public feldscript feld;
     public void Start()
     {
         uiman = GameObject.Find("Player").GetComponent<playermovement>();
         cando=true;
         cando2=true;
         invman = GameObject.Find("Manger").GetComponent<inventory>();
+        feld = GameObject.Find("feld").GetComponent<feldscript>();
     }
     public void Update()
     {
@@ -139,6 +141,14 @@ public class attackscript : MonoBehaviour
         lancle.transform.SetParent(player);
         lancle.transform.Rotate(new Vector3(0,0,-90));
         lancle.GetComponent<swordattakskript>().werte = new swordattakskript.values(invman.donned[i].schaden,invman.donned[i].schadensart);
+    }
+    public void harvest()
+    {
+        feld.Harvest();
+    }
+    public void seed()
+    {
+        feld.PlantDown();
     }
     public IEnumerator makeready(int wepint)
     {

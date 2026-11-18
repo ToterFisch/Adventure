@@ -64,10 +64,7 @@ public class feldscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            PlantDown();
-        }
+        
         foreach (plant pflanz in plants)
         {
             pflanz.growing += Time.deltaTime;
@@ -81,24 +78,32 @@ public class feldscript : MonoBehaviour
         Debug.Log(inv.donned[3]);
         plant pflanz = IsPlant(selectedfield);
         if(targettile == erde){
-            if (inv.donned[3].schadensart == "seed")
+            if (inv.donned[3].angriffsart == "seed")
             {
-                int o = System.Array.IndexOf(seedname,inv.donned[3].angriffsart);
+                int o = System.Array.IndexOf(seedname,inv.donned[3].schadensart);
                 if (inv.donned[3].anzahl == 1){
                     map.SetTile(selectedfield, seeds[o][0]);
-                    plants.Add(new plant(selectedfield,inv.donned[3].angriffsart,seeds[o],map,wachszeiten[o]));
+                    plants.Add(new plant(selectedfield,inv.donned[3].schadensart,seeds[o],map,wachszeiten[o]));
                     inv.shoes.Remove(inv.donned[3]);
                     inv.donned[3] = null;
                 }
                 else if(inv.donned[3].anzahl > 1)
                 {
                     map.SetTile(selectedfield, seeds[o][0]);
-                    plants.Add(new plant(selectedfield,inv.donned[3].angriffsart,seeds[o],map,wachszeiten[o]));
+                    plants.Add(new plant(selectedfield,inv.donned[3].schadensart,seeds[o],map,wachszeiten[o]));
                     inv.donned[3].anzahl --;
                 }
             }
         }
-        else if (pflanz != null)
+        
+    }
+    public void Harvest()
+    {
+        Vector3Int selectedfield = map.WorldToCell(camera.ScreenToWorldPoint(Input.mousePosition));
+        TileBase targettile = map.GetTile(selectedfield);
+        Debug.Log(inv.donned[3]);
+        plant pflanz = IsPlant(selectedfield);
+        if (pflanz != null)
         {
             if (pflanz.status == 2){
                 map.SetTile(pflanz.where, erde);

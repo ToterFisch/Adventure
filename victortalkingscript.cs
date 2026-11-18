@@ -48,6 +48,10 @@ public class victortalkingscript : MonoBehaviour
             test = false;
         }
     }
+    public void Angesprochen()
+    {
+        Done(5);
+    }
     public void Tageszeit(int i)
     {
         Debug.Log("MessageRecieved");
@@ -121,7 +125,7 @@ public class victortalkingscript : MonoBehaviour
             walk.Move(this.gameObject,new Vector3(-69.5f,-2.5f,this.transform.position.z),5f,anna);
             while (this.transform.position != new Vector3(-69.5f,-2.5f, this.transform.position.z))
             {
-                einsatz = 301;
+                einsatz = 3001;
                 yield return new WaitForSeconds(5f);
             } 
             einsatz = 300;
@@ -132,7 +136,7 @@ public class victortalkingscript : MonoBehaviour
                 walk.Move(this.gameObject,new Vector3(-65.5f,-2.5f,this.transform.position.z),5f,anna);
                 while (this.transform.position != new Vector3(-69.5f,-2.5f, this.transform.position.z))
                 {
-                    einsatz = 301;
+                    einsatz = 3001;
                     yield return new WaitForSeconds(5f);
                 } 
                 einsatz = 300;
@@ -143,7 +147,7 @@ public class victortalkingscript : MonoBehaviour
                 walk.Move(this.gameObject,new Vector3(-69.5f,-1.5f,this.transform.position.z),5f,anna);
                 while (this.transform.position != new Vector3(-69.5f,-2.5f, this.transform.position.z))
                 {
-                    einsatz = 301;
+                    einsatz = 3001;
                     yield return new WaitForSeconds(5f);
                 } 
                 einsatz = 300;
@@ -160,7 +164,7 @@ public class victortalkingscript : MonoBehaviour
             walk.Move(this.gameObject,wostehen[i],5f,anna);
             while (this.transform.position != wostehen[i])
             {
-                einsatz = 401;
+                einsatz = 4001;
                 yield return new WaitForSeconds(1f);
             } 
             einsatz = 400;
@@ -221,9 +225,13 @@ public class victortalkingscript : MonoBehaviour
         if (einsatz == 1)
         {
             mikro.Sag(this.gameObject,bild.sprite,"Hello there, my name is Victor. I am the main chef of this kloster. If you want food, we eat in the morning, noon and evening. It would be my honor to serve you some food to.");
-            if (merken != 0)
+            if (merken != 0&&merken != 1)
             {
                 einsatz = merken;
+            }
+            else
+            {
+                einsatz = 2;
             }
         }
         else if (einsatz == 300)

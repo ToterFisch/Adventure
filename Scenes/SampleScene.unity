@@ -44924,6 +44924,7 @@ MonoBehaviour:
   todo: sword
   invman: {fileID: 0}
   uiman: {fileID: 0}
+  feld: {fileID: 0}
 --- !u!1 &592399921
 GameObject:
   m_ObjectHideFlags: 0
@@ -46394,6 +46395,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191be363f2fe0c297b91d20e637e4843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mikro: {fileID: 0}
+  bild: {fileID: 0}
+  einsatz: 0
+  todo: 0
+  walk: {fileID: 0}
+  speed: 0
+  anna: {fileID: 0}
+  player: {fileID: 0}
+  bett: {fileID: 0}
+  ungeduld: 0
+  merken: 0
+  test: 0
+  letztetageszeit: 0
+  beardo: {fileID: 0}
+  met: 0
 --- !u!1 &861909105
 GameObject:
   m_ObjectHideFlags: 0
@@ -49551,12 +49567,12 @@ MonoBehaviour:
   Contains:
   - name: salad seeds
     schaden: 0
-    angriffsart: salad
-    schadensart: seed
+    angriffsart: seed
+    schadensart: salad
     schadensreduktion: 0
     verteidigung: 0
     resistenz: 
-    effekt: 
+    effekt: salad
     effektstaerke: 0
     geschw: 0
     speed: 0
