@@ -19,7 +19,8 @@ public class feldscript : MonoBehaviour
     public TileBase[] saladtiles = new TileBase[3];
     public inventory inv;
     public float[] wachszeiten = new float[10];
-    public GameObject[] crops = new GameObject[10];
+    public GameObject drop;
+    public inventory.item[] crops= new inventory.item[10];
     public class plant
     {
         public Vector3Int where;
@@ -27,11 +28,9 @@ public class feldscript : MonoBehaviour
         public int status;
         public float wachszeit;
         public float growing;
-        public TileBase erde;
         public TileBase[] looks;
         public Tilemap map;
-        public GameObject crop;
-        public plant(Vector3Int where, string name, TileBase[] looks, Tilemap map, float wachszeit, GameObject crop, TileBase erde)
+        public plant(Vector3Int where, string name, TileBase[] looks, Tilemap map, float wachszeit)
         {
             this.where = where;
             this.name = name;
@@ -40,8 +39,7 @@ public class feldscript : MonoBehaviour
             this.looks = looks;
             this.map = map;
             this.wachszeit = wachszeit;
-            this.crop = crop;
-            this.erde = erde;
+            
         }
         public void Grow()
         {
@@ -81,29 +79,37 @@ public class feldscript : MonoBehaviour
         Vector3Int selectedfield = map.WorldToCell(camera.ScreenToWorldPoint(Input.mousePosition));
         TileBase targettile = map.GetTile(selectedfield);
         Debug.Log(inv.donned[3]);
+        plant pflanz = IsPlant(selectedfield);
         if(targettile == erde){
             if (inv.donned[3].schadensart == "seed")
             {
-                int o = System.Array.IndexOf(seedname,inv.donned[3].name);
+                int o = System.Array.IndexOf(seedname,inv.donned[3].angriffsart);
                 if (inv.donned[3].anzahl == 1){
                     map.SetTile(selectedfield, seeds[o][0]);
-                    plants.Add(new plant(selectedfield,inv.donned[3].angriffsart,seeds[o],map,wachszeiten[o],crops[o],erde));
+                    plants.Add(new plant(selectedfield,inv.donned[3].angriffsart,seeds[o],map,wachszeiten[o]));
                     inv.shoes.Remove(inv.donned[3]);
                     inv.donned[3] = null;
                 }
                 else if(inv.donned[3].anzahl > 1)
                 {
                     map.SetTile(selectedfield, seeds[o][0]);
-                    plants.Add(new plant(selectedfield,inv.donned[3].angriffsart,seeds[o],map,wachszeiten[o],crops[o],erde));
+                    plants.Add(new plant(selectedfield,inv.donned[3].angriffsart,seeds[o],map,wachszeiten[o]));
                     inv.donned[3].anzahl --;
                 }
             }
         }
-        plant pflanz = IsPlant(selectedfield);
-        if (pflanz != null)
+        else if (pflanz != null)
         {
-            map.SetTile(pflanz.where, erde){
-                
+            if (pflanz.status == 2){
+                map.SetTile(pflanz.where, erde);
+                plants.Remove(pflanz);
+                GameObject crop = Instantiate(drop, pflanz.where, transform.rotation);
+                Debug.Log("innendrinne");
+                dropskript script = crop.GetComponent<dropskript>();
+                if(script != null){
+                    script.das = crops[System.Array.IndexOf(seedname,pflanz.name)];
+                }
+            Debug.Log("penis");
             }
         }
     }

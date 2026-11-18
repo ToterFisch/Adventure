@@ -16384,7 +16384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &497818861
 RectTransform:
   m_ObjectHideFlags: 0
@@ -48825,7 +48825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1131113561
 RectTransform:
   m_ObjectHideFlags: 0
@@ -49941,7 +49941,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2039368995}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999999
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -55863,7 +55863,7 @@ MonoBehaviour:
   map: {fileID: 1753091695}
   erde: {fileID: 11400000, guid: 9002579635a9e877c88b840dc4f1935a, type: 2}
   seedname:
-  - salad seeds
+  - salad
   - 
   - 
   - 
@@ -55881,9 +55881,9 @@ MonoBehaviour:
   - {fileID: 0}
   inv: {fileID: 1802844345}
   wachszeiten:
+  - 20
   - 1000
   - 1000
-  - 1000
   - 0
   - 0
   - 0
@@ -55891,6 +55891,178 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  drop: {fileID: 3136888012632221366, guid: 79e90287ba7b3af9da21ac7d4939a044, type: 3}
+  crops:
+  - name: Salad
+    schaden: 0
+    angriffsart: salad
+    schadensart: salad
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 0
+    wert: 0
+    gewicht: 0
+    art: stuff
+    explanation: A normal salad, carefully grown and ready to be eaten.
+    pic: {fileID: 8752078902884745039, guid: a3992138ee98c8d7283384951ca33486, type: 3}
+  - name: 
+    schaden: 0
+    angriffsart: 
+    schadensart: 
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 0
+    wert: 0
+    gewicht: 0
+    art: 
+    explanation: 
+    pic: {fileID: 0}
+  - name: 
+    schaden: 0
+    angriffsart: 
+    schadensart: 
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 0
+    wert: 0
+    gewicht: 0
+    art: 
+    explanation: 
+    pic: {fileID: 0}
+  - name: 
+    schaden: 0
+    angriffsart: 
+    schadensart: 
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 0
+    wert: 0
+    gewicht: 0
+    art: 
+    explanation: 
+    pic: {fileID: 0}
+  - name: 
+    schaden: 0
+    angriffsart: 
+    schadensart: 
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 0
+    wert: 0
+    gewicht: 0
+    art: 
+    explanation: 
+    pic: {fileID: 0}
+  - name: 
+    schaden: 0
+    angriffsart: 
+    schadensart: 
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 0
+    wert: 0
+    gewicht: 0
+    art: 
+    explanation: 
+    pic: {fileID: 0}
+  - name: 
+    schaden: 0
+    angriffsart: 
+    schadensart: 
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 0
+    wert: 0
+    gewicht: 0
+    art: 
+    explanation: 
+    pic: {fileID: 0}
+  - name: 
+    schaden: 0
+    angriffsart: 
+    schadensart: 
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 0
+    wert: 0
+    gewicht: 0
+    art: 
+    explanation: 
+    pic: {fileID: 0}
+  - name: 
+    schaden: 0
+    angriffsart: 
+    schadensart: 
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 0
+    wert: 0
+    gewicht: 0
+    art: 
+    explanation: 
+    pic: {fileID: 0}
+  - name: 
+    schaden: 0
+    angriffsart: 
+    schadensart: 
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 0
+    wert: 0
+    gewicht: 0
+    art: 
+    explanation: 
+    pic: {fileID: 0}
 --- !u!1 &1766983920
 GameObject:
   m_ObjectHideFlags: 0
@@ -56401,6 +56573,8 @@ MonoBehaviour:
   waffenanzeigenbild: {fileID: 1426629992}
   invan: 0
   iteminv: {fileID: 709120578}
+  itemanzeige: {fileID: 1131113560}
+  itemanzeigecontent: {fileID: 1893344663}
   invents: {fileID: 497818860}
   armorex: {fileID: 1407384569}
   weaponex: {fileID: 1467204912}
@@ -143650,7 +143824,7 @@ RectTransform:
   m_Father: {fileID: 1725679579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.9999999}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

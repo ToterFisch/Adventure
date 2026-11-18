@@ -33,6 +33,7 @@ public class inventorypossskript : MonoBehaviour, IPointerEnterHandler, IPointer
             {
                 mouseon = false;
                 manager.invon(manager.shoes,manager.content,manager.iteminv,was,art);
+                manager.invents.SetActive(false);
                 manager.uiman.uiopen = manager.iteminv;
             }
             if(art > 2)

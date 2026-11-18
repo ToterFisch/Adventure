@@ -18,6 +18,8 @@ public class inventory : MonoBehaviour
     public Image waffenanzeigenbild;
     public bool invan;
     public GameObject iteminv;
+    public GameObject itemanzeige;
+    public GameObject itemanzeigecontent;
     public GameObject invents;
     public GameObject armorex;
     public GameObject weaponex;
@@ -112,6 +114,7 @@ public class inventory : MonoBehaviour
             invents.SetActive(true);
             anzeigendingens.SetActive(true);
             invan = true;
+            invon(shoes,itemanzeigecontent,itemanzeige,"stuff", lastone);
             uiman.uiopen = invents;
         }
         else if (uiman.uiopen == iteminv)
@@ -165,7 +168,7 @@ public class inventory : MonoBehaviour
         }
                 itin.SetActive(true);
                 
-                invents.SetActive(false);
+                
                 foreach (item ito in das)
                 {
                         if(ito.art == was || was == null){
