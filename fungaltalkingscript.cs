@@ -130,14 +130,11 @@ public class fungaltalkingscript : MonoBehaviour
                 mikro.Sag(this.gameObject,bild.sprite,"Do you see the little seedling sprouting out of the dirt?");
                 einsatz = 10;
             }
-
-
-
-
-
-
-
-
+            else if (einsatz == 9)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"The Soldiers and Knights fought for weeks over every town and village, every fortresss and castle. But they couldnt stop it, soon many settlements layed in ruins and the forces where to decimated to resist the invasion.");
+                einsatz = 11;
+            }
             else if(einsatz == 10)
             {
                 if (i == 5)
@@ -147,12 +144,54 @@ public class fungaltalkingscript : MonoBehaviour
                 if (i == 1)
                 {
                     mikro.Sag(this.gameObject,bild.sprite,"It is the great wonder of life. All it takes now for it to become a fullgrown plant is time and some water here and then. When it is fully grown you can just hit it again to harvest it. Did you understand everything?");
+                    einsatz = 12;
                 }
                 if (i == 2)
                 {
                     mikro.Sag(this.gameObjectt,bild.sprite,"Then you probably havent planted it yet. try again doing so.");
-                    einsatz = 8;
+                    einsatz = 6;
                 }
+                if(i== 3)
+                {
+                    mikro.Sag(this.gameObject,bild.sprite,"You take some seeds and just hit the ground with it and bam there is the sweet sweet life again.");
+                    einsatz = 6;
+                }
+            }
+            else if (einsatz == 11)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"So when the dragons where marching against tulip town i stood up and talked to the people. I told them to arm themselves and help the troops that where threatening our homeland. So many piltses followed my lead and stood up.");
+                einsatz = 13;
+            }
+            else if(einsatz == 12)
+            {
+                if (i == 5)
+                {
+                    mikro.Entscheide(this.gameObject,bild.sprite,new string[3]{"Yes i understood everything.","Can you explain how I plant something again?","How do i harvest something again?"});
+                }
+                if (i == 1)
+                {
+                    mikro.Sag(this.gameObject,bild.sprite,"Great! Happy planting and i hope we will see us again.");
+                    einsatz = 1;
+                }
+                if (i == 2)
+                {
+                    mikro.Sag(this.gameObject,bild.sprite,"You take some seeds and just hit the ground with it and bamthere is the sweet sweet life again.");
+                    einsatz = 6;
+                }
+                if (i == 3)
+                {
+                    mikro.Sag(this.gameObject,bild.sprite,"You have to wait until its fully grown and then hit it again and collect it.");
+                }
+            }
+            else if(einsatz == 13)
+            {
+                mikro.sag(this.gameObject,bild.sprite,"We let a small force defend the city while the others where hiding in a little forest nearby and then fell into the nemys back holding them on the ground with archers and destroyewd their army.");
+                einsatz = 14;
+            }
+            else if (einsatz == 14)
+            {
+                mikro.Sag(this.gameObject,bild.sprite,"After that overwhelming defeat the dragons crumbled and we drove them out of our land in the following days. i lost my family and friends in battle but i survived. for that i thank the gods by living in the kloster and serving them.");
+                einsatz = 1;
             }
         }
     }
