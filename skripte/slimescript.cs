@@ -56,10 +56,14 @@ public class slimescript : MonoBehaviour
                     if(this.gameObject.transform.position.x > player.transform.position.x)
                     {
                         target = new Vector3(transform.position.x-howfar,transform.position.y,transform.position.z);
+                        anna.SetInteger("richtung",1);
+                        StartCoroutine(ResetRichtung());
                     }
                     else
                     {
                         target = new Vector3(transform.position.x+howfar,transform.position.y,transform.position.z);
+                        anna.SetInteger("richtung",2);
+                        StartCoroutine(ResetRichtung());
                     }
                 }
                 else
@@ -68,10 +72,14 @@ public class slimescript : MonoBehaviour
                     if(this.gameObject.transform.position.y > player.transform.position.y)
                     {
                         target = new Vector3(transform.position.x,transform.position.y-howfar,transform.position.z);
+                        anna.SetInteger("richtung",3);
+                        StartCoroutine(ResetRichtung());
                     }
                     else
                     {
                         target = new Vector3(transform.position.x,transform.position.y+howfar,transform.position.z);
+                        anna.SetInteger("richtung",4);
+                        StartCoroutine(ResetRichtung());
                     }
                 }
             }
@@ -122,13 +130,18 @@ public class slimescript : MonoBehaviour
     }
     public IEnumerator GotHit()
     {
-        int before = anna.GetInteger("richtung");
+        /*int before = anna.GetInteger("richtung");
         Debug.Log("before: "+before);
         anna.SetInteger("richtung", before+10);
-        Debug.Log("after: "+anna.GetInteger("richtung"));
+        Debug.Log("after: "+anna.GetInteger("richtung"));*/
         yield return new WaitForSeconds(itch);
-        Debug.Log("afterafter: "+anna.GetInteger("richtung"));
-        anna.SetInteger("richtung", before);
+        /*Debug.Log("afterafter: "+anna.GetInteger("richtung"));
+        anna.SetInteger("richtung", before);*/
+    }
+    public IEnumerator ResetRichtung()
+    {
+        yield return new WaitForSeconds(itch);
+        anna.SetInteger("richtung",0);
     }
     public void OnCollisionEnter2D (Collision2D collision)
     {
