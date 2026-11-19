@@ -61,7 +61,7 @@ public class beardotalkingscript : MonoBehaviour
     }
     public void Tageszeit(int i)
     {
-        if(tutorial = false){
+        if(tutorial == false){
         int ran = Random.Range(1,3);
         if (i == 1)
         {

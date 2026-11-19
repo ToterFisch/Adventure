@@ -8,6 +8,10 @@ using System.Collections.Generic;
 using System.Linq;
 public class fungaltalkingscript : MonoBehaviour
 {
+    public feldscript feld;
+    public Vector3Int[][] felder = new Vector3Int[6][];
+    public Vector3[][] paths = new Vector3[6][];
+    public inventory.item[] seedsowned = new inventory.item[3];
     public uimanagerskript mikro;
     public SpriteRenderer bild;
     public int einsatz;
@@ -31,6 +35,7 @@ public class fungaltalkingscript : MonoBehaviour
         mikro = GameObject.Find("Manger").GetComponent<uimanagerskript>();
         walk = this.gameObject.GetComponent<enemywalk2>();
         anna = this.gameObject.GetComponent<Animator>();
+        feld = GameObject.Find("feld").GetComponent<feldscript>();
         einsatz = 1;
         met = false;
     }
@@ -39,6 +44,55 @@ public class fungaltalkingscript : MonoBehaviour
     void Update()
     {
         
+    }
+    public void Tageszeit(int i)
+    {
+        if (beardo.tutorial == false)
+        {
+            if (i == 1)
+            {
+                StartCoroutine(Essenfassen());
+            }
+            else if (i == 2)
+            {
+                
+            }
+        }
+    }
+    public IEnumerator Garteln()
+    {
+        int ran = Random.Range(1,3);
+        int rando = Random.Range(0,5);
+        int t = 0;
+        walk.Move(this.gameObject,paths[rando][0],5f,anna);
+        while (this.transform.position != paths[rando][0])
+        {
+            yield return new WaitForSeconds(1f);
+        }
+        for(int i = 16; i < paths.GetLength(1); i++)
+        {
+            walk.Move(this.gameObject,paths[rando][i],5f,anna);
+            while (this.transform.position != paths[rando][i])
+            {
+                yield return new WaitForSeconds(0.5f);
+            }
+            feld.PlantOrHarvest(felder[rando][t]);
+            t++;
+            yield return new WaitForSeconds(0.5f);
+            feld.PlantOrHarvest(felder[rando][t]);
+            t++;
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+    public IEnumerator Essenfassen()
+    {
+        yield return new WaitForSeconds(Random.Range(1f,30f));
+        walk.Move(this.gameObject,new Vector3(-62.5f,6.5f,this.transform.position.z),5f,anna);
+        while (this.transform.position != new Vector3(-62.5f,6.5f, this.transform.position.z))
+        {
+            yield return new WaitForSeconds(5f);
+        }
+        yield return new WaitForSeconds(Random.Range(60f,80f));
     }
     public void Angesprochen()
     {

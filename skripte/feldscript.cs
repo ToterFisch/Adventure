@@ -118,6 +118,32 @@ public class feldscript : MonoBehaviour
             }
         }
     }
+    public void PlantOrHarvest(Vector3Int selectedfield,inventory.item seedos)
+    {
+        TileBase targettile = map.GetTile(selectedfield);
+        Debug.Log(inv.donned[3]);
+        plant pflanz = IsPlant(selectedfield);
+        if(targettile == erde){
+            int o = System.Array.IndexOf(seedname,inv.donned[3].schadensart);
+            map.SetTile(selectedfield, seeds[o][0]);
+            plants.Add(new plant(selectedfield,seedos.schadensart,seeds[o],map,wachszeiten[o]));
+            inv.shoes.Remove(inv.donned[3]);
+        }
+        else if (pflanz != null)
+        {
+            if (pflanz.status == 2){
+                map.SetTile(pflanz.where, erde);
+                plants.Remove(pflanz);
+                GameObject crop = Instantiate(drop, pflanz.where, transform.rotation);
+                Debug.Log("innendrinne");
+                dropskript script = crop.GetComponent<dropskript>();
+                if(script != null){
+                    script.das = crops[System.Array.IndexOf(seedname,pflanz.name)];
+                }
+            Debug.Log("penis");
+            }
+        }
+    }
     public plant IsPlant(Vector3Int wo)
     {
         foreach (plant pflanz in plants)

@@ -115,6 +115,8 @@ public class victortalkingscript : MonoBehaviour
         walk.Move(this.gameObject,new Vector3(-67.5f,-1.5f,this.transform.position.z),5f,anna);
         while (this.transform.position != new Vector3(-67.5f,-1.5f, this.transform.position.z))
         {
+            einsatz = 3001;
+            Debug.Log("inwhile");
             yield return new WaitForSeconds(5f);
         }
         einsatz = 300;
@@ -125,6 +127,7 @@ public class victortalkingscript : MonoBehaviour
             walk.Move(this.gameObject,new Vector3(-69.5f,-2.5f,this.transform.position.z),5f,anna);
             while (this.transform.position != new Vector3(-69.5f,-2.5f, this.transform.position.z))
             {
+                Debug.Log("inwhile");
                 einsatz = 3001;
                 yield return new WaitForSeconds(5f);
             } 
@@ -134,8 +137,9 @@ public class victortalkingscript : MonoBehaviour
             else if (ran == 2)
             {
                 walk.Move(this.gameObject,new Vector3(-65.5f,-2.5f,this.transform.position.z),5f,anna);
-                while (this.transform.position != new Vector3(-69.5f,-2.5f, this.transform.position.z))
+                while (this.transform.position != new Vector3(-65.5f,-2.5f, this.transform.position.z))
                 {
+                    Debug.Log("inwhile");
                     einsatz = 3001;
                     yield return new WaitForSeconds(5f);
                 } 
@@ -145,8 +149,9 @@ public class victortalkingscript : MonoBehaviour
             else if (ran == 3)
             {
                 walk.Move(this.gameObject,new Vector3(-69.5f,-1.5f,this.transform.position.z),5f,anna);
-                while (this.transform.position != new Vector3(-69.5f,-2.5f, this.transform.position.z))
+                while (this.transform.position != new Vector3(-69.5f,-1.5f, this.transform.position.z))
                 {
+                    Debug.Log("inwhile");
                     einsatz = 3001;
                     yield return new WaitForSeconds(5f);
                 } 
@@ -165,17 +170,17 @@ public class victortalkingscript : MonoBehaviour
             while (this.transform.position != wostehen[i])
             {
                 einsatz = 4001;
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(0.5f);
             } 
             einsatz = 400;
             int ran = Random.Range(0,4);
             detailsup.SetTile(detailsup.WorldToCell(tisch[t]),food[ran]);
             t++;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             ran = Random.Range(0,4);
             detailsup.SetTile(detailsup.WorldToCell(tisch[t]),food[ran]);
             t++;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
         }
         walk.Move(this.gameObject,new Vector3(-67.5f,-1.5f,this.transform.position.z),5f,anna);
         einsatz = 401;
@@ -205,13 +210,13 @@ public class victortalkingscript : MonoBehaviour
     }
     public IEnumerator Essenfassen()
     {
-        yield return new WaitForSeconds(Random.Range(1f,30f));
+        yield return new WaitForSeconds(Random.Range(1f,20f));
         walk.Move(this.gameObject,new Vector3(-67.5f,3.5f,this.transform.position.z),5f,anna);
         while (this.transform.position != new Vector3(-67.5f,3.5f, this.transform.position.z))
         {
             yield return new WaitForSeconds(5f);
         }
-        yield return new WaitForSeconds(Random.Range(80f,90f));
+        yield return new WaitForSeconds(Random.Range(70f,80f));
         StartCoroutine(Tischabdecken());
     }
     public void Done(int i)
