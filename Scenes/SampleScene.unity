@@ -16835,7 +16835,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -62.45, y: 6.55, z: -5}
+  m_LocalPosition: {x: -52.05, y: 7.01, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46281,7 +46281,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 5917612437045615429, guid: 3ca803263a7f9b036a43909a5d49a6f3, type: 3}
   m_Color: {r: 0.5754717, g: 0.41132963, b: 0.2524475, a: 1}
   m_FlipX: 0
@@ -46302,7 +46302,7 @@ Transform:
   m_GameObject: {fileID: 854495904}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -51.88, y: 15.02, z: -0.13954997}
+  m_LocalPosition: {x: -53.38, y: 11.49, z: -0.13954997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46395,6 +46395,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191be363f2fe0c297b91d20e637e4843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  feld: {fileID: 0}
+  seedsowned:
+  - name: 
+    schaden: 0
+    angriffsart: 
+    schadensart: 
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 0
+    wert: 0
+    gewicht: 0
+    art: 
+    explanation: 
+    pic: {fileID: 0}
+  - name: 
+    schaden: 0
+    angriffsart: 
+    schadensart: 
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 0
+    wert: 0
+    gewicht: 0
+    art: 
+    explanation: 
+    pic: {fileID: 0}
+  - name: 
+    schaden: 0
+    angriffsart: 
+    schadensart: 
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: 
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 0
+    wert: 0
+    gewicht: 0
+    art: 
+    explanation: 
+    pic: {fileID: 0}
   mikro: {fileID: 0}
   bild: {fileID: 0}
   einsatz: 0
@@ -50251,7 +50304,7 @@ Transform:
   m_GameObject: {fileID: 1282994889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -62.45, y: 6.55, z: 0}
+  m_LocalPosition: {x: -52.05, y: 7.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -144651,7 +144704,7 @@ Transform:
   m_GameObject: {fileID: 2145230961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -62.45, y: 6.55, z: -5}
+  m_LocalPosition: {x: -52.05, y: 7.01, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

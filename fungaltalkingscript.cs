@@ -38,11 +38,47 @@ public class fungaltalkingscript : MonoBehaviour
         feld = GameObject.Find("feld").GetComponent<feldscript>();
         einsatz = 1;
         met = false;
+        for(int i = 0; i < 6; i++)
+        {
+            felder[i] = new Vector3Int[16];
+        }
+        for(int i = 0; i < 6; i++)
+        {
+            paths[i] = new Vector3[16];
+        }
+        Feldereintragen(new Vector3Int(-69,14,0),new Vector3Int(-54,13,0),new Vector3(-68.5f,11.5f,transform.position.z),new Vector3(-53.5f,11.5f,transform.position.z),0);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (test == true)
+        {
+            StartCoroutine(Garteln());
+            test = false;
+        }
+    }
+    public void Feldereintragen(Vector3Int obenlinks, Vector3Int untenrechts, Vector3 links,Vector3 rechts, int wo)
+    {
+        int ipos = 0;
+        int ii = obenlinks.y-untenrechts.y;
+        for (int i = ii;i>0;i--){
+            for(int ol = obenlinks.x; ol <= untenrechts.x; ol++)
+            {
+                felder[wo][ipos] = new Vector3Int(ol,obenlinks.y-ii,obenlinks.z);
+                Debug.Log("Felder"+felder[wo][ipos]);
+                ipos ++;
+            }
+            ipos = 0;
+        }
+        int fpos = 0;
+        for(float o = links.x; o <= rechts.x; o++)
+        {
+            paths[wo][fpos] = new Vector3(o,links.y,links.z);
+            Debug.Log("Felder"+felder[wo][ipos]);
+            fpos ++;
+        }
         
     }
     public void Tageszeit(int i)
@@ -61,28 +97,31 @@ public class fungaltalkingscript : MonoBehaviour
     }
     public IEnumerator Garteln()
     {
-        int ran = Random.Range(1,3);
-        int rando = Random.Range(0,5);
+        einsatz = 4000;
+        int ran = Random.Range(0,2);
+        int rando = 0;//Random.Range(0,5);
         int t = 0;
         walk.Move(this.gameObject,paths[rando][0],5f,anna);
         while (this.transform.position != paths[rando][0])
         {
             yield return new WaitForSeconds(1f);
         }
-        for(int i = 16; i < paths.GetLength(1); i++)
+        
+        for(int i = 0; i < paths[rando].Length; i++)
         {
             walk.Move(this.gameObject,paths[rando][i],5f,anna);
             while (this.transform.position != paths[rando][i])
             {
                 yield return new WaitForSeconds(0.5f);
             }
-            feld.PlantOrHarvest(felder[rando][t]);
+            feld.PlantOrHarvest(felder[rando][t],seedsowned[ran]);
             t++;
             yield return new WaitForSeconds(0.5f);
-            feld.PlantOrHarvest(felder[rando][t]);
+            feld.PlantOrHarvest(felder[rando][t],seedsowned[ran]);
             t++;
             yield return new WaitForSeconds(0.5f);
         }
+        einsatz = 1;
     }
     public IEnumerator Essenfassen()
     {
@@ -108,10 +147,15 @@ public class fungaltalkingscript : MonoBehaviour
         }
         if (met == true)
         {
+
             if (einsatz == 1)
             {
                 mikro.Sag(this.gameObject,bild.sprite,"I love our gardens and all the plants. Everything grows and is usefull. My live is perfect here.");
                 einsatz = 2;
+            }
+            else if(einsatz == 1000)
+            {
+                einsatz = 1;
             }
             else if (einsatz == 2)
             {
@@ -132,7 +176,7 @@ public class fungaltalkingscript : MonoBehaviour
                 if(i == 3)
                 {
                     mikro.Sag(this.gameObject,bild.sprite,"May the gras grow green where ever you go.");
-                    einsatz = 1;
+                    einsatz = 1000;
                 }
             }
             else if (einsatz == 3)
@@ -166,7 +210,7 @@ public class fungaltalkingscript : MonoBehaviour
                 if (i == 2)
                 {
                     mikro.Sag(this.gameObject,bild.sprite,"Well i understand that you are one young lad and send from the gods. You will have a lot to do.");
-                    einsatz = 1;
+                    einsatz = 1000;
                 }
 
             }
@@ -230,7 +274,7 @@ public class fungaltalkingscript : MonoBehaviour
                 if (i == 1)
                 {
                     mikro.Sag(this.gameObject,bild.sprite,"Great! Happy planting and i hope we will see us again.");
-                    einsatz = 1;
+                    einsatz = 1000;
                 }
                 if (i == 2)
                 {
@@ -250,7 +294,7 @@ public class fungaltalkingscript : MonoBehaviour
             else if (einsatz == 14)
             {
                 mikro.Sag(this.gameObject,bild.sprite,"After that overwhelming defeat the dragons crumbled and we drove them out of our land in the following days. i lost my family and friends in battle but i survived. for that i thank the gods by living in the kloster and serving them.");
-                einsatz = 1;
+                einsatz = 1000;
             }
         }
     }
