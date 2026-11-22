@@ -16835,7 +16835,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -52.05, y: 7.01, z: -5}
+  m_LocalPosition: {x: -51.82, y: 41.31, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46233,7 +46233,7 @@ GameObject:
   - component: {fileID: 854495909}
   m_Layer: 0
   m_Name: Fungal
-  m_TagString: Untagged
+  m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46302,7 +46302,7 @@ Transform:
   m_GameObject: {fileID: 854495904}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -53.38, y: 11.49, z: -0.13954997}
+  m_LocalPosition: {x: -54.8, y: 18.9, z: -0.13954997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49635,6 +49635,57 @@ MonoBehaviour:
     art: weapon
     explanation: Place these seeds in some soil to  let them grow.
     pic: {fileID: 8752078902884745039, guid: a3992138ee98c8d7283384951ca33486, type: 3}
+  - name: cucumber seeds
+    schaden: 0
+    angriffsart: seed
+    schadensart: cucumber
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: cucumber
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 5
+    wert: 0
+    gewicht: 0
+    art: weapon
+    explanation: Place these seeds in some soil to  let them grow.
+    pic: {fileID: 30742024189514511, guid: ef4d3d5aeef88e4b6a44febc4264941c, type: 3}
+  - name: aube seeds
+    schaden: 0
+    angriffsart: seed
+    schadensart: aube
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: aube
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 5
+    wert: 0
+    gewicht: 0
+    art: weapon
+    explanation: Place these seeds in some soil to  let them grow.
+    pic: {fileID: -8967805619833037483, guid: ef4d3d5aeef88e4b6a44febc4264941c, type: 3}
+  - name: hoe
+    schaden: 0
+    angriffsart: harvest
+    schadensart: harvest
+    schadensreduktion: 0
+    verteidigung: 0
+    resistenz: 
+    effekt: aube
+    effektstaerke: 0
+    geschw: 0
+    speed: 0
+    anzahl: 5
+    wert: 0
+    gewicht: 0
+    art: weapon
+    explanation: Use to harvest crops.
+    pic: {fileID: -6101804006561483568, guid: cbc7df4402a9d7b0987ce8fadb5c199e, type: 3}
 --- !u!61 &1191531031
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -50304,7 +50355,7 @@ Transform:
   m_GameObject: {fileID: 1282994889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -52.05, y: 7.01, z: 0}
+  m_LocalPosition: {x: -51.82, y: 41.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -55844,8 +55895,8 @@ MonoBehaviour:
   erde: {fileID: 11400000, guid: 9002579635a9e877c88b840dc4f1935a, type: 2}
   seedname:
   - salad
-  - 
-  - 
+  - cucumber
+  - aube
   - 
   - 
   - 
@@ -55856,16 +55907,24 @@ MonoBehaviour:
   plantnames:
   - salad
   saladtiles:
-  - {fileID: 11400000, guid: 9e821769f752908ab8c0c7aa2094d96b, type: 2}
-  - {fileID: 11400000, guid: b05a85f26a625a0b8a17762c4983b618, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 04d4fe8aff0b912f5929c9f8ef74258a, type: 2}
+  - {fileID: 11400000, guid: ee096326d5adfba10b44930857c37b30, type: 2}
+  - {fileID: 11400000, guid: f7ef7b866699cb4629d7736ba9802948, type: 2}
+  cucumbertiles:
+  - {fileID: 11400000, guid: 59aa22e04a80938a0913aef9269eb6f6, type: 2}
+  - {fileID: 11400000, guid: 4f045047e271afd5285c800376abd7a2, type: 2}
+  - {fileID: 11400000, guid: 00cbd3a1660743d2bacdfe8e2cfc8182, type: 2}
+  aubetiles:
+  - {fileID: 11400000, guid: f5098f25e003e542fb68985ab1f925a1, type: 2}
+  - {fileID: 11400000, guid: b305ae2d8e801d5afbfa805c272eee3a, type: 2}
+  - {fileID: 11400000, guid: 22a7409704850962095dd2e762827d18, type: 2}
   inv: {fileID: 1802844345}
   wachszeiten:
   - 20
-  - 1000
-  - 1000
-  - 0
-  - 0
+  - 20
+  - 20
+  - 20
+  - 20
   - 0
   - 0
   - 0
@@ -55890,10 +55949,10 @@ MonoBehaviour:
     art: stuff
     explanation: A normal salad, carefully grown and ready to be eaten.
     pic: {fileID: 8752078902884745039, guid: a3992138ee98c8d7283384951ca33486, type: 3}
-  - name: 
+  - name: cucumber
     schaden: 0
-    angriffsart: 
-    schadensart: 
+    angriffsart: cucumber
+    schadensart: cucumber
     schadensreduktion: 0
     verteidigung: 0
     resistenz: 
@@ -55904,13 +55963,13 @@ MonoBehaviour:
     anzahl: 0
     wert: 0
     gewicht: 0
-    art: 
-    explanation: 
-    pic: {fileID: 0}
-  - name: 
+    art: stuff
+    explanation: It is a common cucumber
+    pic: {fileID: 30742024189514511, guid: ef4d3d5aeef88e4b6a44febc4264941c, type: 3}
+  - name: aube
     schaden: 0
-    angriffsart: 
-    schadensart: 
+    angriffsart: aube
+    schadensart: aube
     schadensreduktion: 0
     verteidigung: 0
     resistenz: 
@@ -55921,9 +55980,9 @@ MonoBehaviour:
     anzahl: 0
     wert: 0
     gewicht: 0
-    art: 
-    explanation: 
-    pic: {fileID: 0}
+    art: stuff
+    explanation: It is a common aube.
+    pic: {fileID: -8381178215406866660, guid: ef4d3d5aeef88e4b6a44febc4264941c, type: 3}
   - name: 
     schaden: 0
     angriffsart: 
@@ -144704,7 +144763,7 @@ Transform:
   m_GameObject: {fileID: 2145230961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -52.05, y: 7.01, z: -5}
+  m_LocalPosition: {x: -51.82, y: 41.31, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

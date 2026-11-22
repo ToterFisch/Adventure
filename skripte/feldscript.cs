@@ -17,6 +17,8 @@ public class feldscript : MonoBehaviour
     
     public List<string> plantnames = new List<string>();
     public TileBase[] saladtiles = new TileBase[3];
+    public TileBase[] cucumbertiles = new TileBase[3];
+    public TileBase[] aubetiles = new TileBase[3];
     public inventory inv;
     public float[] wachszeiten = new float[10];
     public GameObject drop;
@@ -59,6 +61,8 @@ public class feldscript : MonoBehaviour
     {
         camera = Camera.main;
         seeds[0] = saladtiles;
+        seeds[1] = cucumbertiles;
+        seeds[2] = aubetiles; 
     }
 
     // Update is called once per frame

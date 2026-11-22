@@ -83,7 +83,7 @@ public class fungaltalkingscript : MonoBehaviour
     }
     public void Tageszeit(int i)
     {
-        if (beardo.tutorial == false)
+        /*if (beardo.tutorial == false)
         {
             if (i == 1)
             {
@@ -93,7 +93,7 @@ public class fungaltalkingscript : MonoBehaviour
             {
                 
             }
-        }
+        }*/
     }
     public IEnumerator Garteln()
     {
