@@ -4,9 +4,12 @@ In the game the character in this game is summoned through a portal without memo
 Some creepy cultists tell them theire being controlled by a god who wants to see the world through their eyes. 
 They then tell them to get out there and show this god the world, get stronger and perform miracles. 
 
-Ask the NPC to teach you some basics to start the tutorial. And of course you can see the dummie moving ok? i did not not implement it, nüch. 
-After that you can look into the living house to watch Victor do food stuff. according to a daily schedule. He will always talk to you when 
-he walks so just accept it and wait until he is done. 
+
+
+Ask the NPC to teach you some basics to start the tutorial. And of course you can see the dummie moving ok i did not not implement it, nüch. 
+(Yeah i know the slime cant die i will fix it soon so just ignore him and talk to beardo anyways he will act like he is dead and you cant die at all). 
+After that you can look into the living house to watch Victor do food stuff. according to a daily schedule. He will always talk to you when he walks so just accept it and wait until he is done. 
+Also you can plant stuff now ask Fungal for more information.
 
 In the moment there sometimes is a dialogue bug where the tutorial npc always gives you the same answer no matter which choices you make. 
 I could "fix" that by tabbing in and out of the browser waiting and hovering over the choice before clicking.
