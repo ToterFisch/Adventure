@@ -14,6 +14,7 @@ public class dropskript : MonoBehaviour
     public GameObject player;
     public float speed;
     public bool clicked;
+    public GameObject target;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,15 +23,16 @@ public class dropskript : MonoBehaviour
         picpic.sprite = das.pic;
         clicked = false;
         player = GameObject.Find("Player");
+        target = null;
     }
     // Update is called once per frame
     void Update()
     {
         if (clicked == true){
             this.gameObject.GetComponent<Collider2D>().isTrigger = true;
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position , speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position , speed * Time.deltaTime);
         }
-        if(this.transform.position == player.transform.position)
+        if(clicked == true && this.transform.position == target.transform.position)
         {
             int uhu = inv.durchsuchen(das);
             if(uhu < 0){
@@ -44,8 +46,9 @@ public class dropskript : MonoBehaviour
             }
         }
     }
-    public void aufheben(){
+    public void aufheben(GameObject tar){
         clicked = true;
+        target = tar;
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -61,6 +64,10 @@ public class dropskript : MonoBehaviour
                 inv.shoes[uhu].anzahl ++;
                 Destroy(this.gameObject);
             }
+        }
+        else if (clicked == true && collision.gameObject.transform.CompareTag("npc"))
+        {
+            Destroy(this.gameObject);
         }
     }
     

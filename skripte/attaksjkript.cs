@@ -69,7 +69,7 @@ public class attackscript : MonoBehaviour
                     hit.collider.gameObject.SendMessage("Offnen");
                 }
                 else if(hit.collider.gameObject.transform.CompareTag("drop")){
-                    hit.collider.gameObject.SendMessage("aufheben");
+                    hit.collider.gameObject.SendMessage("aufheben",GameObject.Find("Player"));
                 }
                 else if(hit.collider.gameObject.transform.CompareTag("npc")){
                     hit.collider.gameObject.SendMessage("Angesprochen");

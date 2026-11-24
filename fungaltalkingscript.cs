@@ -40,13 +40,13 @@ public class fungaltalkingscript : MonoBehaviour
         met = false;
         for(int i = 0; i < 6; i++)
         {
-            felder[i] = new Vector3Int[16];
+            felder[i] = new Vector3Int[32];
         }
         for(int i = 0; i < 6; i++)
         {
             paths[i] = new Vector3[16];
         }
-        Feldereintragen(new Vector3Int(-69,14,0),new Vector3Int(-54,13,0),new Vector3(-68.5f,11.5f,transform.position.z),new Vector3(-53.5f,11.5f,transform.position.z),0);
+        Feldereintragen(new Vector3Int(-69,13,0),new Vector3Int(-54,12,0),new Vector3(-68.5f,11.5f,transform.position.z),new Vector3(-53.5f,11.5f,transform.position.z),0);
         
     }
 
@@ -62,16 +62,20 @@ public class fungaltalkingscript : MonoBehaviour
     public void Feldereintragen(Vector3Int obenlinks, Vector3Int untenrechts, Vector3 links,Vector3 rechts, int wo)
     {
         int ipos = 0;
+        
         int ii = obenlinks.y-untenrechts.y;
-        for (int i = ii;i>0;i--){
-            for(int ol = obenlinks.x; ol <= untenrechts.x; ol++)
-            {
-                felder[wo][ipos] = new Vector3Int(ol,obenlinks.y-ii,obenlinks.z);
+        for(int ol = obenlinks.x; ol <= untenrechts.x; ol++)
+        {
+            
+            for (int i = ii;i>=0;i--){
+                Debug.Log("wo"+wo+" ipos"+ipos);
+                felder[wo][ipos] = new Vector3Int(ol,obenlinks.y-i,obenlinks.z);
                 Debug.Log("Felder"+felder[wo][ipos]);
                 ipos ++;
             }
-            ipos = 0;
         }
+        ipos = 0;
+        
         int fpos = 0;
         for(float o = links.x; o <= rechts.x; o++)
         {
@@ -81,9 +85,10 @@ public class fungaltalkingscript : MonoBehaviour
         }
         
     }
+    
     public void Tageszeit(int i)
     {
-        /*if (beardo.tutorial == false)
+        if (beardo.tutorial == false)
         {
             if (i == 1)
             {
@@ -93,7 +98,7 @@ public class fungaltalkingscript : MonoBehaviour
             {
                 
             }
-        }*/
+        }
     }
     public IEnumerator Garteln()
     {
@@ -115,9 +120,11 @@ public class fungaltalkingscript : MonoBehaviour
                 yield return new WaitForSeconds(0.5f);
             }
             feld.PlantOrHarvest(felder[rando][t],seedsowned[ran]);
+            Debug.Log("penis"+felder[rando][t]);
             t++;
             yield return new WaitForSeconds(0.5f);
             feld.PlantOrHarvest(felder[rando][t],seedsowned[ran]);
+            Debug.Log("penis"+felder[rando][t]);
             t++;
             yield return new WaitForSeconds(0.5f);
         }

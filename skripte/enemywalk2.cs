@@ -29,9 +29,9 @@ public class enemywalk2 : MonoBehaviour
     {
         Vector3Int npcposs = map.WorldToCell(npc.transform.position);
         Vector3Int targetposs = map.WorldToCell(target);
-        Debug.Log(targetposs);
+        
         path.Add(Pathfinding(npcposs,targetposs,new List<Vector3Int>()));
-        Debug.Log(targetposs);
+        
         StartCoroutine(Walking(npc,speed,anna));
               
     }
@@ -350,23 +350,23 @@ public class enemywalk2 : MonoBehaviour
             {
                 //links
                 anna.SetInteger("richtung", 1);
-                Debug.Log("links");
+                
             }
             else if (npc.transform.position.x < map.GetCellCenterWorld(path.LastOrDefault()).x)
             {
                 anna.SetInteger("richtung", 2);
-                Debug.Log("rechts");
+               
             }
             else if(npc.transform.position.y > map.GetCellCenterWorld(path.LastOrDefault()).y)
             {
                 
                 anna.SetInteger("richtung", 3);
-                Debug.Log("oben");
+                
             }
             else if (npc.transform.position.y < map.GetCellCenterWorld(path.LastOrDefault()).y)
             {
                 anna.SetInteger("richtung", 4);
-                Debug.Log("unten");
+                
             }
             yield return new WaitForSeconds(0.01f);
             

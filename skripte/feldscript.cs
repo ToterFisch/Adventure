@@ -112,7 +112,7 @@ public class feldscript : MonoBehaviour
             if (pflanz.status == 2){
                 map.SetTile(pflanz.where, erde);
                 plants.Remove(pflanz);
-                GameObject crop = Instantiate(drop, pflanz.where, transform.rotation);
+                GameObject crop = Instantiate(drop, map.GetCellCenterWorld(pflanz.where), transform.rotation);
                 Debug.Log("innendrinne");
                 dropskript script = crop.GetComponent<dropskript>();
                 if(script != null){
@@ -128,7 +128,7 @@ public class feldscript : MonoBehaviour
         Debug.Log(inv.donned[3]);
         plant pflanz = IsPlant(selectedfield);
         if(targettile == erde){
-            int o = System.Array.IndexOf(seedname,inv.donned[3].schadensart);
+            int o = System.Array.IndexOf(seedname,seedos.schadensart);
             map.SetTile(selectedfield, seeds[o][0]);
             plants.Add(new plant(selectedfield,seedos.schadensart,seeds[o],map,wachszeiten[o]));
             inv.shoes.Remove(inv.donned[3]);
@@ -138,7 +138,7 @@ public class feldscript : MonoBehaviour
             if (pflanz.status == 2){
                 map.SetTile(pflanz.where, erde);
                 plants.Remove(pflanz);
-                GameObject crop = Instantiate(drop, pflanz.where, transform.rotation);
+                GameObject crop = Instantiate(drop, map.GetCellCenterWorld(pflanz.where), transform.rotation);
                 Debug.Log("innendrinne");
                 dropskript script = crop.GetComponent<dropskript>();
                 if(script != null){
