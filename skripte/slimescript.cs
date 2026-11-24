@@ -41,6 +41,10 @@ public class slimescript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (leben <= 0)
+        {
+            Destroy(this.gameObject);
+        }
         if(aggro == true)
         {
             if (timer < weiter)

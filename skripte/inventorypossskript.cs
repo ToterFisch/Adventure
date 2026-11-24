@@ -32,6 +32,11 @@ public class inventorypossskript : MonoBehaviour, IPointerEnterHandler, IPointer
             if (Input.GetMouseButtonDown(0))
             {
                 mouseon = false;
+                foreach(Transform child in manager.itemanzeigecontent.transform)
+                {
+                    Debug.Log(child.name);
+                    Destroy(child.gameObject);
+                }
                 manager.invon(manager.shoes,manager.content,manager.iteminv,was,art);
                 manager.invents.SetActive(false);
                 manager.uiman.uiopen = manager.iteminv;
@@ -45,7 +50,7 @@ public class inventorypossskript : MonoBehaviour, IPointerEnterHandler, IPointer
                     manager.waffenanzeigen[3].text = manager.donned[art].schadensart.ToString();
                     manager.waffenanzeigen[10].text = manager.donned[art].speed.ToString();
                     manager.waffenanzeigen[11].text = manager.donned[art].wert.ToString();
-                    manager.waffenanzeigen[12].text = manager.donned[art].geschw.ToString();
+                    manager.waffenanzeigen[12].text = manager.donned[art].anzahl.ToString();
                     manager.waffenanzeigen[14].text = manager.donned[art].explanation;
                     manager.waffenanzeigenbild.sprite = manager.donned[art].pic;
                 }

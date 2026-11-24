@@ -46,13 +46,15 @@ public class iteminvskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         if (mouseon == true){
             if (Input.GetMouseButtonDown(0))
             {
-                equip();
-            }
-            
-            if (Input.GetMouseButtonDown(0))
-            {
+                
+                if (manager.uiman.uiopen != manager.invents)
+                {
+                    equip();
+                }
                 mouseon = false;
             }
+            
+            
             if(was > 2)
             {
                 if(manager.donned[was] != null){
@@ -63,7 +65,7 @@ public class iteminvskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
                     
                     manager.waffenanzeigen[10].text = das.speed.ToString();
                     manager.waffenanzeigen[11].text = das.wert.ToString();
-                    manager.waffenanzeigen[12].text = das.gewicht.ToString();
+                    manager.waffenanzeigen[12].text = das.anzahl.ToString();
                     manager.waffenanzeigen[14].text = das.explanation;
                     manager.waffenanzeigenbild.sprite = das.pic;
                 }
@@ -77,7 +79,7 @@ public class iteminvskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
                     manager.anzeigen[6].text = das.resistenz.ToString();
                     manager.anzeigen[10].text = das.speed.ToString();
                     manager.anzeigen[11].text = das.wert.ToString();
-                    manager.anzeigen[12].text = das.gewicht.ToString();
+                    manager.anzeigen[12].text = das.anzahl.ToString();
                     manager.anzeigen[14].text = das.explanation;
                     manager.anzeigenbild.sprite = das.pic;
                 }
@@ -97,6 +99,8 @@ public class iteminvskript : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
                 Destroy(child.gameObject);
             }
             manager.invents.SetActive(true);
+            manager.invon(manager.shoes,manager.itemanzeigecontent,manager.itemanzeige,null, manager.lastone);
+            manager.uiman.uiopen = manager.invents;
             manager.iteminv.SetActive(false);
             stats.CalculateValues();
         }

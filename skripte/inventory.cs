@@ -114,7 +114,7 @@ public class inventory : MonoBehaviour
             invents.SetActive(true);
             anzeigendingens.SetActive(true);
             invan = true;
-            invon(shoes,itemanzeigecontent,itemanzeige,"stuff", lastone);
+            invon(shoes,itemanzeigecontent,itemanzeige,null, lastone);
             uiman.uiopen = invents;
         }
         else if (uiman.uiopen == iteminv)
@@ -148,12 +148,18 @@ public class inventory : MonoBehaviour
             Debug.Log("were in");
             invents.SetActive(true);
             iteminv.SetActive(false);
+            invon(shoes,itemanzeigecontent,itemanzeige,null, lastone);
             uiman.uiopen = invents;
         }
             
         else if(invents.activeInHierarchy == true)
         {
             Debug.Log("definitly here");
+            foreach(Transform child in itemanzeigecontent.transform)
+            {
+                Debug.Log(child.name);
+                Destroy(child.gameObject);
+            }
             invents.SetActive(false);
             anzeigendingens.SetActive(false);
             invan = false;

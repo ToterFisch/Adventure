@@ -47,8 +47,12 @@ public class fungaltalkingscript : MonoBehaviour
             paths[i] = new Vector3[16];
         }
         Feldereintragen(new Vector3Int(-69,13,0),new Vector3Int(-54,12,0),new Vector3(-68.5f,11.5f,transform.position.z),new Vector3(-53.5f,11.5f,transform.position.z),0);
-        
-    }
+        Feldereintragen(new Vector3Int(-69,17,0),new Vector3Int(-54,16,0),new Vector3(-68.5f,15.5f,transform.position.z),new Vector3(-53.5f,15.5f,transform.position.z),1);
+        Feldereintragen(new Vector3Int(-69,21,0),new Vector3Int(-54,20,0),new Vector3(-68.5f,19.5f,transform.position.z),new Vector3(-53.5f,19.5f,transform.position.z),2);
+        Feldereintragen(new Vector3Int(-51,13,0),new Vector3Int(-36,12,0),new Vector3(-50.5f,11.5f,transform.position.z),new Vector3(-35.5f,11.5f,transform.position.z),3);
+        Feldereintragen(new Vector3Int(-51,17,0),new Vector3Int(-36,16,0),new Vector3(-50.5f,15.5f,transform.position.z),new Vector3(-35.5f,15.5f,transform.position.z),4);
+        Feldereintragen(new Vector3Int(-51,21,0),new Vector3Int(-36,20,0),new Vector3(-50.5f,19.5f,transform.position.z),new Vector3(-35.5f,19.5f,transform.position.z),5);
+    }   
 
     // Update is called once per frame
     void Update()
@@ -96,7 +100,19 @@ public class fungaltalkingscript : MonoBehaviour
             }
             else if (i == 2)
             {
-                
+                StartCoroutine(Garteln());
+            }
+            else if (i == 3)
+            {
+                StartCoroutine(Essenfassen());
+            }
+            else if (i == 4)
+            {
+                StartCoroutine(Garteln());
+            }
+            else if (i == 5)
+            {
+                StartCoroutine(Essenfassen());
             }
         }
     }
@@ -104,7 +120,7 @@ public class fungaltalkingscript : MonoBehaviour
     {
         einsatz = 4000;
         int ran = Random.Range(0,2);
-        int rando = 0;//Random.Range(0,5);
+        int rando = Random.Range(0,5);
         int t = 0;
         walk.Move(this.gameObject,paths[rando][0],5f,anna);
         while (this.transform.position != paths[rando][0])
@@ -142,16 +158,19 @@ public class fungaltalkingscript : MonoBehaviour
     }
     public void Angesprochen()
     {
-        Done(5);
-    }
-    public void Done(int i)
-    {
         if (met == false)
         {
             met = true;
             mikro.Sag(this.gameObject,bild.sprite,"Praised be the gods and you as you are theire eyes and ears on this world. I hope you have found your way into this world quite nicely. I am Fungal the main gardener of this kloster.");
 
         }
+        else {
+            Done(5);
+        }
+    }
+    public void Done(int i)
+    {
+        
         if (met == true)
         {
 
