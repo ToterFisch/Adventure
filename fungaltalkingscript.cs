@@ -72,9 +72,9 @@ public class fungaltalkingscript : MonoBehaviour
         {
             
             for (int i = ii;i>=0;i--){
-                Debug.Log("wo"+wo+" ipos"+ipos);
+                
                 felder[wo][ipos] = new Vector3Int(ol,obenlinks.y-i,obenlinks.z);
-                Debug.Log("Felder"+felder[wo][ipos]);
+                
                 ipos ++;
             }
         }
@@ -84,7 +84,7 @@ public class fungaltalkingscript : MonoBehaviour
         for(float o = links.x; o <= rechts.x; o++)
         {
             paths[wo][fpos] = new Vector3(o,links.y,links.z);
-            Debug.Log("Felder"+felder[wo][ipos]);
+            
             fpos ++;
         }
         

@@ -113,7 +113,7 @@ public class feldscript : MonoBehaviour
                 map.SetTile(pflanz.where, erde);
                 plants.Remove(pflanz);
                 GameObject crop = Instantiate(drop, map.GetCellCenterWorld(pflanz.where), transform.rotation);
-                Debug.Log("innendrinne");
+                
                 dropskript script = crop.GetComponent<dropskript>();
                 if(script != null){
                     script.das = crops[System.Array.IndexOf(seedname,pflanz.name)];
@@ -139,12 +139,12 @@ public class feldscript : MonoBehaviour
                 map.SetTile(pflanz.where, erde);
                 plants.Remove(pflanz);
                 GameObject crop = Instantiate(drop, map.GetCellCenterWorld(pflanz.where), transform.rotation);
-                Debug.Log("innendrinne");
+                
                 dropskript script = crop.GetComponent<dropskript>();
                 if(script != null){
                     script.das = crops[System.Array.IndexOf(seedname,pflanz.name)];
                 }
-            Debug.Log("penis");
+            
             }
         }
     }

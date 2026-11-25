@@ -10,7 +10,7 @@ public class MainMagicUIScript : MonoBehaviour
 {
     public GameObject rangedtier3;
     public GameObject buildSpace;
-    
+    public SpellBuildScript builder;
     
     public class Spell
     {
@@ -33,6 +33,7 @@ public class MainMagicUIScript : MonoBehaviour
     void Start()
     {
         uiman = GameObject.Find("Player").GetComponent<playermovement>(); 
+        builder = GameObject.Find("SpellBuildUi").GetComponent<SpellBuildScript>();
     }
 
     // Update is called once per frame
@@ -43,6 +44,7 @@ public class MainMagicUIScript : MonoBehaviour
     public void OpenBuildSpace(GameObject tier)
     {
         buildSpace.SetActive(true);
+        builder.currentier = tier;
         uiman.uiopen = buildSpace;
         tier.SetActive(true);
         this.gameObject.SetActive(false);
