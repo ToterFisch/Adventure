@@ -47,6 +47,10 @@ public class SpellBuildScript : MonoBehaviour
     {
         
     }
+    public void SpellSpeichern()
+    {
+        
+    }
     public void Anzeigen(Effect das)
     {
         if (das.type == "effect")

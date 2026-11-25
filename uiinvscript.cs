@@ -9,10 +9,13 @@ public class uiinvscript : MonoBehaviour , IPointerEnterHandler, IPointerExitHan
 {
     public SpellBuildScript builder;
     public MainMagicUIScript mainmage;
-    public SpellBuildScript.Effect das;
+    public SpellBuildScript.Effect das = new SpellBuildScript.Effect("penis",null,"a penis",1,1f,"effect");
     public bool mouseon;
     public bool clicked;
+    public GameObject lastlastparent;
     public GameObject lastparent;
+    public GameObject nextparent;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,6 +26,8 @@ public class uiinvscript : MonoBehaviour , IPointerEnterHandler, IPointerExitHan
         Debug.Log(builder.effectinvcontent);
         Debug.Log(lastparent);
         mouseon = false;
+        das.type = "effect";
+        Debug.Log(das.type);
     }
     
     // Update is called once per frame
@@ -36,7 +41,16 @@ public class uiinvscript : MonoBehaviour , IPointerEnterHandler, IPointerExitHan
                 transform.SetParent(GameObject.Find("SpellBuildUi").transform);
                 transform.position = Input.mousePosition;
             }
-            else {transform.SetParent(lastparent.transform);}
+            if (Input.GetMouseButtonUp(0)) 
+            {
+                transform.SetParent(lastparent.transform);
+                if (lastparent.CompareTag("position"))
+                {
+                    effectpossscript scripti = lastparent.GetComponent<effectpossscript>();
+                    scripti.das = das;
+                    scripti.belegt = true;
+                }
+            }
         }
         
     }
@@ -50,12 +64,26 @@ public class uiinvscript : MonoBehaviour , IPointerEnterHandler, IPointerExitHan
     }
     public void OnTriggerEnter2D (Collider2D collision)
     {
-        Debug.Log("gehittet");
-        if (transform.CompareTag("position"))
+        if (collision.transform.CompareTag("position") && collision.gameObject.GetComponent<effectpossscript>().belegt == false)
         {
-            transform.SetParent(collision.transform.parent);
-            lastparent = collision.transform.parent.gameObject;
-            Debug.Log("gewechselt");
+            Debug.Log(das.type);
+            Debug.Log(collision.gameObject.GetComponent<effectpossscript>().type);
+            if(collision.gameObject.GetComponent<effectpossscript>().type == das.type){
+            lastlastparent = lastparent;
+            nextparent = collision.transform.gameObject;
+            lastparent = collision.transform.gameObject;
+            }
+        }
+    }
+    public void OnTriggerExit2D (Collider2D collision)
+    {
+        
+        if (collision.transform.CompareTag("position"))
+        {
+            nextparent = null;
+            lastparent = lastlastparent;
+            lastlastparent = null;
+            collision.gameObject.GetComponent<effectpossscript>().belegt = false;
         }
     }
 }
