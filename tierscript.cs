@@ -7,16 +7,28 @@ using System.Collections.Generic;
 using System.Data;
 public class tierscript : MonoBehaviour
 {
-    public GameObject namestuff;
-    public GameObject maineffect;
-    public GameObject number1;
-    public GameObject sideeffect1;
-    public GameObject number2;
-    public GameObject sideeffect2;
-    public GameObject number3;
-    public GameObject sideeffect3;
-    public GameObject multplier;
-    public GameObject multplier2;
+    public effectpossscript namestuff;
+    public string maineffect;
+    public int number1;
+    public string sideeffect1;
+    public int number2;
+    public string sideeffect2;
+    public int number3;
+    public string sideeffect3;
+    public int multplier;
+    public int multplier2;
+    public float cooldown;
+    public float basiscooldown;
+    public GameObject namestuffr;
+    public effectpossscript maineffectr;
+    public effectpossscript number1r;
+    public effectpossscript sideeffect1r;
+    public effectpossscript number2r;
+    public effectpossscript sideeffect2r;
+    public effectpossscript number3r;
+    public effectpossscript sideeffect3r;
+    public effectpossscript multplierr;
+    public effectpossscript multplier2r;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +39,6 @@ public class tierscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        cooldown = basiscooldown;
     }
 }

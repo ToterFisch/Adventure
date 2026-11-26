@@ -57,10 +57,13 @@ public class uiinvscript : MonoBehaviour , IPointerEnterHandler, IPointerExitHan
     public void OnPointerEnter(PointerEventData eventData)
     {
         mouseon = true;
+        builder.inspected = this.gameObject;
     }
     public void OnPointerExit(PointerEventData eventData)
     {
+        
         mouseon = false;
+        builder.inspected = null;
     }
     public void OnTriggerEnter2D (Collider2D collision)
     {

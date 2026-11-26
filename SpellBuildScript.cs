@@ -9,12 +9,16 @@ using System.Linq;
 public class SpellBuildScript : MonoBehaviour
 {
     public TMP_Text[] effecttexts = new TMP_Text[3];
-    // 1:name/strength,2:cooldown,3:description
+    // 1:name,2:cooldown,3:description
     public Image effectbild;
-    public TMP_Text[] factortexts = new TMP_Text[3];
+    public TMP_Text[] factortexts = new TMP_Text[4];
+    // 1:name,2:strength,3:cooldown,4:description
     public GameObject currentier;
     public GameObject spellui;
     public GameObject effectinvcontent;
+    public GameObject inspected;
+    public GameObject effectdisplay;
+    public GameObject numberdisplay;
     public class Effect
     {
         public string name;
@@ -45,11 +49,46 @@ public class SpellBuildScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (inspected != null)
+        {
+            uiinvscript scrub = inspected.GetComponent<uiinvscript>();
+            if (scrub.das.type == "effect")
+            {
+                effectdisplay.SetActive(true);
+                effecttexts[0].text = scrub.das.name;
+                effecttexts[1].text = scrub.das.cooldown.ToString();
+                effecttexts[2].text = scrub.das.description;
+                effectbild.sprite = scrub.das.image;
+            }
+            else if (scrub.das.type == "factor")
+            {
+                numberdisplay.SetActive(true);
+                factortexts[0].text = scrub.das.name;
+                factortexts[1].text = scrub.das.strength.ToString();
+                factortexts[2].text = scrub.das.cooldown.ToString();
+                factortexts[3].text = scrub.das.description;
+            }
+            else if (scrub.das.type == "multiplier")
+            {
+                numberdisplay.SetActive(true);
+                factortexts[0].text = scrub.das.name;
+                factortexts[1].text = scrub.das.strength.ToString();
+                factortexts[2].text = scrub.das.cooldown.ToString();
+                factortexts[3].text = scrub.das.description;
+            }
+        }
+        else
+        {
+            effectdisplay.SetActive(false);
+            numberdisplay.SetActive(false);
+        }
     }
     public void SpellSpeichern()
     {
-        
+        tierscript tier = currentier.GetComponent<tierscript>();
+        MainMagicUIScript.Spell  newone = new MainMagicUIScript.Spell(new List<Effect>(),new List<int>(),"",0f,0);
+        newone.effects.Add(tier.maineffect.das.effect);
+        newone.strength.Add(tier.);
     }
     public void Anzeigen(Effect das)
     {
