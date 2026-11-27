@@ -28,4 +28,4 @@ Use of AI: there is one part of the skript where some angles need to be calculat
 generated (I am deeply ashamed). Also there are some lines in the code i have done a wile back, these are not marked 
 in the code but will likely be found somewhere in the movement part or the spellinventory part. I honestly cant remember 
 how i did these but knowing me i would say its likely i copied them from some tutorial or generated them using ai 
-(I do tend to copy such stuff from older projects where i used these methods).
+(I do tend to copy such stuff from older projects where i used these methods). I also used AI to debug at some point but i also stopped that at least after completing the (in game)tutorial.

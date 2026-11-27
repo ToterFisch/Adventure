@@ -86,9 +86,9 @@ public class SpellBuildScript : MonoBehaviour
     public void SpellSpeichern()
     {
         tierscript tier = currentier.GetComponent<tierscript>();
-        MainMagicUIScript.Spell  newone = new MainMagicUIScript.Spell(new List<Effect>(),new List<int>(),"",0f,0);
-        newone.effects.Add(tier.maineffect.das.effect);
-        newone.strength.Add(tier.);
+        MainMagicUIScript.Spell  newone = new MainMagicUIScript.Spell(new List<string>(),new List<int>(),"",0f,0);
+        newone.effects.Add(tier.maineffectr.das.name);
+        //newone.strength.Add(tier.);
     }
     public void Anzeigen(Effect das)
     {
